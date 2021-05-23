@@ -40,28 +40,28 @@ export default () => {
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
-            <h2>Organize an Event</h2>
+            <h2>Mesa de partes</h2>
             <form action="#">
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" placeholder="E.g. John Doe" />
+                    <Label htmlFor="name-input">Nombre y Apellidos.</Label>
+                    <Input id="name-input" required type="text" name="name" placeholder="Marilu" />
                   </InputContainer>
                   <InputContainer>
-                    <Label htmlFor="email-input">Your Email Address</Label>
-                    <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" />
+                    <Label htmlFor="email-input">Correo electrónico:</Label>
+                    <Input id="email-input" required type="email" name="email" placeholder="correo@mail.com" />
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
-                    <Label htmlFor="name-input">Your Message</Label>
-                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your event"/>
+                    <Label htmlFor="name-input">Mensaje</Label>
+                    <TextArea id="message-input" required name="message" placeholder="A continuación, describo mi caso ..."/>
                   </InputContainer>
                 </Column>
               </TwoColumn>
 
-              <SubmitButton type="submit" value="Submit">Submit</SubmitButton>
+              <SubmitButton type="submit" value="Submit">Enviar</SubmitButton>
             </form>
           </div>
           <SvgDotPattern1 />

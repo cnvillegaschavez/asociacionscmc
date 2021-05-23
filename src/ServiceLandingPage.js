@@ -8,11 +8,10 @@ import Hero from "./components/hero/TwoColumnWithFeaturesAndTestimonial.js";
 import Features from "./components/features/ThreeColWithSideImage.js";
 import MainFeature from "./components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureStats from "./components/features/ThreeColCenteredStatsPrimaryBackground.js";
-import Pricing from "./components/pricing/TwoPlansWithDurationSwitcher.js";
-import Blog from "./components/blogs/GridWithFeaturedPost.js";
+import MapContainer from "./components/maps/MapContainer";
 import Testimonial from "./components/testimonials/TwoColumnWithImageAndRating.js";
 import FAQ from "./components/faqs/SingleCol.js";
-import GetStarted from "./components/cta/GetStartedLight.js";
+import SimpleContactUs from "./components/forms/SimpleContactUs.js";
 import Footer from "./components/footers/FiveColumnWithInputForm.js";
 
 const HighlightedText = tw.span`text-primary-500`
@@ -22,26 +21,35 @@ export default () => {
     <AnimationRevealPage>
       <Hero />
       <FeatureStats/>
-      <Features 
-        heading={<>Amazing <HighlightedText>Features</HighlightedText></>}
+      <div id='services'>
+      <Features
+        heading={<> Servicios<HighlightedText> bajo los rubros</HighlightedText></>}
       />
+      </div>
+      <div id='we-team'>
       <MainFeature
-        heading={<>Cloud built by and for <HighlightedText>Professionals</HighlightedText></>}
+        heading={<>Nuestros <HighlightedText>Profesionales</HighlightedText></>}
       />
+      </div>
+      <div id='testimonials'>
       <Testimonial 
-        heading={<>Our Clients <HighlightedText>Love Us</HighlightedText></>}
+        heading={<>Nuestros <HighlightedText> Clientes</HighlightedText></>}
       />
-      <Pricing 
-        heading={<>Flexible <HighlightedText>Plans</HighlightedText></>}
-      />
+      </div>
+     
       <FAQ
-        heading={<>Any <HighlightedText>Questions ?</HighlightedText></>}
+        heading={<>Algunas <HighlightedText>preguntas comunes</HighlightedText></>}
       />
-      <Blog
-        subheading="Blog"
-        heading={<>We love <HighlightedText>Writing</HighlightedText></>}
-      />
-      <GetStarted/>
+      <div id='location'>
+      <MapContainer/>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div id='contact-us'>
+        <SimpleContactUs/>
+      </div>
       <Footer />
     </AnimationRevealPage>
   );

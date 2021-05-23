@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
-import loveIllustrationImageSrc from "images/love-illustration.svg";
+import loveIllustrationImageSrc from "images/clients.jpg";
 import { ReactComponent as StarIconBase } from "images/star-icon.svg";
 import { ReactComponent as ArrowLeftIcon } from "images/arrow-left-3-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg";
@@ -73,9 +73,9 @@ export default ({
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
-  subheading = "Testimonials",
-  heading = "Our Clients Love Us.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
+  subheading = "Testimonios",
+  heading = "Nuestro clientes",
+  description = "Nuestros clientes son...",
   textOnLeft = false,
   testimonials = [
     {

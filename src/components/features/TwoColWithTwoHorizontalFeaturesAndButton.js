@@ -4,10 +4,10 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import TeamIllustrationSrc from "images/we-team.jpg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as MoneyIcon } from "images/reliable-icon.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -60,15 +60,15 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
 ]);
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Equipo de trabajo",
   heading = (
     <>
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  description = "Los miembros del centro de conciliación extrajudicial Ex Lege provienen del mundo empresarial, público y académico, con lo cual la unidad de arbitraje y conciliacion extrajudicial busca contar con enfoques que comprenden las necesidades y realidades de todos los usuarios.",
+  primaryButtonText = "Leer más",
+  primaryButtonUrl = "#",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -90,14 +90,14 @@ export default ({
   const defaultFeatures = [
     {
       Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you.",
+      title: "Arbitraje",
+      description: "Contamos con los mejores profesionales del servicio Arbitraje para trabajar con usted.",
       iconContainerCss: tw`bg-teal-300 text-teal-800`
     },
     {
       Icon: MoneyIcon,
-      title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard.",
+      title: "Conciliación Extrajudicial",
+      description: "Contamos con los mejores profesionales del servicio Conciliación Extrajudicial para trabajar con usted.",
       iconContainerCss: tw`bg-red-300 text-red-800`
     }
   ];

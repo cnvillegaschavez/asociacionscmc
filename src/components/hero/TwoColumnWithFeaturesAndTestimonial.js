@@ -10,12 +10,12 @@ import { Container, ContentWithVerticalPadding } from "components/misc/Layouts.j
 import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg";
 import { ReactComponent as QuotesLeftIconBase } from "images/quotes-l.svg"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/dot-pattern.svg"
-
+import profileImg from 'images/header-profile.jfif';
 const Header = tw(HeaderBase)`max-w-none`;
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`;
 const Column = tw.div``;
 const TextColumn = tw(Column)`mr-auto lg:mr-0 max-w-lg lg:max-w-xl xl:max-w-2xl`;
-const Heading = tw(SectionHeading)`text-left text-primary-900 leading-snug xl:text-6xl`;
+const Heading = tw(SectionHeading)`text-left text-primary-900 leading-snug xl:text-5xl`;
 const Description = tw(SectionDescription)`mt-4 lg:text-base text-gray-700 max-w-lg`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 inline-block w-56 tracking-wide text-center py-5`;
 const FeatureList = tw.ul`mt-12 leading-loose`;
@@ -37,35 +37,32 @@ const CustomerCompany = tw.p`mt-1 text-sm text-gray-500`
 
 
 export default ({
-  heading = "Better, Faster and Cheaper Cloud.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  imageSrc = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+  heading = "CENTRO DE CONCILIACIÓN EXTRAJUDICIAL EX LEGE",
+  description = "Somos una institucion cusqueña , que facilita la solución de controversias y la mediación de conflictos a través de la Conciliación en materia referida a familia, civiles, comercial y contrataciones con el estado.",
+  imageSrc = profileImg,
   imageDecoratorBlob = true,
-  primaryButtonUrl = "https://google.com",
-  primaryButtonText = "Get Started",
+  primaryButtonUrl = "#services",
+  primaryButtonText = "Servicios",
   buttonRounded = true,
-  features = ["Available in 7 Locations", "Premium Internet Backbone", "99.99% Uptime SLA"],
+  features = ["ARBITRAJE", "CONCILIACIÓN EXTRAJUDICIAL"],
   testimonial = {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    customerName: "Charlotte Hale",
-    customerCompany: "Delos Inc."
+    quote: "SOLUCIÓN DE CONFLICTOS Y MEDIACIÓN DE CONTROVERSIAS.",
+    customerName: "ASOCIACIÓN SCMC",
+    customerCompany: "Estudio jurídico"
   }
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#">Testimonials</NavLink>
+      <NavLink href="/#services">Servicios</NavLink>
+      <NavLink href="/#we-team">Nosotros</NavLink>
+      <NavLink href="/#testimonials">Clientes</NavLink>
+      <NavLink href="/#location">Ubicación</NavLink>
+      <NavLink href="/#contact-us">Contactanos</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={buttonRoundedCss} href="/#">
-        Sign Up
+      <PrimaryLink css={buttonRoundedCss} href="/#contact-us">
+        MESA DE PARTES VIRTUAL
       </PrimaryLink>
     </NavLinks>
   ];
