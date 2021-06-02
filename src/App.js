@@ -14,7 +14,7 @@ export default function App() {
         <Route path="/thank-you">
           <ThankYouPage />
         </Route>
-        <Route path="/">
+        <Route path="/main">
           <ServiceLandingPage />
         </Route>
       </Switch>

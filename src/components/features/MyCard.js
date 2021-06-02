@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     item: {
@@ -36,11 +37,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
-
 const MyCard = (props) => {
-    const {img, title, description} = props; 
+    const {img, title, description, url} = props; 
     const classes = useStyles();
 
     return (
@@ -61,12 +59,13 @@ const MyCard = (props) => {
             </CardActionArea>
             <Box border={0} align="center">
                 <CardActions className={classes.paper} >
-                    <Button color="primary" variant="contained" endIcon={<WhatsAppIcon/>} className={classes.button}>
-                        Contactar
-                    </Button>
+                    {/* <Link to={`${url}/${title}`}> */}
+                        <Button color="primary" variant="contained" endIcon={<WhatsAppIcon/>} className={classes.button}>
+                            Contactar
+                        </Button>
+                    {/* </Link> */}
                 </CardActions>
             </Box>
-           
         </Card>
     );
 }
