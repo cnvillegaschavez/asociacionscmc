@@ -11,6 +11,7 @@ import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-c
 import { ReactComponent as QuotesLeftIconBase } from "images/quotes-l.svg"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/dot-pattern.svg"
 import profileImg from 'images/header-profile.jfif';
+
 const Header = tw(HeaderBase)`max-w-none`;
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`;
 const Column = tw.div``;
@@ -54,11 +55,11 @@ export default ({
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#services">Servicios</NavLink>
-      <NavLink href="/#we-team">Nosotros</NavLink>
-      <NavLink href="/#testimonials">Clientes</NavLink>
-      <NavLink href="/#location">Ubicación</NavLink>
-      <NavLink href="/#contact-us">Contactanos</NavLink>
+      <NavLink href="/#services">Mediación Online</NavLink>
+      <NavLink href="/#we-team">Arbitraje Virtual</NavLink>
+      <NavLink href="/#testimonials">Abogado Virtual</NavLink>
+      <NavLink href="/#location">Conciliación</NavLink>
+      <NavLink href="/#contact-us">Curso de Conciliación Extrajudicial</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink css={buttonRoundedCss} href="/#contact-us">
@@ -104,6 +105,7 @@ export default ({
           </Row>
         </ContentWithVerticalPadding>
       </Container>
+    
     </>
   );
 };

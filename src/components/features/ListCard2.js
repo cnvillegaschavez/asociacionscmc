@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import MyCard from './MyCard';
+import MyCard2 from './MyCard2';
 import { Grid } from '@material-ui/core';
 
 const ListCard = (props) => {
@@ -10,7 +10,7 @@ const ListCard = (props) => {
             <Grid container spacing={24} justify="center">
             {
                 data.map((element, index) => {
-                    return <MyCard img={element.img} title={element.title} content={element.content}/>
+                    return <MyCard2 img={element.img} title={element.title} content={element.content}/>
                 })
             }
             </Grid>
