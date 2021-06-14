@@ -1,0 +1,18 @@
+{
+    "Benefits": [{
+        "icon": "fa fa-star",
+        "title": "Servicios de calidad"
+    },
+    {
+        "icon": "fa fa-dollar",
+        "title": "Mejores precios"
+    },
+    {
+        "icon": "fa fa-lock",
+        "title": "Pago seguro"
+    },
+    {
+        "icon": "fa fa-eye-slash",
+        "title": "Confidencialidad"
+    }]
+}

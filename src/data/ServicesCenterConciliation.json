@@ -1,0 +1,417 @@
+{
+    "ServicesConciliation": [{
+        "img": "img/servicesConciliation/A.jpg",
+        "title": "Conciliación para MYPE",
+        "content": "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
+        "more": [
+            {
+                "img": "img/servicesConciliation/A1.jpg",
+                "title": "Conciliación de Resolución de Contrato",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/A2.jpg",
+                "title": "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/A3.jpg",
+                "title": "Conciliación para Cobrar Deudas por Venta de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/A4.jpg",
+                "title": "Conciliación para Cobrar Préstamos de Dinero",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/A5.jpg",
+                "title": "Conciliacion de Desalojo por Falta de Pago",
+                "content": "$300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/B.jpg",
+        "title": "Conciliación Empresarial",
+        "content": "Servicio orientado en el sector empresarial con el objeto  de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
+        "more": [
+            {
+                "img": "img/servicesConciliation/B1.jpg",
+                "title": "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/B2.jpg",
+                "title": "Conciliación para Cobrar Deudas por Venta de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/B3.jpg",
+                "title": "Conciliación para Cobrar Préstamos de Dinero",
+                "content": "$350"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/C.jpg",
+        "title": "Conciliación Familiar",
+        "content": "Servicio de conciliación extrajudicial de  conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
+        "more": [
+            {
+                "img": "img/servicesConciliation/C1.jpg",
+                "title": "Conciliación por Pensión de Alimentos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/C2.jpg",
+                "title": "Conciliación por Régimen de Visitas con externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/C3.jpg",
+                "title": "Conciliación de Exoneracion de persión de alimentos",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/C4.jpg",
+                "title": "Conciliación por Gastos de Embarazo",
+                "content": "$250"
+            },
+            {
+                "img": "img/servicesConciliation/C5.jpg",
+                "title": "Conciliación de Régimen de Visias sin externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/C6.jpg",
+                "title": "Conciliación por Tenencia de hijos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/C7.jpg",
+                "title": "Conciliación para divorcio",
+                "content": "300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/D.jpg",
+        "title": "Conciliación para Divorcio",
+        "content": "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias  o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
+        "more": [
+            {
+                "img": "img/servicesConciliation/D1.jpg",
+                "title": "Conciliación por Régimen de Visitas con externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/D2.jpg",
+                "title": "Redaccion de cartas notariales",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/D3.jpg",
+                "title": "Conciliación por Régimen de Visitas sin externamiento",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/D4.jpg",
+                "title": "Abogado virtual",
+                "content": "$250"
+            },
+            {
+                "img": "img/servicesConciliation/D5.jpg",
+                "title": "Conciliación por Pensión de Alimentos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/D6.jpg",
+                "title": "Conciliación por Tenencia de hijos",
+                "content": "$300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/E.jpg",
+        "title": "Conciliación Social",
+        "content": "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",   
+        "more": [
+            {
+                "img": "img/servicesConciliation/E1.jpg",
+                "title": "Conciliación por Pensión de Alimentos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/E2.jpg",
+                "title": "Conciliación por Régimen de Visitas con externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/E3.jpg",
+                "title": "Conciliación por Gastos de Embarazo",
+                "content": "$250"
+            },
+            {
+                "img": "img/servicesConciliation/E4.jpg",
+                "title": "Conciliación de Régimen de Visias sin externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/E5.jpg",
+                "title": "Conciliación por Tenencia de hijos",
+                "content": "$300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/F.jpg",
+        "title": "Conciliación para Personas Naturales",
+        "content": "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",  
+        "more": [
+            {
+                "img": "img/servicesConciliation/F1.jpg",
+                "title": "Conciliación de División y Partición de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F2.jpg",
+                "title": "Conciliación por Indenmización de daños a vehículos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F3.jpg",
+                "title": "Conciliación por Indenmización de Negligencia Médica",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/F4.jpg",
+                "title": "Conciliación por Indenmización de accidente de transito",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F5.jpg",
+                "title": "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F6.jpg",
+                "title": "Conciliación para Cobrar Deugaspor Venta de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F7.jpg",
+                "title": "Conciliación para Cobrar Préstamos de Dinero",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/F8.jpg",
+                "title": "Conciliación de Desalojo por Falta de Pago",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F9.jpg",
+                "title": "Conciliación de Desalojo por Ocupante Precario",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/F10.jpg",
+                "title": "Conciliación de Desalojo por Vencimiento de contrato",
+                "content": "$300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/G.jpg",
+        "title": "Conciliación en Contrataciones del Estado",
+        "content": "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",  
+        "more": [
+            {
+                "img": "img/servicesConciliation/G1.jpg",
+                "title": "Conciliación de Liquidaciones en Contrataciones del Estado",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G2.jpg",
+                "title": "Conciliación de Vicios Ocultos en Contrataciones del Estado",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G3.jpg",
+                "title": "Conciliación de Indenmización en Contrataciones del Estado",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G4.jpg",
+                "title": "Conciliación de Pago de Deudas en Contrataciones del Estado",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G5.jpg",
+                "title": "Conciliación de Valoraziones y Metrados",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G6.jpg",
+                "title": "Conciliación de Recepción y Conformidad",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G7.jpg",
+                "title": "Conciliación de Resolución de Contratos de Suministros Servicios y Obras",
+                "content": "$499"
+            },
+            {
+                "img": "img/servicesConciliation/G8.jpg",
+                "title": "Conciliación de Ampliación del Plazo",
+                "content": "$499"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/H.jpg",
+        "title": "Conciliación fuera del Centro de Conciliación",
+        "content": "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",  
+        "more": [
+            {
+                "img": "img/servicesConciliation/H1.jpg",
+                "title": "Conciliación por Pensión de Alimentos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/H2.jpg",
+                "title": "Conciliación para Divorcio",
+                "content": "$300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/I.jpg",
+        "title": "Conciliación con Apoderado",
+        "content": "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
+        "more": [
+            {
+                "img": "img/servicesConciliation/I1.jpg",
+                "title": "Conciliación de División y Partición de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I2.jpg",
+                "title": "Conciliación por Indenmización de daños a vehiculos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I3.jpg",
+                "title": "Conciliación de Indenmización de Negligencia Médica",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I4.jpg",
+                "title": "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I5.jpg",
+                "title": "Conciliación para Cobrar Deudas por Venta de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I6.jpg",
+                "title": "Conciliación para Cobrar Préstamos de Dinero",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/I7.jpg",
+                "title": "Conciliación de Desalojo por Falta de Pago",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I8.jpg",
+                "title": "Conciliación de Desalojo por Ocupante Precario",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I9.jpg",
+                "title": "Conciliación para Divorcio",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/I10.jpg",
+                "title": "Conciliación de Desalojo por Vencimiento de Contrato",
+                "content": "$300"
+            }
+        ]
+    },
+    {
+        "img": "img/servicesConciliation/J.jpg",
+        "title": "Concilia hoy mismo",
+        "content": "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
+        "more": [
+            {
+                "img": "img/servicesConciliation/J1.jpg",
+                "title": "Conciliación por Pensión de Alimentos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J2.jpg",
+                "title": "Conciliación por Régimen de Visitas con externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J3.jpg",
+                "title": "Conciliación por Indenmización de daños a vehiculos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J4.jpg",
+                "title": "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J5.jpg",
+                "title": "Conciliación para Cobrar Deudas por Venta de Bienes",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J6.jpg",
+                "title": "Conciliación para Cobrar Préstamos de Dinero",
+                "content": "$350"
+            },
+            {
+                "img": "img/servicesConciliation/J7.jpg",
+                "title": "Conciliación de Desalojo por Falta de Pago",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J8.jpg",
+                "title": "Conciliación de Desalojo por Ocupante Precario",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J9.jpg",
+                "title": "Conciliación de Exoneración de pensión de alimentos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J10.jpg",
+                "title": "Conciliación de Régimen de Visias sin externamiento",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J11.jpg",
+                "title": "Conciliación por Tenencia de hijos",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J12.jpg",
+                "title": "Conciliación para Divorcio",
+                "content": "$300"
+            },
+            {
+                "img": "img/servicesConciliation/J13.jpg",
+                "title": "Conciliación de Desalojo por Vencimiento de Contrato",
+                "content": "$300"
+            }
+        ]
+    }]
+}

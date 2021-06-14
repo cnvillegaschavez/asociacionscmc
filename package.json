@@ -1,50 +1,27 @@
 {
-  "name": "asociacionscmc",
-  "version": "0.1.0",
+  "name": "landingpage-react-template",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "@owaiswiz/use-in-view": "^1.0.16",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^13.1.5",
-    "feather-icons": "^4.28.0",
-    "framer-motion": "^4.1.5",
-    "google-maps-react": "^2.0.6",
-    "react": "^17.0.2",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^17.0.2",
-    "react-github-btn": "^1.2.0",
-    "react-modal": "^3.13.1",
-    "react-rnd": "^10.2.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^5.0.1",
+    "emailjs-com": "^2.6.4",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-slick": "^0.28.1",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^5.2.3",
-    "tailwindcss": "^2.1.1",
-    "twin.macro": "^2.3.3"
+    "react-scripts": "^4.0.2",
+    "smooth-scroll": "^16.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "yarn build && netlify deploy --prod --dir=build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "overrides": [
-      {
-        "files": [
-          "src/**/*.js"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [

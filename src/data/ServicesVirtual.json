@@ -1,0 +1,63 @@
+{
+    "ServicesVirtual": [ {
+        "img": "img/servicesVirtual/A.jpg",
+        "title": "Mediación Online",
+        "content": "Servicio para resolver conflictos en línea, por el cual dos o más personas, con la ayuda de un mediador alcanzan un acuerdo mutuamente satisfactorio.",
+        "more": [
+            {
+                "img": "img/servicesVirtual/A.jpg",
+                "price": "S/. 350",
+                "comment": "Soluciona tú mismo tus problemas en linea con ayuda de un mediador.",
+                "description1": "Es un servicio para resolver conflictos en linea, por el que dos o mas personas con la ayuda de un mediador utilizan medios electrónicos para alcanzar acuerdos mutuamente satisfactorios, evitando contagios por la pandemia de la Covid -19 o por imposibilidad de viajar, etc.",
+                "description2": "Materias que se pueden mediar:",
+                "list": [
+                    "Desalojo.",   
+                    "Cobro de deudas.",   
+                    "Desalojo.",   
+                    "Indemnización.",   
+                    "Otros derechos disponibles."   
+                ]
+            }
+        ]
+    },
+    {
+        "img": "img/servicesVirtual/B.jpg",
+        "title": "Arbitraje Virtual",
+        "content": "Servicio enfocado en las micro y pequeñas empresas que les permite obtener soluciones vinculantes, rápidas y económicas para conflictos comerciales.",
+        "more": [
+            {
+                "img": "img/servicesVirtual/B.jpg",
+                "price": "S/. 5500",
+                "comment": "Deja que un árbitro solucione tus conflictos por ti.",
+                "description1": "Es un servicio enfocado en las micro y pequeñas empresas que les permite obtener soluciones vinculantes, rápidas y económicas en conflictos comerciales.",
+                "description2": "",
+                "list": []
+            }
+        ]
+    },
+    {
+        "img": "img/servicesVirtual/C.jpg",
+        "title": "Abogado Virtual",
+        "content": "Servicio de asesoría y defensa legal virtual ante los tribunales de justicia del Perú eficiente, eficaz y con dedicación a sus clientes.",
+        "more": [
+            {
+                "img": "img/servicesVirtual/C.jpg",
+                "price": "S/. 350",
+                "comment": "Asesoría y defensa legal virtual ante los tribunales de justicia del Perú, con excelencia profesional.",
+                "description1": "Abogado virtual es un servicio de asesoría y defensa legal virtual ante los tribunales de justicia del Perú eficiente, eficaz  y dedicación a sus clientes.",
+                "description2": "",
+                "list": [
+                    "Área de derecho de familia.",
+                    "Área de derecho civil.",   
+                    "Área de derecho arbitral.",   
+                    "Área derecho internacional.", 
+                    "Área derecha inversión finanzas empresarial.",   
+                    "Área derecho penal.",   
+                    "Área derecho laboral.",   
+                    "Área previsional.",   
+                    "Área contrataciones del Estado."
+                ]
+            }
+        ]
+    }]
+}
