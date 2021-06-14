@@ -179,9 +179,10 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2020 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
+            Todos los derechos reservados &copy; 2021 by
+            {" "}
+            <a href="https://ruwaytech.com/" rel="nofollow">
+                RUWAYTECH S.R.L
             </a>
           </p>
         </div>

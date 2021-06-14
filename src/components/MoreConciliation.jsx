@@ -29,7 +29,6 @@ const MoreConciliation = (props) => {
                                     <img src={value.img} alt='...' className='team-img'/> 
                                     <div className='caption'>
                                         <h4>{value.title}</h4>
-                                        <h6 className="text-center">PRECIO: {/* {value.content} */}</h6>
                                     </div>
                                 </div>
                                 <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message}`}>
