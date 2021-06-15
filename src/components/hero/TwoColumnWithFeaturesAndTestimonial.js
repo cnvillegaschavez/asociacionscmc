@@ -45,7 +45,7 @@ export default ({
   primaryButtonUrl = "#services",
   primaryButtonText = "Servicios",
   buttonRounded = true,
-  features = ["ARBITRAJE", "CONCILIACIÓN EXTRAJUDICIAL", 'CONCILIACIÓN PARA MYPE'],
+  features = ["ARBITRAJE", "CONCILIACIÓN EXTRAJUDICIAL"],
   testimonial = {
     quote: "SOLUCIÓN DE CONFLICTOS Y MEDIACIÓN DE CONTROVERSIAS.",
     customerName: "ASOCIACIÓN SCMC",
@@ -58,7 +58,7 @@ export default ({
       <NavLink href="/#services">Servicios de conciliación</NavLink>
       <NavLink href="/#virtual">Servicio virtual</NavLink>
       <NavLink href="/#testimonials">Nosotros</NavLink>
-      <NavLink href="/#location">Beneficios</NavLink>
+      <NavLink href="/#location">Ubicación</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink css={buttonRoundedCss} href="/#contact-us">
