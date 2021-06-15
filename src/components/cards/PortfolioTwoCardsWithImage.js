@@ -9,6 +9,10 @@ import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin
 import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 
+
+import nosotros from '../../images/nosotros.jpg';
+
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
@@ -22,7 +26,7 @@ const CardColumn = tw(Column)`w-full md:w-1/2 xl:w-3/12 mt-16 xl:mt-0 xl:last:ml
 
 const HeadingInfoContainer = tw.div`text-center xl:text-left max-w-lg xl:max-w-none mx-auto xl:mx-0`;
 const HeadingTitle = tw(SectionHeading)`mt-4 xl:text-left leading-tight`;
-const HeadingDescription = tw.p`text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-8`;
+const HeadingDescription = tw.p`text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-8 text-justify`;
 const PrimaryLink = styled(PrimaryLinkBase)`
   ${tw`inline-flex justify-center xl:justify-start items-center mt-8 text-lg`}
   svg {
@@ -60,10 +64,10 @@ export default ({
   subheading = "¿QUES ES EL CENTRO DE CONCILIACIÓN EX LEGE?",
   headingHtmlComponent = (
     <>
-      We've done some <span tw="text-primary-500">amazing projects.</span>
+     ¿Que es el centro de conciliación <span tw="text-primary-500">EX LEGE?</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
+  description = "EX LEGE es un Centro de Conciliación de Lima debidamente autorizado por el Ministerio de Justicia y Derechos Humanos que proporciona servicios de conciliación extrajudicial con altos estándares de calidad, seguridad y confidencialidad, gracias a su filosofía basada en la innovación, desarrollo, capacitación constante y valores éticos.",
   linkText = "View all Projects",
   cardLinkText = "Read Case Study",
   textOnLeft = false
@@ -92,17 +96,22 @@ export default ({
     <Container>
       <Content>
         <ThreeColumn>
+
           <HeadingColumn textOnLeft={textOnLeft}>
             <HeadingInfoContainer>
-              <Subheading>{subheading}</Subheading>
+              {/* <Subheading>{subheading}</Subheading> */}
               <HeadingTitle>{headingHtmlComponent}</HeadingTitle>
               <HeadingDescription>{description}</HeadingDescription>
-              <PrimaryLink>
+              {/* <PrimaryLink>
                 {linkText} <ArrowRightIcon />
-              </PrimaryLink>
+              </PrimaryLink> */}
             </HeadingInfoContainer>
           </HeadingColumn>
-          {cards.map((card, index) => (
+
+          <img src={nosotros} alt=""/>
+
+
+         {/*  {cards.map((card, index) => (
             <CardColumn key={index}>
               <Card>
                 <CardImage imageSrc={card.imageSrc} />
@@ -124,7 +133,9 @@ export default ({
                 </CardText>
               </Card>
             </CardColumn>
-          ))}
+          ))} */}
+
+
         </ThreeColumn>
       </Content>
     </Container>
