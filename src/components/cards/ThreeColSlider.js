@@ -8,7 +8,7 @@ import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin
 import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
-import { ReactComponent as WhatsappIcon } from "feather-icons/dist/icons/whatsapp.svg";
+import WhatsappIcon from "../../images/whatsapp.png";
 
 import conciliacionMYPE from '../../images/conciliacionMYPE.jpg';
 import conciliacionEmpresa from '../../images/conciliacionEmpresa.jpg';
@@ -217,11 +217,11 @@ export default () => {
                 <Description>{card.description}</Description>
               </TextInfo>
               <PrimaryButton>
-                <IconWithTextButton>
-                    CONTACTAR
-                    <IconContainerButton>
-                      <WhatsappIcon />
+                <IconWithTextButton>                    
+                    <IconContainerButton style={ { marginRight: 15 } }>
+                      <img src={WhatsappIcon} style={ {width: 25 } }/>
                     </IconContainerButton>
+                    CONTACTAR
                 </IconWithTextButton>
               </PrimaryButton>
             </Card>
