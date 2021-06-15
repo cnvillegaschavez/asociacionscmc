@@ -32,7 +32,7 @@ export default ({
      ¿Que es el centro de conciliación <span tw="text-primary-500">EX LEGE?</span>
     </>
   ),
-  description = "EX LEGE es un Centro de Conciliación de Lima debidamente autorizado por el Ministerio de Justicia y Derechos Humanos que proporciona servicios de conciliación extrajudicial con altos estándares de calidad, seguridad y confidencialidad, gracias a su filosofía basada en la innovación, desarrollo, capacitación constante y valores éticos.",
+  description = "EX LEGE es un Centro de Conciliación de Cusco debidamente autorizado por el Ministerio de Justicia y Derechos Humanos que proporciona servicios de conciliación extrajudicial con altos estándares de calidad, seguridad y confidencialidad, gracias a su filosofía basada en la innovación, desarrollo, capacitación constante y valores éticos.",
   textOnLeft = false
 }) => {
   const cards = [
