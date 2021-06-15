@@ -9,6 +9,7 @@ export const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container contentainer-nav'>
+
         <div className='navbar-header'>
           <button
             type='button'
@@ -30,14 +31,9 @@ export const Navigation = (props) => {
                 <img src='img/logo.png' alt='...' className='logo'/> 
             </Link>
           </div>
-          
-          
         </div>
 
-        <div
-          className='collapse navbar-collapse'
-          id='bs-example-navbar-collapse-1'
-        >
+        <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
           <ul className='nav navbar-nav navbar-right'>
             <li>
               <a href='#services-conciliation' className='page-scroll'>
@@ -69,6 +65,7 @@ export const Navigation = (props) => {
             </a>
           </ul>
         </div>
+      
       </div>
     </nav>
   )

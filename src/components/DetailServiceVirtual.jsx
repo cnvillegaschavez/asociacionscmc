@@ -43,7 +43,7 @@ const DetailServiceVirtual = (props) => {
                                                 </div>
                                                 <div className="col-xs-5">
                                                     <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message}`}>
-                                                        <button className="btn-custom">CONTRATAR</button>
+                                                        <button className="btn-custom">CONTACTAR <i class="fa fa-whatsapp"/></button>
                                                     </a>
                                                 </div>
                                             </div>
