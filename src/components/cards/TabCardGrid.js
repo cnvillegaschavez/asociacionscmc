@@ -64,7 +64,7 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 export default ({
   heading = "Servicio virtual",
   tabs = {
-    'En Línea': [
+    'Virtual': [
       {
         imageSrc: mediacionOnline,
         title: "Mediación Online",
@@ -111,7 +111,9 @@ export default ({
    */
   const tabsKeys = Object.keys(tabs);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
-
+  const phone = "+51962212903";
+  const message = `Hola, quisiera consultar acerca del servicio de `;
+  
   return (
     <Container>
       <ContentWithPaddingXl>
@@ -168,8 +170,13 @@ export default ({
                         }
                       }}
                       transition={{ duration: 0.3 }}
-                    >
-                      <CardButton>Contactar</CardButton>
+                    >                      
+                        
+                          <CardButton>    
+                          <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${card.title}`}>
+                          Contactar
+                          </a>
+                          </CardButton>
                     </CardHoverOverlay>
                   </CardImageContainer>
                   <CardText>

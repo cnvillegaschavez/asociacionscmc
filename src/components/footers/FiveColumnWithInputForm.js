@@ -55,16 +55,16 @@ export default () => {
             <ColumnHeading>INICIO</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="/#services">Servicios</Link>
+                <Link href="/#services">Servicios de conciliación</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/#we-team">Nosotros</Link>
+                <Link href="/#virtual">Servicio virtual</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/#contact-us">Contactanos</Link>
+                <Link href="/#testimonials">Nosotros</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/#testimonials">Clientes</Link>
+                <Link href="/#location">Ubicación</Link>
               </LinkListItem>
             </LinkList>
           </Column>
