@@ -19,43 +19,11 @@ const HeadingColumn = styled(Column)(props => [
   tw`w-full xl:w-5/12`,
   props.textOnLeft ? tw`xl:order-first` : tw`xl:order-last xl:ml-12 xl:mr-0`
 ]);
-const CardColumn = tw(Column)`w-full md:w-1/2 xl:w-3/12 mt-16 xl:mt-0 xl:last:ml-auto`;
 
 const HeadingInfoContainer = tw.div`text-center xl:text-left max-w-lg xl:max-w-none mx-auto xl:mx-0`;
 const HeadingTitle = tw(SectionHeading)`mt-4 xl:text-left leading-tight`;
 const HeadingDescription = tw.p`text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-8 text-justify`;
-const PrimaryLink = styled(PrimaryLinkBase)`
-  ${tw`inline-flex justify-center xl:justify-start items-center mt-8 text-lg`}
-  svg {
-    ${tw`ml-2 w-5 h-5`}
-  }
-`;
 
-const Card = tw.div`mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs`;
-const CardImage = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`h-80 bg-cover bg-center rounded`
-]);
-
-const CardText = tw.div`mt-4`;
-
-const CardHeader = tw.div`flex justify-between items-center`;
-const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
-const CardType = tw.div`font-semibold text-sm text-gray-600`;
-
-const CardTitle = tw.h5`text-xl mt-4 font-bold`;
-
-const CardMeta = styled.div`
-  ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
-`;
-
-const CardMetaFeature = styled.div`
-  ${tw`flex items-center mt-4 mr-4 last:mr-0`}
-  svg {
-    ${tw`w-5 h-5 mr-1`}
-  }
-`;
-const CardAction = tw(PrimaryButtonBase)`w-full mt-6`;
 
 export default ({
   subheading = "¿QUES ES EL CENTRO DE CONCILIACIÓN EX LEGE?",
@@ -65,8 +33,6 @@ export default ({
     </>
   ),
   description = "EX LEGE es un Centro de Conciliación de Lima debidamente autorizado por el Ministerio de Justicia y Derechos Humanos que proporciona servicios de conciliación extrajudicial con altos estándares de calidad, seguridad y confidencialidad, gracias a su filosofía basada en la innovación, desarrollo, capacitación constante y valores éticos.",
-  linkText = "View all Projects",
-  cardLinkText = "Read Case Study",
   textOnLeft = false
 }) => {
   const cards = [

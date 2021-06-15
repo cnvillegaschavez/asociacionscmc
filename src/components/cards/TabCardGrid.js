@@ -70,8 +70,8 @@ export default ({
         title: "Mediación Online",
         content: "Servicio para resolver conflictos en línea, por el cual dos o más personas, con la ayuda de un mediador alcanzan un acuerdo mutuamente satisfactorio.",
         price: "",
-        rating: "5.0",
-        reviews: "87",
+        rating: "",
+        reviews: "",
         url: "#"
       },
       {
@@ -79,8 +79,8 @@ export default ({
         title: "Arbitraje Virtual",
         content: "Servicio enfocado en las micro y pequeñas empresas que les permite obtener soluciones vinculantes, rápidas y económicas para conflictos comerciales.",
         price: "",
-        rating: "4.8",
-        reviews: "32",
+        rating: "",
+        reviews: "",
         url: "#"
       },
       {
@@ -88,8 +88,17 @@ export default ({
         title: "Abogado Virtual",
         content: "Servicio de asesoría y defensa legal virtual ante los tribunales de justicia del Perú eficiente, eficaz y con dedicación a sus clientes.",
         price: "",
-        rating: "4.9",
-        reviews: "89",
+        rating: "",
+        reviews: "",
+        url: "#"
+      },
+      {
+        imageSrc: mediacionOnline,
+        title: "Charlas Virtuales",
+        content: "Organizamos charlas virtuales dirigidos a publico en general, con el fin de informar sobre los términos legales.",
+        price: "",
+        rating: "",
+        reviews: "",
         url: "#"
       }
     ]
@@ -145,7 +154,7 @@ export default ({
                         <StarIcon />
                         {card.rating}
                       </CardRating>
-                      <CardReview>({card.reviews})</CardReview>
+                      <CardReview>{card.reviews}</CardReview>
                     </CardRatingContainer>
                     <CardHoverOverlay
                       variants={{
@@ -160,7 +169,7 @@ export default ({
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <CardButton>Buy Now</CardButton>
+                      <CardButton>Contactar</CardButton>
                     </CardHoverOverlay>
                   </CardImageContainer>
                   <CardText>
