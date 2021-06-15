@@ -57,7 +57,7 @@ const CardMetaFeature = styled.div`
 const CardAction = tw(PrimaryButtonBase)`w-full mt-6`;
 
 export default ({
-  subheading = "Our Portfolio",
+  subheading = "¿QUES ES EL CENTRO DE CONCILIACIÓN EX LEGE?",
   headingHtmlComponent = (
     <>
       We've done some <span tw="text-primary-500">amazing projects.</span>

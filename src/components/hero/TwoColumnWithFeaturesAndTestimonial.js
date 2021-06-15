@@ -45,7 +45,7 @@ export default ({
   primaryButtonUrl = "#services",
   primaryButtonText = "Servicios",
   buttonRounded = true,
-  features = ["ARBITRAJE", "CONCILIACIÓN EXTRAJUDICIAL"],
+  features = ["ARBITRAJE", "CONCILIACIÓN EXTRAJUDICIAL", 'CONCILIACIÓN PARA MYPE'],
   testimonial = {
     quote: "SOLUCIÓN DE CONFLICTOS Y MEDIACIÓN DE CONTROVERSIAS.",
     customerName: "ASOCIACIÓN SCMC",
@@ -55,11 +55,10 @@ export default ({
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#services">Mediación Online</NavLink>
-      <NavLink href="/#we-team">Arbitraje Virtual</NavLink>
-      <NavLink href="/#testimonials">Abogado Virtual</NavLink>
-      <NavLink href="/#location">Conciliación</NavLink>
-      <NavLink href="/#contact-us">Curso de Conciliación Extrajudicial</NavLink>
+      <NavLink href="/#services">Servicios de conciliación</NavLink>
+      <NavLink href="/#virtual">Servicio virtual</NavLink>
+      <NavLink href="/#testimonials">Nosotros</NavLink>
+      <NavLink href="/#location">Beneficios</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink css={buttonRoundedCss} href="/#contact-us">

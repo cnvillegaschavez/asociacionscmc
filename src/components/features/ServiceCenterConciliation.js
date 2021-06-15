@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
-import ListCard from "./ListCard";
 import { Route, Switch, useRouteMatch } from 'react-router';
 import a from '../../images/A.jpg';
 import a1 from '../../images/A1.jpg';
@@ -81,6 +80,11 @@ import j10 from '../../images/J10.jpg';
 import j11 from '../../images/J11.jpg';
 import j12 from '../../images/J12.jpg';
 import j13 from '../../images/J13.jpg';
+import TabCardGrid from 'components/cards/TabCardGrid';
+import ThreeColSlider from 'components/cards/ThreeColSlider';
+import PortfolioTwoCardsWithImage from 'components/cards/PortfolioTwoCardsWithImage';
+import ProfileThreeColGrid from 'components/cards/ProfileThreeColGrid';
+import ThreeColContactDetails from 'components/cards/ThreeColContactDetails';
 
 const useStyle = makeStyles({
     title: {    
@@ -516,21 +520,10 @@ const ServiceCenterConciliation = () => {
 
     return (
         <Fragment >
-            <Typography className={classes.title} align="center">
-                Servicios de Centro de Conciliación para ti
-            </Typography>
-            <ListCard data={data}/>
             
             
-            
-            {/* <Switch>
-                <Route exact path={path}>
-                    
-                </Route>
-                <Route exact path={`${path}/:${data.title}`} component={prueba}>
-                   
-                </Route>
-            </Switch> */}
+            <ThreeColSlider/>
+           
         </Fragment>
     )
 }

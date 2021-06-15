@@ -3,12 +3,11 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "./components/hero/TwoColumnWithFeaturesAndTestimonial.js";
-import Features from "./components/features/ThreeColWithSideImage.js";
 import MainFeature from "./components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
-import ServiceCenterConciliation from "./components/features/ServiceCenterConciliation.js";
-import FeatureStats from "./components/features/ThreeColCenteredStatsPrimaryBackground.js";
+import ThreeColSlider from 'components/cards/ThreeColSlider';
+import TabCardGrid from 'components/cards/TabCardGrid'
 import MapContainer from "./components/maps/MapContainer";
-import Testimonial from "./components/testimonials/TwoColumnWithImageAndRating.js";
+import PortfolioTwoCardsWithImage from "./components/cards/PortfolioTwoCardsWithImage";
 import FAQ from "./components/faqs/SingleCol.js";
 import SimpleContactUs from "./components/forms/SimpleContactUs.js";
 import Footer from "./components/footers/FiveColumnWithInputForm.js";
@@ -18,12 +17,12 @@ const HighlightedText = tw.span`text-primary-500`
 export default () => {
     return (
         <AnimationRevealPage>
-            <Hero />
-            <ServiceCenterConciliation />
+            <Hero />            
             <div id='services'>
-                <Features
-                    heading={<> Servicios<HighlightedText> bajo los rubros</HighlightedText></>}
-                />
+                <ThreeColSlider />
+            </div>
+            <div id='virtual'>
+                <TabCardGrid />
             </div>
             <div id='we-team'>
                 <MainFeature
@@ -31,9 +30,7 @@ export default () => {
                 />
             </div>
             <div id='testimonials'>
-                <Testimonial
-                    heading={<>Nuestros <HighlightedText> Clientes</HighlightedText></>}
-                />
+                <PortfolioTwoCardsWithImage/>
             </div>
             <FAQ
                 heading={<>Algunas <HighlightedText>preguntas comunes</HighlightedText></>}
