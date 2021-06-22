@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -12,7 +12,6 @@ import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/che
 import WhatsappIcon from "../../images/whatsapp.png";
 import CollapseCardGrid from "./CollapseCardGrid";
 import Chevron from './Chevron';
-
 import ConciliacionMYPE from '../../images/ConciliacionMYPE.jpg';
 import ConciliacionResoluciónContrato from '../../images/ConciliacionResoluciónContrato.jpg';
 import ConciliacionCobrarDeudasPrestacionServicios from '../../images/ConciliacionCobrarDeudasPrestacionServicios.jpg';
@@ -151,6 +150,7 @@ export default () => {
       description: "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
       locationText: "En Oficina",
       rating: "",
+      isActive: false,
       more: [
         {
             imageSrc: ConciliacionResoluciónContrato,
@@ -205,6 +205,7 @@ export default () => {
       description: "Servicio de conciliación extrajudicial de conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
       locationText: "En Oficina",
       rating: "",
+      isActive: false,
       more: [
         {
             imageSrc: ConciliacionPensionAlimentos,
@@ -277,6 +278,7 @@ export default () => {
       description: "Servicio orientado en el sector empresarial con el objeto de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
       locationText: "En Oficina",
       rating: "",
+      isActive: false,
       more: [
         {
             imageSrc: ConciliacionCobrarDeudasPrestacionServicios,
@@ -313,6 +315,7 @@ export default () => {
       description: "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
       locationText: "En Oficina",
       rating: "",
+      isActive: false,
       more: [
         {
             imageSrc: ConciliacionRegimenVisitasConExternamiento,
@@ -376,6 +379,7 @@ export default () => {
       description: "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",
       locationText: "En Oficina",
       rating: "",
+      isActive: false,
       more: [
         {
             imageSrc: ConciliacionPensionAlimentos,
@@ -430,6 +434,7 @@ export default () => {
         description: "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",
         locationText: "En Oficina",
         rating: "",
+        isActive: false,
         more: [
         {
             imageSrc: ConciliacionDivisionParticionBienes,
@@ -529,6 +534,7 @@ export default () => {
         description: "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",
         locationText: "En Oficina",
         rating: "",
+        isActive: false,
         more: [
         {
             imageSrc: ConciliacionLiquidacionesContratacionesEstado,
@@ -610,6 +616,7 @@ export default () => {
         description: "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",
         locationText: "En Oficina",
         rating: "",
+        isActive: false,
         more: [
         {
             imageSrc: ConciliacionPensionAlimentos,
@@ -637,6 +644,7 @@ export default () => {
         description: "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
         locationText: "En Oficina",
         rating: "",
+        isActive: false,
         more: [
         {
             imageSrc: ConciliacionDivisionParticionBienes,
@@ -736,6 +744,7 @@ export default () => {
         description: "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
         locationText: "En Oficina",
         rating: "",
+        isActive: false,
         more: [
         {
             imageSrc: ConciliacionPensionAlimentos,
@@ -858,26 +867,27 @@ export default () => {
       }
   ]
    
-  const [active, setActive] = useState("");
-  const [height, setHeight] = useState("0px");
-  const [rotate, setRotate] = useState("accordion__icon");
-  const collapse = useRef(null);
-
-
+  
   const [heading, setHeading] = useState("");
+  const [allCards, setAllCards] = useState(cards);
+  const [currentCard, setCurrentCard] = useState(null);
   const [tabs, setTabs]= useState({
-      Virtual: [],
+      '+ Servicios': [],
   });
 
-  const toogleAccordion = (title, more) => {
-    setHeading(title);
-    setTabs({...tabs, Virtual: more});
+  const toogleAccordion = (card) => {
+    setHeading(card.title);
+    setTabs({'+ Servicios': card.more});
 
-
-    setActive(active === "" ? "active" : ""); 
-    setHeight(active === "active" ? "0px" : `${collapse.current.scrollHeight}px`);
-    setRotate(active === "active" ? "accordion__icon" : "accordion__icon rotate");
-    console.log(collapse.current.scrollHeight);    
+    allCards.map(item=>{
+      item.isActive = false;
+      if(item.title===card.title){
+        item.isActive = true;
+        setCurrentCard(item);
+      }        
+    });
+    
+    setAllCards(allCards);
   }
   
   return (
@@ -892,7 +902,7 @@ export default () => {
           </Controls>
         </HeadingWithControl>
         <CardSlider ref={setSliderRef} {...sliderSettings}>
-          {cards.map((card, index) => (
+          {allCards.map((card, index) => (
             <Card key={index}>
 
               <CardImage imageSrc={card.imageSrc} />
@@ -914,31 +924,31 @@ export default () => {
                  
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
+                  <IconWithText>
+                    {card.isActive? <Chevron className="accordion__icon rotate" width={10} fill={"#777"} />: <Chevron width={10} fill={"#777"}  />}
+                    
+                     <Text style={ { cursor: 'pointer' } } onClick={() => toogleAccordion(card)}>Ver más</Text>
+                  </IconWithText>
               </TextInfo>
               
-            
-              <PrimaryButton onClick={() => toogleAccordion(card.title, card.more)}>
-                {/* <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${card.title}`}> */}
+              <PrimaryButton>
                     <IconWithTextButton>                    
                         <IconContainerButton style={ { marginRight: 15 } }>
+                          <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${card.title}`}> 
                             <img src={WhatsappIcon} alt="cargando imagen..." style={ {width: 25 } }/>
+                            </a>
                         </IconContainerButton>
                         CONTACTAR
-
-                        <Chevron className={`${rotate}`} width={10} fill={"#777"} />
-                    </IconWithTextButton>                     
-                {/* </a>  */}               
+                    </IconWithTextButton>
               </PrimaryButton>
             </Card>
           ))}
         </CardSlider>
-        
-        <div ref={collapse} style={{ maxHeight: `${height}` }} className="accordion__content">
+       {
+         currentCard!=null&& currentCard.isActive &&
             <CollapseCardGrid heading={heading} tabs={tabs}/>
-        </div>
-       
-      </Content>
-      
+       }       
+      </Content>      
 
     </Container>
   );
