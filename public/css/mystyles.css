@@ -1,0 +1,112 @@
+.main .modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-modal:checked ~ .modal{
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: all 500ms ease;
+    position: relative;
+    transform: translateY(-30%);
+}
+#btn-modal:checked ~ .modal .contenedor{
+    transform: translateY(0%);
+}
+.contenedor header{
+    padding: 10px;
+    background: rgb(221, 30, 30);
+    color: #ffffff;
+}
+.contenedor label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#btn-modal{
+    display: none;
+}
+
+.lbl-modal{
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+/* .accordion__section{
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .accordion {
+    background-color: rgb(243, 239, 239);
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    transition: background-color 0.6s ease;
+} */
+
+/* .accordion:hover,
+.active{
+    background-color:rgb(223, 223, 223);
+} */
+
+/* .accordion__title{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+} */
+
+.accordion__icon{
+    margin-left: 20px;
+    transition: transform 0.6s ease;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+
+.accordion__content{
+    height: 800vh;
+    background-color: white;
+    /* overflow: hidden; */
+    transition: 0.6s ease;
+}
+/* .accordion__text{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 18px;
+} */
+
+
+

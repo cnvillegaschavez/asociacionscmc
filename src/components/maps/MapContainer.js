@@ -12,7 +12,6 @@ const initialCenter= {
 
 const ColumnContainer = tw.div`lg:w-1/2 max-w-lg`
 const TextContainer = tw(ColumnContainer)`text-2xl sm:text-4xl font-bold`;
-const Subheading = tw.h6`text-primary-500 opacity-75`;
 const Heading = tw.h5`text-primary-500`;
 
 const subheading = 'Ubicación';

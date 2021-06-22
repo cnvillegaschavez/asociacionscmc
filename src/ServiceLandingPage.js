@@ -5,7 +5,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "./components/hero/TwoColumnWithFeaturesAndTestimonial.js";
 import MainFeature from "./components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import ThreeColSlider from 'components/cards/ThreeColSlider';
-import TabCardGrid from 'components/cards/TabCardGrid'
+import TabCardGrid from 'components/cards/TabCardGrid';
 import MapContainer from "./components/maps/MapContainer";
 import PortfolioTwoCardsWithImage from "./components/cards/PortfolioTwoCardsWithImage";
 import FAQ from "./components/faqs/SingleCol.js";
@@ -20,6 +20,7 @@ export default () => {
             <Hero />            
             <div id='services'>
                 <ThreeColSlider />
+                {/* <CollapseCardGrid /> */}
             </div>
             <div id='virtual'>
                 <TabCardGrid />

@@ -11,6 +11,10 @@ export default function App() {
         <Route exact path="/">
           <ServiceLandingPage />
         </Route>
+
+        {/* <Route exact path="/:title">
+
+        </Route> */}
         
       </Switch>
     </Router>
