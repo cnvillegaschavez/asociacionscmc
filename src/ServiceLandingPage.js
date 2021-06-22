@@ -20,7 +20,6 @@ export default () => {
             <Hero />            
             <div id='services'>
                 <ThreeColSlider />
-                {/* <CollapseCardGrid /> */}
             </div>
             <div id='virtual'>
                 <TabCardGrid />

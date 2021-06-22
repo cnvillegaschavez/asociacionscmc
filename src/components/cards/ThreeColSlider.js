@@ -925,7 +925,7 @@ export default () => {
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
                   <IconWithText>
-                    {card.isActive? <Chevron className="accordion__icon rotate" width={10} fill={"#777"} />: <Chevron width={10} fill={"#777"}  />}
+                    {card.isActive? <Chevron className="rotate" width={10} fill={"#777"} />: <Chevron width={10} fill={"#777"}  />}
                     
                      <Text style={ { cursor: 'pointer' } } onClick={() => toogleAccordion(card)}>Ver más</Text>
                   </IconWithText>
