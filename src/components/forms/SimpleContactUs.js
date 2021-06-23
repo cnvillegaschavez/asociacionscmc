@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
+import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg";
+import sendEmail from "../../api/userApi";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -35,33 +36,99 @@ const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
 
 export default () => {
+
+  const msg = {
+    to: ['sathielx9@gmail.com', 'centrodeconciliacionexlege@asociacionscmc.org','cnvillch@gmail.com'], 
+    from: 'centrodeconciliacionexlege@asociacionscmc.org', 
+    subject: 'Mesa de partes virtual - Pagina Web',
+    text: 'x',
+    html: '<h1>Esquema 7</h1>',
+  }
+
+  const [values, setValues] = useState(msg);
+  const [messageHtml, setMessageHtml] = useState({
+      name: '',
+      email: '',
+      message: '',
+  })
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setMessageHtml({ ...messageHtml, [name]: value });   
+    
+  };
+
+  const onSendEmail = (e) => {
+    e.preventDefault();
+    const newMessageHtml = {
+        name: messageHtml.name,
+        email: messageHtml.email,
+        message: messageHtml.message, 
+    }
+    const miHtml = esqueletoHtml(newMessageHtml);
+
+    const newValues = {
+        to: ['sathielx9@gmail.com', 'centrodeconciliacionexlege@asociacionscmc.org','cnvillch@gmail.com'], 
+        from: 'centrodeconciliacionexlege@asociacionscmc.org', 
+        subject: 'Mesa de partes virtual - Pagina Web',
+        text: 'x',
+        html: miHtml,
+    }
+
+    setValues(newValues);
+    console.log(values);
+    //sendEmail(values); 
+  }
+
+  const esqueletoHtml = (messageHtml) => {
+    return (`
+      <table>
+        <tbody>
+          <tr>
+            <td>Nombres:</td>
+            <td>${messageHtml.name}</td>
+          </tr>
+          <tr>
+            <td>Correo:</td>
+            <td>${messageHtml.email}</td>
+          </tr>
+          <tr>
+            <td>Mensaje:</td>
+            <td>${messageHtml.message}</td>
+          </tr>
+        </tbody>
+      </table>
+    `)
+  }
+
+
   return (
     <Container>
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <h2>Mesa de partes</h2>
-            <form action="#">
+            <form onSubmit={onSendEmail}>
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="name-input">Nombre y Apellidos.</Label>
-                    <Input id="name-input" required type="text" name="name" placeholder="Marilu" />
+                    <Label htmlFor="name">Nombre y Apellidos.</Label>
+                    <Input id="name" onChange={handleChange} required type="text" name="name" placeholder="Marilu" />
                   </InputContainer>
                   <InputContainer>
-                    <Label htmlFor="email-input">Correo electrónico:</Label>
-                    <Input id="email-input" required type="email" name="email" placeholder="correo@mail.com" />
+                    <Label htmlFor="email">Correo electrónico:</Label>
+                    <Input id="email" onChange={handleChange} required type="email" name="email" placeholder="correo@mail.com" />
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
-                    <Label htmlFor="name-input">Mensaje</Label>
-                    <TextArea id="message-input" required name="message" placeholder="A continuación, describo mi caso ..."/>
+                    <Label htmlFor="message">Mensaje</Label>
+                    <TextArea id="message" onChange={handleChange} required name="message" placeholder="A continuación, describo mi caso ..."/>
                   </InputContainer>
                 </Column>
               </TwoColumn>
 
-              <SubmitButton type="submit" value="Submit">Enviar</SubmitButton>
+              <SubmitButton type="submit">Enviar</SubmitButton>
             </form>
           </div>
           <SvgDotPattern1 />
