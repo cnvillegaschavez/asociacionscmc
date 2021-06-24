@@ -37,15 +37,6 @@ const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform
 
 export default () => {
 
-  const msg = {
-    to: ['sathielx9@gmail.com', 'centrodeconciliacionexlege@asociacionscmc.org','cnvillch@gmail.com'], 
-    from: 'centrodeconciliacionexlege@asociacionscmc.org', 
-    subject: 'Mesa de partes virtual - Pagina Web',
-    text: 'x',
-    html: '<h1>Esquema 7</h1>',
-  }
-
-  const [values, setValues] = useState(msg);
   const [messageHtml, setMessageHtml] = useState({
       name: '',
       email: '',
@@ -60,45 +51,20 @@ export default () => {
 
   const onSendEmail = (e) => {
     e.preventDefault();
-    const newMessageHtml = {
-        name: messageHtml.name,
-        email: messageHtml.email,
-        message: messageHtml.message, 
-    }
-    const miHtml = esqueletoHtml(newMessageHtml);
+    const miHtml = bodyHtml(messageHtml);
 
     const newValues = {
         to: ['sathielx9@gmail.com', 'centrodeconciliacionexlege@asociacionscmc.org','cnvillch@gmail.com'], 
         from: 'centrodeconciliacionexlege@asociacionscmc.org', 
         subject: 'Mesa de partes virtual - Pagina Web',
-        text: 'x',
+        text: 'Content',
         html: miHtml,
     }
-
-    setValues(newValues);
-    console.log(values);
-    //sendEmail(values); 
+    sendEmail(newValues); 
   }
 
-  const esqueletoHtml = (messageHtml) => {
-    return (`
-      <table>
-        <tbody>
-          <tr>
-            <td>Nombres:</td>
-            <td>${messageHtml.name}</td>
-          </tr>
-          <tr>
-            <td>Correo:</td>
-            <td>${messageHtml.email}</td>
-          </tr>
-          <tr>
-            <td>Mensaje:</td>
-            <td>${messageHtml.message}</td>
-          </tr>
-        </tbody>
-      </table>
-    `)
+  const bodyHtml = (messageHtml) => {
+    return (`<table><tbody><tr><td>Nombres:</td><td>${messageHtml.name}</td></tr><tr><td>Correo:</td><td>${messageHtml.email}</td></tr><tr><td>Mensaje:</td><td>${messageHtml.message}</td></tr></tbody></table>`)
   }
 
 
