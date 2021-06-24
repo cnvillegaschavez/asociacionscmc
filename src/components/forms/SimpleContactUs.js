@@ -36,7 +36,8 @@ const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
 
 export default () => {
-
+  const [messageConfirm, setMessageConfirm] = useState();
+  const [messageColor, setMessageColor] = useState();
   const [messageHtml, setMessageHtml] = useState({
       name: '',
       email: '',
@@ -46,7 +47,6 @@ export default () => {
   const handleChange = (e) => {
     const {name, value} = e.target;
     setMessageHtml({ ...messageHtml, [name]: value });   
-    
   };
 
   const onSendEmail = (e) => {
@@ -60,7 +60,16 @@ export default () => {
         text: 'Content',
         html: miHtml,
     }
-    sendEmail(newValues); 
+
+    sendEmail(newValues).then(() => {
+        setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible');
+        setMessageColor('#FFFFFF');
+        e.target.reset();
+    })
+    .catch((error) => {
+        setMessageConfirm('No se pudo enviar sus datos, intente más tarde');
+        setMessageColor('#E3B24B');
+    });
   }
 
   const bodyHtml = (messageHtml) => {
@@ -95,6 +104,8 @@ export default () => {
               </TwoColumn>
 
               <SubmitButton type="submit">Enviar</SubmitButton>
+              <h1 style={{color: messageColor}}>{messageConfirm}</h1>
+
             </form>
           </div>
           <SvgDotPattern1 />
