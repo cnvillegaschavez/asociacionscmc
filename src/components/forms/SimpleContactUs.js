@@ -51,17 +51,7 @@ export default () => {
 
   const onSendEmail = (e) => {
     e.preventDefault();
-    const miHtml = bodyHtml(messageHtml);
-
-    const newValues = {
-        to: ['sathielx9@gmail.com', 'centrodeconciliacionexlege@asociacionscmc.org','cnvillch@gmail.com'], 
-        from: 'centrodeconciliacionexlege@asociacionscmc.org', 
-        subject: 'Mesa de partes virtual - Pagina Web',
-        text: 'Content',
-        html: miHtml,
-    }
-
-    sendEmail(newValues).then(() => {
+    sendEmail(messageHtml).then(() => {
         setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible');
         setMessageColor('#FFFFFF');
         e.target.reset();
@@ -71,11 +61,6 @@ export default () => {
         setMessageColor('#E3B24B');
     });
   }
-
-  const bodyHtml = (messageHtml) => {
-    return (`<table><tbody><tr><td>Nombres:</td><td>${messageHtml.name}</td></tr><tr><td>Correo:</td><td>${messageHtml.email}</td></tr><tr><td>Mensaje:</td><td>${messageHtml.message}</td></tr></tbody></table>`)
-  }
-
 
   return (
     <Container>

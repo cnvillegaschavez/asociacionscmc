@@ -1,7 +1,11 @@
-const sgMail = require('@sendgrid/mail');
+const axios = require('axios');
 
-console.log(process.env.SENDGRID_API_KEY);
+const instanceAxios = axios.create({
+  baseURL: "http://localhost:3002/",
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': '',
+  }
+});
 
-const instanceEmial = sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-export default instanceEmial;
+export default instanceAxios;
