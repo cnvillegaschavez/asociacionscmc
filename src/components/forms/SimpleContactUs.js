@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg";
 import sendEmail from "../../api/userApi";
+import emailjs from 'emailjs-com';
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -49,6 +50,7 @@ export default () => {
     setMessageHtml({ ...messageHtml, [name]: value });   
   };
 
+  /* Work with SENDGRID */
   const onSendEmail = (e) => {
     e.preventDefault();
     sendEmail(messageHtml).then(() => {
@@ -62,13 +64,28 @@ export default () => {
     });
   }
 
+  /* Work with EmailJS */
+  const onSendEmailJS =(e) =>{
+    e.preventDefault();
+    emailjs.sendForm('service_4eftzhy', 'template_osenj4a', e.target, 'user_gces61yfrtx4j8VJ8mDOy').then(resp => {
+        console.log(resp);
+        setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible');
+        setMessageColor('#FFFFFF');
+        e.target.reset();
+    }).catch(err => {
+        console.log(err);
+        setMessageConfirm('No se pudo enviar sus datos, intente más tarde');
+        setMessageColor('#E3B24B');
+    });
+  }
+
   return (
     <Container>
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <h2>Mesa de partes</h2>
-            <form onSubmit={onSendEmail}>
+            <form onSubmit={onSendEmailJS}>
               <TwoColumn>
                 <Column>
                   <InputContainer>
