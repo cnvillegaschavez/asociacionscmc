@@ -11,7 +11,8 @@ import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 import mediacionOnline from '../../images/mediacionOnline.jpg';
 import arbitrajeVirtual from '../../images/arbitrajeVirtual.jpg';
-import abogadoVirtual from '../../images/abogadoVirtual.jpeg';
+import abogadoVirtual from '../../images/abogadoVirtual.jpg';
+import charlasVirtuales from '../../images/charlasVirtuales.jpg';
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -93,7 +94,7 @@ export default ({
         url: "#"
       },
       {
-        imageSrc: mediacionOnline,
+        imageSrc: charlasVirtuales,
         title: "Charlas Virtuales",
         content: "Organizamos charlas virtuales dirigidos a publico en general, con el fin de informar sobre los términos legales.",
         price: "",
