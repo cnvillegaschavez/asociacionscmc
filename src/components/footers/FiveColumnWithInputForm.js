@@ -83,7 +83,7 @@ export default () => {
             <ColumnHeading>CONTACTO</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="tel:+51 962 212 903">962 212 903</Link>
+                <Link href="tel:+51 963 559 100">963 559 100</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="mailto:exlegecentrodeconciliacion@gmail.com">exlegecentrodeconciliacion@gmail.com</Link>
