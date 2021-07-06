@@ -1,10 +1,20 @@
+import Constants from './../util/constants';
 const axios = require('axios');
 
+
+let authorization='';
+if(sessionStorage.getItem(Constants.tokenName)){
+  let user =  JSON.parse(sessionStorage.getItem(Constants.userInfo));
+  if ( user.data && user.data.token != null ) {
+    authorization = `Bearer ${user.data.token}`;
+  }
+}
+
 const instanceAxios = axios.create({
-  baseURL: "http://localhost:3002/",
+  baseURL: process.env.REACT_APP_API_ENDPOINT,
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': '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',
+    'Authorization': authorization
   }
 });
 
