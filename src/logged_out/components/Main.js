@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import AOS from "aos/dist/aos";
 import { withStyles } from "@material-ui/core";
 import NavBar from "./navigation/NavBar";
+import ServicesConciliation from "./servicesConciliation/ServicesConciliation";
 import Footer from "./footer/Footer";
 import "aos/dist/aos.css";
 import CookieRulesDialog from "./cookies/CookieRulesDialog";
@@ -140,12 +141,16 @@ class Main extends PureComponent {
           handleMobileDrawerClose={this.handleMobileDrawerClose}
           history= {history}
         />
-        <Routing
+
+        {/* <Routing
           selectHome={this.selectHome}
           selectBlog={this.selectBlog}
           selectCompany={this.selectCompany}
           selectProducts={this.selectProducts}
-        />
+        /> */}
+
+        <ServicesConciliation/>
+        
         <Footer />
       </div>
     );
