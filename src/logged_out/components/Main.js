@@ -4,6 +4,9 @@ import AOS from "aos/dist/aos";
 import { withStyles } from "@material-ui/core";
 import NavBar from "./navigation/NavBar";
 import ServicesConciliation from "./servicesConciliation/ServicesConciliation";
+import Cardx from "./servicesConciliation/Cardx";
+import We from "./we/We";
+import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 import "aos/dist/aos.css";
 import CookieRulesDialog from "./cookies/CookieRulesDialog";
@@ -150,8 +153,12 @@ class Main extends PureComponent {
         /> */}
 
         <ServicesConciliation/>
+
+        <We/>
         
-        <Footer />
+        <Contact/>
+
+        <Footer/>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from './Card';
+import Cardx from './Cardx';
 
 import AbogadoVirtual from '../../../images/abogadoVirtual.jpg';
 import ArbitrajeVirtual from '../../../images/arbitrajeVirtual.jpg';
@@ -47,7 +47,6 @@ import ConciliacionHoyMismo from '../../../images/conciliacionHoyMismo.jpg';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        /* padding: theme.spacing(3), */
         background: theme.palette.primary.main,
         marginTop: "80px"
     },
@@ -70,7 +69,7 @@ const ServicesConciliation = () => {
         },
         {
             img: ConciliacionSocial,
-            title: 'Conciliación para MYPE',
+            title: 'Conciliación para Social',
         },
         {
             img: ConciliacionContratacionEstado,
@@ -93,11 +92,11 @@ const ServicesConciliation = () => {
     return (
         <Fragment>
             <div className={classes.root}>
-                <Grid container /* spacing={2} */>
+                <Grid container>
                     {
                         servicesConciliation.map((element, index) => (
                             <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                                <Card title={element.title} img={element.img}></Card>
+                                <Cardx title={element.title} img={element.img}/>
                             </Grid>
                         ))
                     }
