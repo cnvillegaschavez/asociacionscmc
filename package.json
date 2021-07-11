@@ -1,9 +1,9 @@
 {
-  "name": "glovitoapp-web",
+  "name": "asociacionscmc-web",
   "version": "1.0.1",
   "private": true,
   "homepage": "",
-  "description": "Glovito App Web",
+  "description": "EXLEGE",
   "dependencies": {
     "@date-io/date-fns": "^2.10.11",
     "@googlemaps/js-api-loader": "^1.12.1",
