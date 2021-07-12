@@ -15,15 +15,19 @@ import HomeIcon from "@material-ui/icons/Home";
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PersonIcon from '@material-ui/icons/Person';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import classNames from "classnames";
 import { isAuth, getUserInfo } from '../../../api/userApi';
 import Menu from '@material-ui/core/Menu';
+import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import PersonIcon from '@material-ui/icons/Person';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
 import Constants from './../../../util/constants';
 import { useHistory } from 'react-router';
 import AddressDialog from '../address/AddressDialog';
@@ -114,32 +118,38 @@ function NavBar(props) {
  
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorButtonServices, setAnchorButtonServices] = useState(null);
   const [userUrlIcon, setUserUrlIcon] = useState(Constants.profilePicture);
+  const [servicesConciliacion, setServicesConciliacion] = useState([
+      'Conciliación para MYPE', 'Conciliación Familiar', 'Conciliación Empresarial', 'Conciliación para Divorcio',
+      'Conciliación Social', 'Conciliación para Personas Naturales', 'Conciliación en Contratación con el Estado',
+      'Conciliación fuerda del Centro de Conciliación', 'Conciliación con Apoderado', 'Conciliación hoy mismo'
+  ]);
   const [menuItems, setMenuItems] = useState([
     {
       link: "/",
-      name: "Inicio",
+      name: "Mediación Online",
       isLogin: false,
       icon: <HomeIcon className="text-white" />
     },
     {
       link: "/products",
-      name: "Productos",
+      name: "Arbitraje Virtual",
       isLogin: false,
       icon: <ShoppingCartIcon className="text-white" />
     },
     {
       link: "/company",
-      name: "Nosotros",
+      name: "Abogado Virtual",
       isLogin: false,
       icon: <AccountBalanceIcon className="text-white" />
     },
     {
-      link: "/login",
-      name: "Iniciar sesión",
-      isLogin: false,
-      icon: <AccountBalanceIcon className="text-white" />
-    }
+        link: "/login",
+        name: "Mesa de Partes Virtual",
+        isLogin: false,
+        icon: <AccountBalanceIcon className="text-white" />
+      }
   ]);
 
   const handleClick = (event) => {
@@ -149,6 +159,14 @@ function NavBar(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleMenuClose = () => {
+    setAnchorButtonServices(null);
+  }
+
+  const handleOpenMenu = (event) => {
+    setAnchorButtonServices(event.currentTarget);    
+  }
 
   useEffect(() => {
     const getUserMenu = () => {
@@ -193,21 +211,9 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <img src='favicon-192x192.png' alt="Logo" className={classes.logo} onClick={onGoToHome}/>  
-             
+            <img src='logo.png' alt="Logo" className={classes.logo} onClick={onGoToHome}/>  
           </div>
-          
-
-          <div className={classes.address}>
-            <AddressDialog/>
-          </div>
-
-          {/* <Hidden mdUp>
-            <div className={classes.address}>
-                <AddressDialog/>
-            </div>
-          </Hidden> */}
-
+       
           <div className={classes.caja}>
             <Hidden mdUp>
               <IconButton
@@ -220,7 +226,30 @@ function NavBar(props) {
             </Hidden>
         
             <Hidden smDown>
+
+              <Button
+                aria-controls="menu"
+                onClick={handleOpenMenu}
+                disableRipple
+                variant="contained"
+                color="primary"
+                size="large"
+                endIcon={<KeyboardArrowDownIcon/>}
+              >
+                Servicios de Conciliación
+              </Button>
               
+              <Menu style={{marginTop: "35px", width: "1000px"}} id="menu" onClose={handleMenuClose} anchorEl={anchorButtonServices} open={Boolean(anchorButtonServices)}>
+                  {
+                      servicesConciliacion.map((element, index) => (
+                        <div key={index}>
+                            <MenuItem onClick={handleMenuClose}>{element}</MenuItem>
+                        </div>
+                      ))
+                  }
+              </Menu>
+
+
               {menuItems.map(element => {
                 if (element.isLogin===false) {
                   return (

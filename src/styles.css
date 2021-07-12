@@ -1,0 +1,73 @@
+#cardAnimation{
+    max-width: 100%;
+	font-family: arial;
+	font-size: 16px;
+	background: #000;
+}
+#cardAnimation img{
+	max-width: 100%;
+    width: 100%;
+}
+#cardAnimation .ui-card{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+}
+#cardAnimation .ui-card img{
+	transform: scale(1.3);
+	transition: all 0.3s ease-out;
+}
+#cardAnimation .ui-card:hover img{
+	opacity: 0.3
+}
+#cardAnimation .ui-card .description{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+#cardAnimation .ui-card .description h2{
+	font-weight: 700;
+	font-size: 25px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+#cardAnimation .ui-card .description p{
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+#cardAnimation .ui-card .description a{
+	color: #fff;
+	background:#111E47;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+#cardAnimation .ui-card .description a:hover{
+	background:#FFB341;
+}
+#cardAnimation .ui-card:hover .description h2{
+	opacity: 1;
+	transform: translateY(0px);
+    color: "#111E47";
+}
+#cardAnimation .ui-card:hover .description p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+#cardAnimation .ui-card:hover .description a{
+	opacity: 1;
+	transform: translateY(0px);
+}
