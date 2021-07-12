@@ -28,27 +28,27 @@ import { sendEmail } from '../../../redux/actions/contactActions';
 
 const CssTextField = withStyles({
     root: {
-      "& label.Mui-focused": {
-        color: "#FFB341"
-      },
-      "& .MuiInput-underline:after": {
-        borderBottomColor: "#FFB341"
-      },
-      "& .MuiOutlinedInput-root": {
-        "& fieldset": {
-          borderColor: "#FFB341"
+        color: "#fff",
+        "& label.Mui-focused": {
+            color: "#FFB341"
         },
-        "&:hover fieldset": {
-          borderColor: "#FFB341"
+        "& .MuiInput-underline:after": {
+            borderBottomColor: "#FFB341"
         },
-        "&.Mui-focused fieldset": {
-          borderColor: "#FFB341"
-        }
-      },
-      color: "#fff",
+        "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+                borderColor: "#FFB341"
+            },
+            "&:hover fieldset": {
+                borderColor: "#FFB341"
+            },
+            "&.Mui-focused fieldset": {
+                borderColor: "#FFB341"
+            }
+        },
     }
-  })(TextField);
-  
+})(TextField);
+
 const styles = theme => ({
     footerInner: {
         backgroundColor: theme.palette.common.darkBlack,
@@ -117,7 +117,7 @@ const styles = theme => ({
     buttonSuccess: {
         backgroundColor: theme.palette.secondary.main,
         '&:hover': {
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: "#b27d2d",
         },
     },
     wrapper: {
@@ -137,40 +137,54 @@ const styles = theme => ({
     },
     inputEvaluation: {
         color: "#ffffff",
-    }
+    },
+    'input-label': {
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        width: '100%',
+        color: 'red'
+      },
+    
+      'input': {
+        '&::placeholder': {
+          textOverflow: 'ellipsis !important',
+          color: '#FFB341'
+        }
+      }
 });
 
 const infos = [
     {
         icon: <PhoneIcon />,
-        description: "963 559 100"
+        description: <Typography variant="subtitle1" color="initial">963 559 100</Typography> /* >963 559 100 */
     },
     {
         icon: <MailIcon />,
-        description: "exlegecentrodeconciliacion@gmail.com"
+        description: <Typography variant="subtitle1" color="initial">exlegecentrodeconciliacion@gmail.com</Typography>
     },
     {
         icon: <AccessTimeIcon />,
-        description: "Horario: 09:00 - 19:00"
+        description: <Typography variant="subtitle1" color="initial">Horario: 09:00 - 19:00</Typography>
     },
     {
         icon: <GavelIcon />,
-        description: "Estudio jurídico"
+        description: <Typography variant="subtitle1" color="initial">Estudio jurídico</Typography>
     }
 ];
 
 const infosServices = [
     {
         icon: <AccountBalanceIcon />,
-        description: "Mediación online"
+        description: <Typography variant="subtitle1" color="initial">Mediación Online</Typography>
     },
     {
         icon: <AccountBalanceIcon />,
-        description: "Arbitraje Virtual"
+        description: <Typography variant="subtitle1" color="initial">Arbitraje Virtual</Typography>
     },
     {
         icon: <AccountBalanceIcon />,
-        description: "Abogado Virtual"
+        description: <Typography variant="subtitle1" color="initial">Abogado Virtual</Typography>
     },
 ];
 
@@ -208,7 +222,7 @@ const socialIcons = [
         href: "https://www.facebook.com/Centro-de-Conciliaci%C3%B3n-Ex-Lege-108763947357901"
     },
     {
-        icon: <YouTubeIcon />,
+        icon: <YouTubeIcon style={{color: "#fff"}}/>,
         label: "Youtube",
         href: "https://www.facebook.com/Centro-de-Conciliaci%C3%B3n-Ex-Lege-108763947357901"
     },
@@ -299,7 +313,7 @@ function Footer(props) {
                         </Box>
 
                         <Typography variant="h6" paragraph className="text-white">
-                            Siganos:
+                            Siguenos:
                         </Typography>
 
                         <Box display="flex">
@@ -319,7 +333,7 @@ function Footer(props) {
                     </Grid>
 
                     <Grid item xs={12} md={6} lg={4}>
-                        <Typography variant="h5" color="secondary" className={classes.titleFooter}>Servicios</Typography>
+                        <Typography variant="h5" color="secondary" className={classes.titleFooter}>Servicios Virtuales</Typography>
                         <Box display="flex" /* justifyContent="center" */>
                             <div >
                                 {infosServices.map((info, index) => (
@@ -360,7 +374,7 @@ function Footer(props) {
                                 <Box mb={1}>
                                     <CssTextField
                                         disabled={loading}
-                                        value={email}
+                                        // value={name}
                                         name="name"
                                         label="Nombre"
                                         variant="outlined"
@@ -371,11 +385,21 @@ function Footer(props) {
                                         }}
                                         fullWidth
                                         required
-                                        style={{padding: "10px 0"}}
+                                        style={{ padding: "10px 0" }}
+                                        InputLabelProps={{
+                                            style: {
+                                                textOverflow: 'ellipsis',
+                                                whiteSpace: 'nowrap',
+                                                overflow: 'hidden',
+                                                width: '100%',
+                                                color: '#FFB341'
+                                            }
+                                        }}
+
                                     />
                                     <CssTextField
                                         disabled={loading}
-                                     
+                                        // value={enail}
                                         label="Correo electrónico"
                                         variant="outlined"
                                         //id="custom-css-outlined-input"
@@ -385,14 +409,23 @@ function Footer(props) {
                                         }}
                                         fullWidth
                                         required
-                                        style={{padding: "10px 0"}}
+                                        style={{ padding: "10px 0" }}
+                                        InputLabelProps={{
+                                            style: {
+                                                textOverflow: 'ellipsis',
+                                                whiteSpace: 'nowrap',
+                                                overflow: 'hidden',
+                                                width: '100%',
+                                                color: '#FFB341'
+                                            }
+                                        }}
                                     />
 
                                 </Box>
                                 <Box mb={1}>
                                     <CssTextField
                                         disabled={loading}
-                                     
+
                                         label="Cuéntanos tu caso"
                                         variant="outlined"
                                         //id="custom-css-outlined-input"
@@ -402,17 +435,26 @@ function Footer(props) {
                                         }}
                                         fullWidth
                                         required
-                                        style={{padding: "10px 0"}}
+                                        style={{ padding: "10px 0" }}
                                         rows={6}
                                         maxRows={20}
                                         multiline
+                                        InputLabelProps={{
+                                            style: {
+                                                textOverflow: 'ellipsis',
+                                                whiteSpace: 'nowrap',
+                                                overflow: 'hidden',
+                                                width: '100%',
+                                                color: '#FFB341'
+                                            }
+                                        }}
                                     />
                                 </Box>
                                 <div className={classes.wrapper} >
                                     <ColoredButton
                                         fullWidth
                                         disabled={loading}
-                                        color={theme.palette.common.white}
+                                        color={theme.palette.common.darkBlack}
                                         className={classes.buttonSuccess}
                                         variant="outlined"
                                     >

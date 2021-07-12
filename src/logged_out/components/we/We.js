@@ -1,6 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -25,7 +26,16 @@ const useStyles = makeStyles((theme) => ({
         color: "#7C99C1",
         marginTop: "20px",
         textAlign: "justify",
-    }
+    },
+    divider: {
+        marginTop: "10px",
+        marginBottom: "10px",
+        marginRight: "auto",
+        // marginLeft: "auto",
+        backgroundColor: theme.palette.secondary.main,
+        width: "100px",
+        height: "3px",
+    },
 
 }));
 
@@ -40,6 +50,7 @@ export default function We() {
             <Grid item xs={12} sm={6} md={6}>
                 <div className={classes.paper}>
                     <Typography variant="h3" color="primary" className={classes.title}>Que es el centro de conciliación EX LEGE?</Typography>
+                    <Divider className={classes.divider} />
                     <Typography variant="h5" color="initial" className={classes.paragraph}>EX LEGE es un Centro de Conciliación de Cusco debidamente autorizado por el Ministerio de Justicia y Derechos Humanos que proporciona servicios de conciliación extrajudicial con altos estándares de calidad, seguridad y confidencialidad, gracias a su filosofía basada en la innovación, desarrollo, capacitación constante y valores éticos.</Typography>
                     
                 </div>
