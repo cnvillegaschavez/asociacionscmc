@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import Cardx from './Cardx';
 
@@ -48,7 +49,22 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         background: theme.palette.primary.main,
-        marginTop: "80px"
+        marginTop: "30px"
+    },
+    title: {
+        marginTop: "100px",
+        fontWeight: "bold",
+        color: theme.palette.primary.main,
+        textAlign: "center"
+    },
+    divider: {
+        marginTop: "10px",
+        marginBottom: "10px",
+        marginRight: "auto",
+        marginLeft: "auto",
+        backgroundColor: theme.palette.secondary.main,
+        width: "100px",
+        height: "3px",
     },
 }));
 
@@ -91,6 +107,8 @@ const ServicesConciliation = () => {
 
     return (
         <Fragment>
+            <Typography variant="h3" color="primary" className={classes.title}>Servicios de Conciliación para ti</Typography>
+            <Divider className={classes.divider} />
             <div className={classes.root}>
                 <Grid container>
                     {
