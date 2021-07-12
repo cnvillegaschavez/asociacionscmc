@@ -8,22 +8,22 @@ import ArbitrajeVirtual from '../../../images/arbitrajeVirtual.jpg';
 import CharlasVirtuales from '../../../images/charlasVirtuales.jpg';
 import MediacionOnline from '../../../images/mediacionOnline.jpg';
 import RedaccionCartasNotariales from '../../../images/redaccionCartasNotariales.jpg';
-import ConciliacionMYPE from '../../../images/conciliacionMYPE.jpg';
+import ConciliacionMYPE from '../../../images/xconciliacionMype.jpg';
 import ConciliacionResoluciónContrato from '../../../images/conciliacionResoluciónContrato.jpg';
 import ConciliacionCobrarDeudasPrestacionServicios from '../../../images/conciliacionCobrarDeudasPrestacionServicios.jpg';
 import ConciliacionCobrarDeudasVentaBienes from '../../../images/conciliacionCobrarDeudasVentaBienes.jpg';
 import ConciliacionCobrarPrestamosDinero from '../../../images/conciliacionCobrarPrestamosDinero.jpg';
 import ConciliacionDesalojoFaltaPago from '../../../images/conciliacionDesalojoFaltaPago.jpg';
 import ConciliacionEmpresa from '../../../images/conciliacionEmpresa.jpg';
-import ConciliacionFamiliar from '../../../images/conciliacionFamiliar.jpg';
+import ConciliacionFamiliar from '../../../images/xconciliacionFamiliar.jpg';
 import ConciliacionPensionAlimentos from '../../../images/conciliacionPensionAlimentos.jpg';
 import ConciliacionRegimenVisitasConExternamiento from '../../../images/conciliacionRegimenVisitasConExternamiento.jpg';
 import ConciliacionExoneracionPersionAlimentos from '../../../images/conciliacionExoneracionPersionAlimentos.jpg';
 import ConciliacionGastosEmbarazo from '../../../images/conciliacionGastosEmbarazo.jpg';
 import ConciliacionRegimenVisitasSinExternamiento from '../../../images/conciliacionRegimenVisitasSinExternamiento.jpg';
 import ConciliacionTenenciaHijos from '../../../images/conciliacionTenenciaHijos.jpg';
-import ConciliacionDivorcio from '../../../images/conciliacionDivorcio.jpg';
-import ConciliacionSocial from '../../../images/conciliacionSocial.jpg';
+import ConciliacionDivorcio from '../../../images/xconciliacionDivorcio.jpg';
+import ConciliacionSocial from '../../../images/xconciliacionSocial.jpg';
 import ConciliacionPersonaNarutal from '../../../images/conciliacionPersonaNarutal.jpg';
 import ConciliacionDivisionParticionBienes from '../../../images/conciliacionDivisionParticionBienes.jpg';
 import ConciliacionIndenmizacionDañosVehiculos from '../../../images/conciliacionIndenmizacionDañosVehiculos.jpg';
@@ -31,7 +31,7 @@ import ConciliacionIndenmizaciónNegligenciaMedica from '../../../images/concili
 import ConciliacionIndenmizacionAccidenteTransito from '../../../images/conciliacionIndenmizacionAccidenteTransito.jpg';
 import ConciliacionDesalojoOcupantePrecario from '../../../images/conciliacionDesalojoOcupantePrecario.jpg';
 import ConciliacionDesalojoVencimientoContrato from '../../../images/conciliacionDesalojoVencimientoContrato.jpg';
-import ConciliacionContratacionEstado from '../../../images/conciliacionContratacionEstado.jpg';
+import ConciliacionContratacionesEstado from '../../../images/xconciliacionContratacionesEstado.jpg';
 import ConciliacionLiquidacionesContratacionesEstado from '../../../images/conciliacionLiquidacionesContratacionesEstado.jpg';
 import ConciliacionViciosOcultosContratacionesEstado from '../../../images/conciliacionViciosOcultosContratacionesEstado.jpg';
 import ConciliacionIndenmizacionContratacionesEstado from '../../../images/conciliacionIndenmizacionContratacionesEstado.jpg';
@@ -40,9 +40,9 @@ import ConciliacionValorazionesMetrados from '../../../images/conciliacionValora
 import ConciliacionRecepciónConformidad from '../../../images/conciliacionRecepciónConformidad.jpg';
 import ConciliacionResoluciónContratosSuministrosServiciosObras from '../../../images/conciliacionResoluciónContratosSuministrosServiciosObras.jpg';
 import ConciliacionAmpliaciónPlazo from '../../../images/conciliacionAmpliaciónPlazo.jpg';
-import ConciliacionCentroConciliacion from '../../../images/conciliacionCentroConciliacion.jpg';
-import ConciliacionApoderado from '../../../images/conciliacionApoderado.jpg';
-import ConciliacionHoyMismo from '../../../images/conciliacionHoyMismo.jpg';
+import ConciliacionFueraCentroConciliacion from '../../../images/xconciliacionFueraCentroConciliacion.jpg';
+import ConciliacionApoderado from '../../../images/xconciliacionApoderado.jpg';
+import ConciliacionHoyMismo from '../../../images/xconciliacionHoyMismo.jpg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,11 +72,11 @@ const ServicesConciliation = () => {
             title: 'Conciliación para Social',
         },
         {
-            img: ConciliacionContratacionEstado,
+            img: ConciliacionContratacionesEstado,
             title: 'Conciliación en Contrataciones con el Estado',
         },
         {
-            img: ConciliacionCentroConciliacion,
+            img: ConciliacionFueraCentroConciliacion,
             title: 'Conciliación fuera del Centro de Conciliación',
         },
         {
