@@ -5,9 +5,10 @@ import PropsRoute from "../../shared/components/PropsRoute";
 import Home from "./home/Home";
 import Company from "./company/Company";
 import Product from "./products/Product";
+import ServicesInfo from "./servicesConciliation/ServicesInfo";
 
 function Routing(props) {
-  const { selectCompany, selectHome } = props;
+  const { selectCompany, selectHome, selectServicesInfo } = props;
 
   return (
     <Switch>
@@ -15,7 +16,6 @@ function Routing(props) {
         exact
         path="/company"
         component={Company}
-        selectBlog={selectCompany}
       />
       <PropsRoute
         exact
@@ -27,9 +27,16 @@ function Routing(props) {
         path="/googlemaps"
         component={Product}
       />
+      <PropsRoute
+        exact
+        path="/servicesinfo"
+        component={ServicesInfo}
+        selectServicesInfo={selectServicesInfo}
+      />
 
       )
       <PropsRoute path="/" component={Home} selectHome={selectHome} />)
+
     </Switch>
   );
 }

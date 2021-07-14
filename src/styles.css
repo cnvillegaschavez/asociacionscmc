@@ -1,3 +1,5 @@
+
+/* -------------------styles component  in route: /logged_out/components/cards/Cardx.js -------------------*/
 #cardAnimation{
     /* max-width: 100%; */
     width: 100%;
@@ -45,10 +47,10 @@
 	opacity: 0;
 	transition: all 0.3s ease-out 0.2s;
 }
-#cardAnimation .ui-card .description a{
-	color: #fff;
+#cardAnimation .ui-card .description .mi-link{
+    color: "#fff";
 	background:#111E47;
-	display: inline-block;
+	/* display: inline-block; */
 	padding: 10px 25px;
 	border-radius: 5px;
 	text-decoration: none;
@@ -56,10 +58,15 @@
 	opacity: 0;
 	transition: all 0.3s ease-out 0.2s;
 }
-#cardAnimation .ui-card .description a:hover{
+#cardAnimation .ui-card .description .mi-link:hover{
 	background:#FFB341;
 }
 #cardAnimation .ui-card:hover .description h2{
+	opacity: 1;
+	transform: translateY(0px);
+    color: "#111E47";
+}
+#cardAnimation .ui-card:hover .description Button{
 	opacity: 1;
 	transform: translateY(0px);
     color: "#111E47";
@@ -72,3 +79,4 @@
 	opacity: 1;
 	transform: translateY(0px);
 }
+

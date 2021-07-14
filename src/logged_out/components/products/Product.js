@@ -77,9 +77,6 @@ const tileData = [
         author: "saksaa",
         url: "miurl",
     }
-  
-
-  
 ];
 
 const Product = (props) => {

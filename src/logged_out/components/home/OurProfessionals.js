@@ -1,24 +1,16 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
-import FolderIcon from '@material-ui/icons/Folder';
 import TableChartIcon from '@material-ui/icons/TableChart';
 import SwapVertIcon from '@material-ui/icons/SwapVert';
-import DoneIcon from '@material-ui/icons/Done';
 import { makeStyles } from '@material-ui/core/styles';
 import nuestrosProfesionales from '../../../images/nuestrosProfesionales.jpg';
-
-
 
 const useStyles = makeStyles((theme) => ({
     image: {
@@ -47,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         marginBottom: "10px",
         marginRight: "auto",
-        // marginLeft: "auto",
         backgroundColor: theme.palette.secondary.main,
         width: "100px",
         height: "3px",
@@ -78,7 +69,7 @@ export default function OurProfessionals() {
 
     return (
         <Grid container>
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
                 <div className={classes.paper}>
                     <Typography variant="h3" color="primary" className={classes.title}>Nuestros Profesionales</Typography>
                     <Divider className={classes.divider} />
@@ -107,7 +98,7 @@ export default function OurProfessionals() {
                     </List>
                 </div>
             </Grid>
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
                 <img src={nuestrosProfesionales} className={classes.image} />
             </Grid>
         </Grid>

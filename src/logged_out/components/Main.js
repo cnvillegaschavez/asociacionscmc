@@ -3,11 +3,6 @@ import PropTypes from "prop-types";
 import AOS from "aos/dist/aos";
 import { withStyles } from "@material-ui/core";
 import NavBar from "./navigation/NavBar";
-import ServicesConciliation from "./servicesConciliation/ServicesConciliation";
-import Cardx from "./servicesConciliation/Cardx";
-import We from "./we/We";
-import OurProfessionals from "./ourProfessionals/OurProfessionals";
-import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 import "aos/dist/aos.css";
 import CookieRulesDialog from "./cookies/CookieRulesDialog";
@@ -27,7 +22,7 @@ const styles = theme => ({
 });
 
 class Main extends PureComponent {
-  titleWeb = 'Glovito App Web'; 
+  titleWeb = 'SCMC'; 
 
   state = {
     selectedTab: null,
@@ -62,6 +57,12 @@ class Main extends PureComponent {
     smoothScrollTop();
     document.title = this.titleWeb;
     this.setState({ selectedTab: "Products" });
+  };
+
+  selectServicesInfo = () => {
+    smoothScrollTop();
+    document.title = this.titleWeb;
+    this.setState({ selectedTab: "ServicesInfo" });
   };
 
   openLoginDialog = () => {
@@ -131,10 +132,7 @@ class Main extends PureComponent {
             handleCookieRulesDialogOpen={this.handleCookieRulesDialogOpen}
           />
         )}
-        <CookieRulesDialog
-          open={cookieRulesDialogOpen}
-          onClose={this.handleCookieRulesDialogClose}
-        />
+
         <NavBar
           selectedTab={selectedTab}
           selectTab={this.selectTab}
@@ -146,20 +144,13 @@ class Main extends PureComponent {
           history= {history}
         />
 
-        {/* <Routing
+        <Routing
           selectHome={this.selectHome}
           selectBlog={this.selectBlog}
           selectCompany={this.selectCompany}
           selectProducts={this.selectProducts}
-        /> */}
-
-        <ServicesConciliation/>
-
-        <We/>
-
-        <OurProfessionals/>
-        
-        <Contact/>
+          selectServicesInfo={this.selectServicesInfo}
+        />
 
         <Footer/>
       </div>

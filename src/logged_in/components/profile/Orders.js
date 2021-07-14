@@ -39,7 +39,7 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect (() => {
-      const getListOrders = () => {
+        const getListOrders = () => {
         const user = getUserInfo();
         getOrderByUserId(user.id, user.api_token).then(r=>{
             const lista = r.data.data;

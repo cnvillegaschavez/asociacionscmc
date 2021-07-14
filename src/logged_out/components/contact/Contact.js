@@ -2,11 +2,12 @@ import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
     divider: {
         marginTop: "10px",
-        marginBottom: "60px",
+        marginBottom: "20px",
         marginRight: "auto",
         marginLeft: "auto",
         backgroundColor: theme.palette.secondary.main,
@@ -68,31 +69,52 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         width: "100%",
         color: theme.palette.common.darkBlack,
+    },
+    img: {
+        width: "100%",
+        marginTop: "10px",
+        borderRadius: "5px"
+    },
+    messageWhatsapp: {
+        fontSize: "16px",
+        textAlign: "justify",
+        marginTop: "10px",
+    },
+    styleIconWhatsApps: {
+        color: "#fff",
+        background: "#0DC143",
+        borderRadius: "6px",
     }
 }));
 
-const Contact = () => {
+const Contact = (props) => {
+    const { title, subtitle, descriptionPrimary, descriptionSecondary, img } = props;
     const classes = useStyles();
+    const phone = "+51962212903";
+    const message = `Hola, quisiera consultar acerca del servicio de `;
+
     return (
         <Fragment>
             <Grid container className={classes.root}>
                 <Grid xs={12} className={classes.title}>
-                    <Typography variant="h4">ESTAMOS AQUI PARA AYUDAR</Typography>
-                    <Typography variant="h6">Contáctenos hoy para programar una consulta</Typography>
+                    <Typography variant="h3">{title}</Typography>
+                    <Typography variant="h6">{subtitle}</Typography>
                     <Divider className={classes.divider} />
                 </Grid>
 
-
-                <Hidden xsDown>
-                    <Grid sm={6} className={classes.paragraphWeb}>
+                <Hidden smDown>
+                    <Grid xs={6} className={classes.paragraphWeb}>
+                        {
+                            img ? <img src={img} alt="no hay imagen" className={classes.img} /> : ''
+                        }
                         <Typography variant="subtitle1" >
-                            Si tiene preguntas, necesita el consejo de un consejero de confianza o simplemente no sabe a quién acudir, nuestro equipo está aquí para ayudarlo. Contáctenos hoy para programar una consulta gratis.
+                            {descriptionPrimary}
                             <br />
                             <br />
-                            Si no puede visitarnos en nuestra oficina en el centro durante la semana, estaremos más que felices de encontrarnos con usted en su casa o en nuestra oficina durante el fin de semana. Hablamos español.
+                            {descriptionSecondary}
                         </Typography>
                     </Grid>
-                    <Grid sm={6} className={classes.formWeb}>
+                    <Grid xs={6} className={classes.formWeb}>
                         <form>
                             <Grid container>
                                 <Grid item xs={12}>
@@ -145,71 +167,101 @@ const Contact = () => {
                                 </Grid>
                             </Grid>
                         </form>
+                        <Typography variant="subtitle1" className={classes.messageWhatsapp}>
+                            Tambien puedes comunicarte con nosotros mediante nuestro <span style={{ color: "#FFB341" }}>WhatsApp</span>, te atenderemos inmediatamente.
+                        </Typography>
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={classes.button}
+                            startIcon={<WhatsAppIcon className={classes.styleIconWhatsApps} style={{ fontSize: "30px" }} />}
+                        >
+                            <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${title}`} style={{ textDecoration: "none", color: "#181717" }}>
+                                Contactar
+                            </a>
+                        </Button>
 
                     </Grid>
                 </Hidden>
-
-
-                <Hidden smUp>
-                    <Grid sm={6} className={classes.paragraphMovil}>
+                
+                <Hidden mdUp>
+                    <Grid xs={12} className={classes.paragraphMovil}>
+                        {
+                            img ? <img src={img} alt="no hay imagen" className={classes.img} /> : ''
+                        }
                         <Typography variant="subtitle1" >
-                            Si tiene preguntas, necesita el consejo de un consejero de confianza o simplemente no sabe a quién acudir, nuestro equipo está aquí para ayudarlo. Contáctenos hoy para programar una consulta gratis.
+                            {descriptionPrimary}
                             <br />
                             <br />
-                            Si no puede visitarnos en nuestra oficina en el centro durante la semana, estaremos más que felices de encontrarnos con usted en su casa o en nuestra oficina durante el fin de semana. Hablamos español.
+                            {descriptionSecondary}
                         </Typography>
                     </Grid>
-                    <Grid sm={6} className={classes.formMovil}>
-                        <Grid container>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="name"
-                                    placeholder="Nombre"
-                                    required
-                                    multiline
-                                    variant="outlined"
-                                    color="secondary"
-                                    size="small"
-                                    autoComplete="nombre"
-                                    className={classes.inputMovil}
-                                    inputProps={{ maxLength: 30 }}
-                                />
+                    <Grid xs={12} className={classes.formMovil}>
+                        <form>
+                            <Grid container>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="name"
+                                        placeholder="Nombre"
+                                        required
+                                        multiline
+                                        variant="outlined"
+                                        color="secondary"
+                                        size="small"
+                                        autoComplete="nombre"
+                                        className={classes.inputMovil}
+                                        inputProps={{ maxLength: 30 }}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="name"
+                                        placeholder="Correo electrónico"
+                                        required
+                                        multiline
+                                        variant="outlined"
+                                        color="secondary"
+                                        size="small"
+                                        autoComplete="nombre"
+                                        className={classes.inputMovil}
+                                        inputProps={{ maxLength: 30 }}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="name"
+                                        placeholder="Cuéntanos su caso..."
+                                        required
+                                        multiline
+                                        variant="outlined"
+                                        color="secondary"
+                                        size="small"
+                                        autoComplete="nombre"
+                                        className={classes.inputMovil}
+                                        inputProps={{ maxLength: 1000 }}
+                                        rows={10}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Button variant="contained" color="secondary" className={classes.button}>
+                                        Enviar mensaje
+                                    </Button>
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="name"
-                                    placeholder="Correo electrónico"
-                                    required
-                                    multiline
-                                    variant="outlined"
-                                    color="secondary"
-                                    size="small"
-                                    autoComplete="nombre"
-                                    className={classes.inputMovil}
-                                    inputProps={{ maxLength: 30 }}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="name"
-                                    placeholder="Cuéntanos su caso..."
-                                    required
-                                    multiline
-                                    variant="outlined"
-                                    color="secondary"
-                                    size="small"
-                                    autoComplete="nombre"
-                                    className={classes.inputMovil}
-                                    inputProps={{ maxLength: 1000 }}
-                                    rows={10}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button variant="contained" color="secondary" className={classes.button}>
-                                    Enviar mensaje
-                                </Button>
-                            </Grid>
-                        </Grid>
+                        </form>
+                        <Typography variant="subtitle1" className={classes.messageWhatsapp}>
+                            Tambien puedes comunicarte con nosotros mediante nuestro <span style={{ color: "#FFB341" }}>WhatsApp</span>, te atenderemos inmediatamente.
+                        </Typography>
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={classes.button}
+                            startIcon={<WhatsAppIcon className={classes.styleIconWhatsApps} style={{ fontSize: "30px" }} />}
+                        >
+                            <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${title}`} style={{ textDecoration: "none", color: "#181717" }}>
+                                Contactar
+                            </a>
+                        </Button>
                     </Grid>
                 </Hidden>
             </Grid>

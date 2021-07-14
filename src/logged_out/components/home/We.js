@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(3, 4),
         display: 'flex',
         flexDirection: 'column',
-        // alignItems: 'center',
     },
     title: {
         fontWeight: "bold"
@@ -42,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         marginBottom: "10px",
         marginRight: "auto",
-        // marginLeft: "auto",
         backgroundColor: theme.palette.secondary.main,
         width: "100px",
         height: "3px",
@@ -54,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     }
 
 }));
-
 
 export default function We() {
     const classes = useStyles();
@@ -81,10 +78,10 @@ export default function We() {
 
     return (
         <Grid container>
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
                 <img src={nosotros} className={classes.image} />
             </Grid>
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
                 <div className={classes.paper}>
                     <Typography variant="h3" color="primary" className={classes.title}>Que es el centro de conciliación EX LEGE?</Typography>
                     <Divider className={classes.divider} />
