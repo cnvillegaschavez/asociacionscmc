@@ -11,7 +11,6 @@ import {
     isWidthUp,
     TextField
 } from "@material-ui/core";
-import { green } from '@material-ui/core/colors';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailIcon from "@material-ui/icons/Mail";
@@ -239,27 +238,27 @@ function Footer(props) {
     const [messageConfirm, setMessageConfirm] = useState();
     const [messageColor, setMessageColor] = useState();
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        switch (name) {
-            case 'email':
-                setEmail(value);
-                break;
-            case 'comments':
-                setComments(value);
-                break;
-            default:
-                break;
-        }
-    }
+    // const handleChange = (event) => {
+    //     const { name, value } = event.target;
+    //     switch (name) {
+    //         case 'email':
+    //             setEmail(value);
+    //             break;
+    //         case 'comments':
+    //             setComments(value);
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
 
-    const onClickBtnSubmit = (event) => {
-        event.preventDefault();
-        setResponseResult({ message: '' });
-        const requestDto = { Email: email, Message: comments };
-        setLoading(true);
-        sendEmail(requestDto, callBackResponse);
-    }
+    // const onClickBtnSubmit = (event) => {
+    //     event.preventDefault();
+    //     setResponseResult({ message: '' });
+    //     const requestDto = { Email: email, Message: comments };
+    //     setLoading(true);
+    //     sendEmail(requestDto, callBackResponse);
+    // }
 
     /* Work with EmailJS */
     const onSendEmailJS = (e) => {

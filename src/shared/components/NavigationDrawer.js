@@ -24,7 +24,7 @@ const styles = theme => ({
     width: 200
   },
   blackList: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.palette.primary.main,
     height: "100%"
   },
   noDecoration: {

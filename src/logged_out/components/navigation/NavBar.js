@@ -8,12 +8,11 @@ import {
   Hidden,
   IconButton,
   withStyles,
-  Avatar, Typography,
-  TextField
+  Avatar, Typography
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import HomeIcon from "@material-ui/icons/Home";
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import EmailIcon from '@material-ui/icons/Email';
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
@@ -24,52 +23,49 @@ import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import classNames from "classnames";
 import { isAuth, getUserInfo } from '../../../api/userApi';
 import Menu from '@material-ui/core/Menu';
-import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import Constants from './../../../util/constants';
 import { useHistory } from 'react-router';
-import AddressDialog from '../address/AddressDialog';
 
 import AbogadoVirtual from '../../../images/xabogadoVirtual.jpg';
 import ArbitrajeVirtual from '../../../images/xarbitrajeVirtual.jpg';
-import CharlasVirtuales from '../../../images/charlasVirtuales.jpg';
 import MediacionOnline from '../../../images/xmediacionOnline.jpg';
-import RedaccionCartasNotariales from '../../../images/redaccionCartasNotariales.jpg';
+import RedaccionCartasNotariales from '../../../images/xredaccionCartasNotariales.jpg';
 import ConciliacionMYPE from '../../../images/xconciliacionMype.jpg';
-import ConciliacionResoluciónContrato from '../../../images/conciliacionResoluciónContrato.jpg';
-import ConciliacionCobrarDeudasPrestacionServicios from '../../../images/conciliacionCobrarDeudasPrestacionServicios.jpg';
-import ConciliacionCobrarDeudasVentaBienes from '../../../images/conciliacionCobrarDeudasVentaBienes.jpg';
-import ConciliacionCobrarPrestamosDinero from '../../../images/conciliacionCobrarPrestamosDinero.jpg';
-import ConciliacionDesalojoFaltaPago from '../../../images/conciliacionDesalojoFaltaPago.jpg';
+import ConciliacionResoluciónContrato from '../../../images/xconciliacionResoluciónContrato.jpg';
+import ConciliacionCobrarDeudasPrestacionServicios from '../../../images/xconciliacionCobrarDeudasPrestacionServicios.jpg';
+import ConciliacionCobrarDeudasVentaBienes from '../../../images/xconciliacionCobrarDeudasVentaBienes.jpg';
+import ConciliacionCobrarPrestamosDinero from '../../../images/xconciliacionCobrarPrestamosDinero.jpg';
+import ConciliacionDesalojoFaltaPago from '../../../images/xconciliacionDesalojoFaltaPago.jpg';
 import ConciliacionEmpresa from '../../../images/xconciliacionEmpresa.jpg';
 import ConciliacionFamiliar from '../../../images/xconciliacionFamiliar.jpg';
-import ConciliacionPensionAlimentos from '../../../images/conciliacionPensionAlimentos.jpg';
-import ConciliacionRegimenVisitasConExternamiento from '../../../images/conciliacionRegimenVisitasConExternamiento.jpg';
-import ConciliacionExoneracionPersionAlimentos from '../../../images/conciliacionExoneracionPersionAlimentos.jpg';
-import ConciliacionGastosEmbarazo from '../../../images/conciliacionGastosEmbarazo.jpg';
-import ConciliacionRegimenVisitasSinExternamiento from '../../../images/conciliacionRegimenVisitasSinExternamiento.jpg';
-import ConciliacionTenenciaHijos from '../../../images/conciliacionTenenciaHijos.jpg';
+import ConciliacionPensionAlimentos from '../../../images/xconciliacionPensionAlimentos.jpg';
+import ConciliacionRegimenVisitasConExternamiento from '../../../images/xconciliacionRegimenVisitasConExternamiento.jpg';
+import ConciliacionExoneracionPersionAlimentos from '../../../images/xconciliacionExoneracionPersionAlimentos.jpg';
+import ConciliacionGastosEmbarazo from '../../../images/xconciliacionGastosEmbarazo.jpg';
+import ConciliacionRegimenVisitasSinExternamiento from '../../../images/xconciliacionRegimenVisitasSinExternamiento.jpg';
+import ConciliacionTenenciaHijos from '../../../images/xconciliacionTenenciaHijos.jpg';
 import ConciliacionDivorcio from '../../../images/xconciliacionDivorcio.jpg';
 import ConciliacionSocial from '../../../images/xconciliacionSocial.jpg';
 import ConciliacionPersonaNarutal from '../../../images/xconciliacionPersonaNarutal.jpg';
-import ConciliacionDivisionParticionBienes from '../../../images/conciliacionDivisionParticionBienes.jpg';
-import ConciliacionIndenmizacionDañosVehiculos from '../../../images/conciliacionIndenmizacionDañosVehiculos.jpg';
-import ConciliacionIndenmizaciónNegligenciaMedica from '../../../images/conciliacionIndenmizaciónNegligenciaMedica.jpg';
-import ConciliacionIndenmizacionAccidenteTransito from '../../../images/conciliacionIndenmizacionAccidenteTransito.jpg';
-import ConciliacionDesalojoOcupantePrecario from '../../../images/conciliacionDesalojoOcupantePrecario.jpg';
-import ConciliacionDesalojoVencimientoContrato from '../../../images/conciliacionDesalojoVencimientoContrato.jpg';
+import ConciliacionDivisionParticionBienes from '../../../images/xconciliacionDivisionParticionBienes.jpg';
+import ConciliacionIndenmizacionDañosVehiculos from '../../../images/xconciliacionIndenmizacionDañosVehiculos.jpg';
+import ConciliacionIndenmizaciónNegligenciaMedica from '../../../images/xconciliacionIndenmizaciónNegligenciaMedica.jpg';
+import ConciliacionIndenmizacionAccidenteTransito from '../../../images/xconciliacionIndenmizacionAccidenteTransito.jpg';
+import ConciliacionDesalojoOcupantePrecario from '../../../images/xconciliacionDesalojoOcupantePrecario.jpg';
+import ConciliacionDesalojoVencimientoContrato from '../../../images/xconciliacionDesalojoVencimientoContrato.jpg';
 import ConciliacionContratacionesEstado from '../../../images/xconciliacionContratacionesEstado.jpg';
-import ConciliacionLiquidacionesContratacionesEstado from '../../../images/conciliacionLiquidacionesContratacionesEstado.jpg';
-import ConciliacionViciosOcultosContratacionesEstado from '../../../images/conciliacionViciosOcultosContratacionesEstado.jpg';
-import ConciliacionIndenmizacionContratacionesEstado from '../../../images/conciliacionIndenmizacionContratacionesEstado.jpg';
-import ConciliacionPagoDeudasContratacionesEstado from '../../../images/conciliacionPagoDeudasContratacionesEstado.jpg';
-import ConciliacionValorazionesMetrados from '../../../images/conciliacionValorazionesMetrados.jpg';
-import ConciliacionRecepciónConformidad from '../../../images/conciliacionRecepciónConformidad.jpg';
-import ConciliacionResoluciónContratosSuministrosServiciosObras from '../../../images/conciliacionResoluciónContratosSuministrosServiciosObras.jpg';
-import ConciliacionAmpliaciónPlazo from '../../../images/conciliacionAmpliaciónPlazo.jpg';
+import ConciliacionLiquidacionesContratacionesEstado from '../../../images/xconciliacionLiquidacionesContratacionesEstado.jpg';
+import ConciliacionViciosOcultosContratacionesEstado from '../../../images/xconciliacionViciosOcultosContratacionesEstado.jpg';
+import ConciliacionIndenmizacionContratacionesEstado from '../../../images/xconciliacionIndenmizacionContratacionesEstado.jpg';
+import ConciliacionPagoDeudasContratacionesEstado from '../../../images/xconciliacionPagoDeudasContratacionesEstado.jpg';
+import ConciliacionValorazionesMetrados from '../../../images/xconciliacionValorazionesMetrados.jpg';
+import ConciliacionRecepciónConformidad from '../../../images/xconciliacionRecepciónConformidad.jpg';
+import ConciliacionResoluciónContratosSuministrosServiciosObras from '../../../images/xconciliacionResoluciónContratosSuministrosServiciosObras.jpg';
+import ConciliacionAmpliaciónPlazo from '../../../images/xconciliacionAmpliaciónPlazo.jpg';
 import ConciliacionFueraCentroConciliacion from '../../../images/xconciliacionFueraCentroConciliacion.jpg';
 import ConciliacionApoderado from '../../../images/xconciliacionApoderado.jpg';
 import ConciliacionHoyMismo from '../../../images/xconciliacionHoyMismo.jpg';
@@ -167,13 +163,13 @@ function NavBar(props) {
       link: "/mediaciononline",
       name: "Mediación Online",
       isLogin: false,
-      icon: <HomeIcon className="text-white" />
+      icon: <AccountBalanceIcon className="text-white" />
     },
     {
       link: "/arbitrajevirtual",
       name: "Arbitraje Virtual",
       isLogin: false,
-      icon: <ShoppingCartIcon className="text-white" />
+      icon: <AccountBalanceIcon className="text-white" />
     },
     {
       link: "/abogadovirtual",
@@ -185,19 +181,9 @@ function NavBar(props) {
         link: "/login",
         name: "Mesa de Partes Virtual",
         isLogin: false,
-        icon: <AccountBalanceIcon className="text-white" />
+        icon: <EmailIcon className="text-white" />
       }
   ]);
-
-  const [title, setTitle] = useState("");
-  const [values, setValues] = useState({
-      title: '',
-      img: '',
-      title: '',
-      description: '',
-      more: '',
-      img: ''
-  })
   const [servicesConciliation, setServicesConciliation] = useState([
     {
         img: ConciliacionMYPE,
@@ -870,7 +856,7 @@ function NavBar(props) {
     getUserMenu();
   },[menuItems]);
 
-  const onGoToHome = ()=>{
+  const onGoToHome = () =>{
     props.history.go('/');
   }
 
@@ -883,21 +869,33 @@ function NavBar(props) {
     history.push('/c/profile')
   }
 
-  const onServicesInfo = () => {
-      
-      // history.push({
-         //pathname: '/servicesinfo',
-         //state: values,
-      // });
+  const onHome = () => {
+    history.push('/');
+  }
+  const onServicesInfo = (event) => {
+    const { myValue } = event.currentTarget.dataset;
+    servicesConciliation.map((element, index) => {
+        if(element.title===myValue){
+            const values = {
+                title: element.title,
+                subtitle: element.subtitle,
+                descriptionPrimary: element.descriptionPrimary,
+                descriptionSecondary: element.descriptionSecondary,
+                list: element.list,
+                img: element.img,
+                more: element.more
+            }
+            history.push({
+                pathname: '/servicesinfo',
+                state: values,
+            });
+        }
+    });
+    setAnchorButtonServices(null);
   }
 
-  const onInfo = () => {
-    
-      // history.push({
-        //pathname: '/servicesinfo',
-        //state: values,
-      // });
-    console.log(values.title);
+  const onInfo = (event) => {
+    console.log(event.target.value);
   }
 
   return (
@@ -905,8 +903,11 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div style={{display: "flex"}}>
-            <img src='logo.png' alt="Logo" className={classes.logo} onClick={onGoToHome}/> 
-            <Typography variant="h5" color="primary" style={{fontWeight: "bold", marginLeft: "4px"}}>SCMC</Typography>
+              <Button onClick={onHome}>
+                <img src='logo.png' alt="Logo" className={classes.logo}/> 
+                <Typography variant="h5" color="primary" style={{fontWeight: "bold", marginLeft: "4px"}}>SCMC</Typography>
+              </Button>
+            
           </div>
           
        
@@ -939,8 +940,7 @@ function NavBar(props) {
                   {
                       servicesConciliation.map((element, index) => (
                           <div key={index}>
-                             {/* { setTitle(element.title) } */}
-                             <MenuItem  onClick={onServicesInfo} /* onClick={handleMenuClose} */ >{element.title}</MenuItem>
+                             <MenuItem data-my-value={element.title} onClick={onServicesInfo} /* onClick={handleMenuClose} */ >{element.title}</MenuItem>
                           </div>
                       ))
                   }
@@ -972,7 +972,8 @@ function NavBar(props) {
                               color="primary"
                               size="large"
                               classes={{ text: classes.menuButtonText }}
-                              onClick={onInfo}
+                              value={"example"}
+                              onClick={e => onInfo(e, "value")} 
                             >
                               {element.name}
                             </Button>

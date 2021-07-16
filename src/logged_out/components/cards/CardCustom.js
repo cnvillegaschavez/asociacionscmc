@@ -25,7 +25,7 @@ export default function CardCustom(props) {
         <Fragment>
             <div id="cardAnimation" >
                 <div className="ui-card">
-                    <img src={img} />
+                    <img src={img} alt="no hay imagen"/>
                     <div className="description">
                         <h2>{title}</h2>
                         <Button

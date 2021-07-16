@@ -76,7 +76,7 @@ const ChangePassword = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
        
-        const user = getUserInfo();
+        // const user = getUserInfo();
         // TODO: aqui consumir api "changeNewPassword";
     }
    

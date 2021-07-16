@@ -1,23 +1,11 @@
 import React, { Fragment } from 'react';
-import { Grid, Typography, Divider, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from "react-router-dom";
+import { Button } from '@material-ui/core';
 import { useHistory } from 'react-router';
-import emailjs from 'emailjs-com';
-
-const useStyles = makeStyles((theme) => ({
-    button: {
-        color: "#fff",
-        padding: "0",
-    }
-}));
 
 export default function CardAnimation(props) {
     const { img, title, descriptionPrimary, descriptionSecondary, list, more } = props;
     const history = useHistory();
-    const classes = useStyles();
     const values = {
-        img: img,
         title: title,
         descriptionPrimary: descriptionPrimary,
         descriptionSecondary: descriptionSecondary,
@@ -38,7 +26,7 @@ export default function CardAnimation(props) {
         <Fragment>
             <div id="cardAnimation" >
                 <div className="ui-card">
-                    <img src={img} />
+                    <img src={img} alt="no hay imagen"/>
                     <div className="description">
                         <h2>{title}</h2>
                         <Button className="mi-link" style={{ color: "#fff" }} size="small" onClick={onServicesInfo}>

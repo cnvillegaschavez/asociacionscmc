@@ -99,7 +99,7 @@ export default function OurProfessionals() {
                 </div>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-                <img src={nuestrosProfesionales} className={classes.image} />
+                <img src={nuestrosProfesionales} alt="no hay imagen" className={classes.image} />
             </Grid>
         </Grid>
     );

@@ -10,9 +10,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Box from '@material-ui/core/Box';
 import emailjs from 'emailjs-com';
@@ -126,7 +124,7 @@ const Contact = (props) => {
         });
     }
 
-    /* Work with EmailJS */
+    /* Work with EmailJS - YO*/
     const onSendEmailJS2 = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_gopng3w', 'template_chvehkr', e.target, 'user_1e3ChOzPpO6EG9B6U3aTm').then(resp => {

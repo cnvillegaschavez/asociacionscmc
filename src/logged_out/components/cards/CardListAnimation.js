@@ -1,8 +1,7 @@
-import React, { useState, Fragment } from 'react';
-import { Grid, Typography, Divider } from '@material-ui/core';
+import React, { Fragment } from 'react';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardAnimation from '../cards/CardAnimation';
-import CardCustom from '../cards/CardCustom';
 
 const useStyles = makeStyles((theme) => ({
     root: {

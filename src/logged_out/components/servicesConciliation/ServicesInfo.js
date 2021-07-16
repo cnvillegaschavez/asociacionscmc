@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router';
 import Contact from '../contact/Contact';
 import CardListCustom from '../cards/CardListCustom';
+import smoothScrollTop from "../../../shared/functions/smoothScrollTop";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -39,11 +40,16 @@ const ServicesInfo = () => {
     const history = useHistory();
     const classes = useStyles();
 
+    useEffect(() => {
+        smoothScrollTop();
+        console.log(history.location.state.title)
+    }, []);
+
     return (
         <Fragment>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
             <Contact
                 title={history.location.state.title}
                 subtitle={history.location.state.subtitle}
@@ -57,8 +63,8 @@ const ServicesInfo = () => {
             <Typography variant="h6" className={classes.subtitle}>
                 Puedes comunicarte con nosotros directamente mediante nuestro <span style={{ color: "#FFB341" }}>WhatsApp</span>, donde podrás realizar cualquier consulta y asi resolver cada una de tus dudas
             </Typography>
-            <CardListCustom data={history.location.state.more}/>
-            <br/>
+            <CardListCustom data={history.location.state.more} />
+            <br />
         </Fragment>
     )
 }

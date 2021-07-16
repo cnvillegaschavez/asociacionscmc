@@ -2,12 +2,18 @@ import React, { Fragment, PureComponent } from "react";
 import PropTypes from "prop-types";
 import HeadSection from "./HeadSection";
 import FeatureSection from "./FeatureSection";
+import CarouselContainer from "../carousel/CarouselContainer";
 import ServicesConciliation from "./ServicesConciliation";
 import We from "./We";
 import OurProfessionals from "./OurProfessionals";
 import Contact from "../contact/Contact";
+import smoothScrollTop from "../../../shared/functions/smoothScrollTop";
 
 class Home extends PureComponent {
+
+    // useEffect(() => {
+    //     smoothScrollTop();
+    // }, []);
     
     constructor(props){
         super(props)
@@ -26,6 +32,7 @@ class Home extends PureComponent {
     render() {
         return (
             <Fragment>
+                <CarouselContainer />
                 <ServicesConciliation />
                 <br />
                 <We />
