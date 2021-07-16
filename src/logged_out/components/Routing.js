@@ -14,18 +14,18 @@ function Routing(props) {
     <Switch>
       <PropsRoute
         exact
-        path="/company"
-        component={Company}
+        path="/mediaciononline"
+        component={ServicesInfo}
       />
       <PropsRoute
         exact
-        path="/products"
-        component={Product}
+        path="/arbitrajevirtual"
+        component={ServicesInfo}
       />
       <PropsRoute
         exact
-        path="/googlemaps"
-        component={Product}
+        path="/abogadovirtual"
+        component={ServicesInfo}
       />
       <PropsRoute
         exact

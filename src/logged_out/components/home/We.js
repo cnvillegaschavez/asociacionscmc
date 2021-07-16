@@ -83,15 +83,15 @@ export default function We() {
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
                 <div className={classes.paper}>
-                    <Typography variant="h3" color="primary" className={classes.title}>Que es el centro de conciliación EX LEGE?</Typography>
+                    <Typography variant="h3" color="primary" className={classes.title}>Que es el Centro de Conciliación EX LEGE?</Typography>
                     <Divider className={classes.divider} />
                     <Typography variant="subtitle1" color="initial" className={classes.paragraph}>EX LEGE es un Centro de Conciliación de Cusco debidamente autorizado por el Ministerio de Justicia y Derechos Humanos que proporciona servicios de conciliación extrajudicial con altos estándares de calidad, seguridad y confidencialidad, gracias a su filosofía basada en la innovación, desarrollo, capacitación constante y valores éticos.</Typography>
                     <Typography variant="h6" color="primary" className={classes.subtitle}>Nuestros valores</Typography>
                     <List className={classes.list}>
                         {
                             infoValues.map((element, index) => (
-                                <Box m={-3}>
-                                    <ListItem key={index}>
+                                <Box m={-3} key={index}>
+                                    <ListItem >
                                         <ListItemIcon>
                                             <DoneIcon style={{color: "#FFB341"}}/>
                                         </ListItemIcon>

@@ -47,7 +47,9 @@ const ServicesInfo = () => {
             <Contact
                 title={history.location.state.title}
                 subtitle={history.location.state.subtitle}
-                descriptionPrimary={history.location.state.description}
+                descriptionPrimary={history.location.state.descriptionPrimary}
+                descriptionSecondary={history.location.state.descriptionSecondary}
+                list={history.location.state.list}
                 img={history.location.state.img}
             />
             <Typography variant="h3" color="primary" className={classes.title}>Aquí te recomendamos más Servicios de Conciliación relacionados</Typography>

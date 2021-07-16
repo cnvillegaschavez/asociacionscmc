@@ -3,6 +3,7 @@ import { Grid, Typography, Divider, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router';
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -12,13 +13,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function CardAnimation(props) {
-    const { img, title, description, more } = props;
+    const { img, title, descriptionPrimary, descriptionSecondary, list, more } = props;
     const history = useHistory();
     const classes = useStyles();
     const values = {
         img: img,
         title: title,
-        description: description,
+        descriptionPrimary: descriptionPrimary,
+        descriptionSecondary: descriptionSecondary,
+        list: list,
         more: more,
         img: img
     }
@@ -38,11 +41,6 @@ export default function CardAnimation(props) {
                     <img src={img} />
                     <div className="description">
                         <h2>{title}</h2>
-                        {/* <Link to='/servicesinfo' className="mi-link">
-                            <Button className={classes.button} size="small">
-                                Más información
-                            </Button>
-                        </Link> */}
                         <Button className="mi-link" style={{ color: "#fff" }} size="small" onClick={onServicesInfo}>
                             Más información
                         </Button>

@@ -79,7 +79,7 @@ export default function OurProfessionals() {
                         <Grid container>
                             {
                                 infoValues.map((element, index) => (
-                                    <Grid item xs={6} className={classes.item}>
+                                    <Grid key={index} item xs={6} className={classes.item}>
                                         <ListItem>
                                             <ListItemAvatar>
                                                 <Avatar className={classes.avatar}>

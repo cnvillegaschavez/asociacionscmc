@@ -24,6 +24,7 @@ import Slide from '@material-ui/core/Slide';
 import transitions from "@material-ui/core/styles/transitions";
 import ColoredButton from "../../../shared/components/ColoredButton";
 import { sendEmail } from '../../../redux/actions/contactActions';
+import emailjs from 'emailjs-com';
 
 
 const CssTextField = withStyles({
@@ -235,6 +236,8 @@ function Footer(props) {
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
     const [responseResult, setResponseResult] = useState({ message: '' });
+    const [messageConfirm, setMessageConfirm] = useState();
+    const [messageColor, setMessageColor] = useState();
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -256,6 +259,21 @@ function Footer(props) {
         const requestDto = { Email: email, Message: comments };
         setLoading(true);
         sendEmail(requestDto, callBackResponse);
+    }
+
+    /* Work with EmailJS */
+    const onSendEmailJS = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_4eftzhy', 'template_osenj4a', e.target, 'user_gces61yfrtx4j8VJ8mDOy').then(resp => {
+            console.log(resp);
+            setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible.');
+            setMessageColor('#FFFFFF');
+            e.target.reset();
+        }).catch(err => {
+            console.log(err);
+            setMessageConfirm('No se pudo enviar sus datos, intente más tarde');
+            setMessageColor('#E3B24B');
+        });
     }
 
     const callBackResponse = (responseDto) => {
@@ -369,13 +387,15 @@ function Footer(props) {
                         <Typography variant="subtitle1" className={classes.textEvaluation}>
                             Si tiene preguntas, necesita el consejo de un consejero de confianza o simplemente no sabe a quién acudir, nuestro equipo está aquí para ayudarlo. Contáctenos hoy para programar una consulta gratis.
                         </Typography>
-                        <form onSubmit={onClickBtnSubmit}>
+                        <form onSubmit={onSendEmailJS}>
                             <Box display="flex" flexDirection="column">
                                 <Box mb={1}>
                                     <CssTextField
                                         disabled={loading}
-                                        // value={name}
+                                        id="name"
                                         name="name"
+                                        autoComplete="name"
+                                        // value={name}
                                         label="Nombre"
                                         variant="outlined"
                                         //id="custom-css-outlined-input"
@@ -399,6 +419,9 @@ function Footer(props) {
                                     />
                                     <CssTextField
                                         disabled={loading}
+                                        id="email"
+                                        name="email"
+                                        autoComplete="email"
                                         // value={enail}
                                         label="Correo electrónico"
                                         variant="outlined"
@@ -425,7 +448,9 @@ function Footer(props) {
                                 <Box mb={1}>
                                     <CssTextField
                                         disabled={loading}
-
+                                        id="message"
+                                        name="message"
+                                        autoComplete="message"
                                         label="Cuéntanos tu caso"
                                         variant="outlined"
                                         //id="custom-css-outlined-input"
@@ -437,7 +462,7 @@ function Footer(props) {
                                         required
                                         style={{ padding: "10px 0" }}
                                         rows={6}
-                                        maxRows={20}
+                                        /* maxRows={20} */
                                         multiline
                                         InputLabelProps={{
                                             style: {
@@ -460,6 +485,7 @@ function Footer(props) {
                                     >
                                         Enviar mensaje
                                     </ColoredButton>
+                                    <Typography variant="subtitle1" style={{color: messageColor, fontWeight: "normal", fontStyle: "italic"}}>{messageConfirm}</Typography>
                                     {loading && <CircularProgress size={24} className={classes.buttonProgress} />}
                                 </div>
 

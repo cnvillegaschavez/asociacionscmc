@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -6,7 +6,17 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import DoneIcon from '@material-ui/icons/Done';
 import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import Box from '@material-ui/core/Box';
+import emailjs from 'emailjs-com';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -84,26 +94,64 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff",
         background: "#0DC143",
         borderRadius: "6px",
+    },
+    list: {
+        marginTop: "10px",
+        marginLeft: "5%",
+        color: "#fff",
     }
 }));
 
 const Contact = (props) => {
-    const { title, subtitle, descriptionPrimary, descriptionSecondary, img } = props;
+    const { title, subtitle, descriptionPrimary, descriptionSecondary, list, img } = props;
     const classes = useStyles();
     const phone = "+51962212903";
     const message = `Hola, quisiera consultar acerca del servicio de `;
+    const [messageConfirm, setMessageConfirm] = useState();
+    const [messageColor, setMessageColor] = useState();
+
+
+    /* Work with EmailJS */
+    const onSendEmailJS = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_4eftzhy', 'template_osenj4a', e.target, 'user_gces61yfrtx4j8VJ8mDOy').then(resp => {
+            console.log(resp);
+            setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible.');
+            setMessageColor('#FFFFFF');
+            e.target.reset();
+        }).catch(err => {
+            console.log(err);
+            setMessageConfirm('No se pudo enviar sus datos, intente más tarde');
+            setMessageColor('#E3B24B');
+        });
+    }
+
+    /* Work with EmailJS */
+    const onSendEmailJS2 = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_gopng3w', 'template_chvehkr', e.target, 'user_1e3ChOzPpO6EG9B6U3aTm').then(resp => {
+            console.log(resp);
+            setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible');
+            setMessageColor('#FFFFFF');
+            e.target.reset();
+        }).catch(err => {
+            console.log(err);
+            setMessageConfirm('No se pudo enviar sus datos, intente más tarde');
+            setMessageColor('#E3B24B');
+        });
+    }
 
     return (
         <Fragment>
             <Grid container className={classes.root}>
-                <Grid xs={12} className={classes.title}>
+                <Grid item xs={12} className={classes.title}>
                     <Typography variant="h3">{title}</Typography>
                     <Typography variant="h6">{subtitle}</Typography>
                     <Divider className={classes.divider} />
                 </Grid>
 
                 <Hidden smDown>
-                    <Grid xs={6} className={classes.paragraphWeb}>
+                    <Grid item xs={6} className={classes.paragraphWeb}>
                         {
                             img ? <img src={img} alt="no hay imagen" className={classes.img} /> : ''
                         }
@@ -113,48 +161,69 @@ const Contact = (props) => {
                             <br />
                             {descriptionSecondary}
                         </Typography>
+                        <List className={classes.list}>
+                            {
+                                list
+                                    ?
+                                    list.map((element, index) => (
+                                        <Box m={-3}>
+                                            <ListItem key={index}>
+                                                <ListItemIcon>
+                                                    <DoneIcon style={{ color: "#FFB341" }} />
+                                                </ListItemIcon>
+                                                <ListItemText>
+                                                    {element}
+                                                </ListItemText>
+                                            </ListItem>
+                                        </Box>
+
+                                    ))
+                                    : ""
+                            }
+                        </List>
                     </Grid>
-                    <Grid xs={6} className={classes.formWeb}>
-                        <form>
+                    <Grid item xs={6} className={classes.formWeb}>
+                        <form onSubmit={onSendEmailJS}>
                             <Grid container>
                                 <Grid item xs={12}>
                                     <TextField
                                         id="name"
+                                        name="name"
                                         placeholder="Nombre"
                                         required
-                                        multiline
                                         variant="outlined"
                                         color="secondary"
                                         size="small"
-                                        autoComplete="nombre"
+                                        autoComplete="name"
                                         className={classes.inputWeb}
                                         inputProps={{ maxLength: 30 }}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <TextField
-                                        id="name"
+                                        id="email"
+                                        name="email"
                                         placeholder="Correo electrónico"
                                         required
-                                        multiline
                                         variant="outlined"
                                         color="secondary"
                                         size="small"
-                                        autoComplete="nombre"
+                                        autoComplete="email"
                                         className={classes.inputWeb}
                                         inputProps={{ maxLength: 30 }}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <TextField
-                                        id="name"
+                                        id="message"
+                                        name="message"
                                         placeholder="Cuéntanos su caso..."
                                         required
                                         multiline
                                         variant="outlined"
                                         color="secondary"
                                         size="small"
-                                        autoComplete="nombre"
+                                        autoComplete="message"
                                         className={classes.inputWeb}
                                         inputProps={{ maxLength: 1000 }}
                                         rows={10}
@@ -164,6 +233,7 @@ const Contact = (props) => {
                                     <Button variant="contained" color="secondary" type="submit" className={classes.button}>
                                         Enviar mensaje
                                     </Button>
+                                    <Typography variant="subtitle1" style={{color: messageColor, fontWeight: "normal", fontStyle: "italic"}}>{messageConfirm}</Typography>
                                 </Grid>
                             </Grid>
                         </form>
@@ -183,9 +253,9 @@ const Contact = (props) => {
 
                     </Grid>
                 </Hidden>
-                
+
                 <Hidden mdUp>
-                    <Grid xs={12} className={classes.paragraphMovil}>
+                    <Grid item xs={12} className={classes.paragraphMovil}>
                         {
                             img ? <img src={img} alt="no hay imagen" className={classes.img} /> : ''
                         }
@@ -195,57 +265,60 @@ const Contact = (props) => {
                             <br />
                             {descriptionSecondary}
                         </Typography>
+                        {/* aqui */}
                     </Grid>
-                    <Grid xs={12} className={classes.formMovil}>
-                        <form>
+                    <Grid item xs={12} className={classes.formMovil}>
+                        <form onSubmit={onSendEmailJS}>
                             <Grid container>
                                 <Grid item xs={12}>
                                     <TextField
                                         id="name"
+                                        name="name"
                                         placeholder="Nombre"
                                         required
-                                        multiline
                                         variant="outlined"
                                         color="secondary"
                                         size="small"
-                                        autoComplete="nombre"
+                                        autoComplete="name"
                                         className={classes.inputMovil}
                                         inputProps={{ maxLength: 30 }}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <TextField
-                                        id="name"
+                                        id="email"
+                                        name="email"
                                         placeholder="Correo electrónico"
                                         required
-                                        multiline
                                         variant="outlined"
                                         color="secondary"
                                         size="small"
-                                        autoComplete="nombre"
+                                        autoComplete="email"
                                         className={classes.inputMovil}
                                         inputProps={{ maxLength: 30 }}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <TextField
-                                        id="name"
+                                        id="message"
+                                        name="message"
                                         placeholder="Cuéntanos su caso..."
                                         required
                                         multiline
                                         variant="outlined"
                                         color="secondary"
                                         size="small"
-                                        autoComplete="nombre"
+                                        autoComplete="message"
                                         className={classes.inputMovil}
                                         inputProps={{ maxLength: 1000 }}
                                         rows={10}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Button variant="contained" color="secondary" className={classes.button}>
+                                    <Button variant="contained" color="secondary" type="submit" className={classes.button}>
                                         Enviar mensaje
                                     </Button>
+                                    <Typography variant="subtitle1" style={{color: messageColor, fontWeight: "normal", fontStyle: "italic"}}>{messageConfirm}</Typography>
                                 </Grid>
                             </Grid>
                         </form>

@@ -1,12 +1,10 @@
 import React, { useState, Fragment } from 'react';
 import { Grid, Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import CardAnimation from '../cards/CardAnimation';
-import CardCustom from '../cards/CardCustom';
 import CardListAnimation from '../cards/CardListAnimation';
 
 import AbogadoVirtual from '../../../images/xabogadoVirtual.jpg';
-import ArbitrajeVirtual from '../../../images/arbitrajeVirtual.jpg';
+import ArbitrajeVirtual from '../../../images/xarbitrajeVirtual.jpg';
 import CharlasVirtuales from '../../../images/charlasVirtuales.jpg';
 import MediacionOnline from '../../../images/xmediacionOnline.jpg';
 import RedaccionCartasNotariales from '../../../images/redaccionCartasNotariales.jpg';
@@ -75,7 +73,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionMYPE,
             title: "Conciliación para MYPE",
-            description: "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
+            descriptionPrimary: "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionResoluciónContrato,
@@ -103,7 +103,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionEmpresa,
             title: "Conciliación Empresarial",
-            description: "Servicio orientado en el sector empresarial con el objeto  de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
+            descriptionPrimary: "Servicio orientado en el sector empresarial con el objeto  de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
@@ -130,7 +132,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionFamiliar,
             title: "Conciliación Familiar",
-            description: "Servicio de conciliación extrajudicial de  conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
+            descriptionPrimary: "Servicio de conciliación extrajudicial de  conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -177,7 +181,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionDivorcio,
             title: "Conciliación para Divorcio",
-            description: "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias  o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
+            descriptionPrimary: "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias  o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionTenenciaHijos,
@@ -224,7 +230,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionSocial,
             title: "Conciliación Social",
-            description: "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",
+            descriptionPrimary: "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -271,7 +279,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionPersonaNarutal,
             title: "Conciliación para Personas Naturales",
-            description: "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",
+            descriptionPrimary: "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionDivisionParticionBienes,
@@ -338,7 +348,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionContratacionesEstado,
             title: "Conciliación en Contrataciones del Estado",
-            description: "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",
+            descriptionPrimary: "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionLiquidacionesContratacionesEstado,
@@ -385,7 +397,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionFueraCentroConciliacion,
             title: "Conciliación fuera del Centro de Conciliación",
-            description: "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",
+            descriptionPrimary: "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -409,7 +423,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionApoderado,
             title: "Conciliación con Apoderado",
-            description: "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
+            descriptionPrimary: "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionDivisionParticionBienes,
@@ -466,7 +482,9 @@ const ServicesConciliation = () => {
         {
             img: ConciliacionHoyMismo,
             title: "Concilia hoy mismo",
-            description: "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
+            descriptionPrimary: "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -519,29 +537,108 @@ const ServicesConciliation = () => {
             ]
         },
         {
-            img: AbogadoVirtual,
-            title: 'AbogadoVirtual',
-            description: "Abogado virtual es un servicio de asesoría y defensa legal virtual ante los tribunales de justicia del Perú eficiente, eficaz  y dedicación a sus clientes.",
+            img: MediacionOnline,
+            title: "Mediacion Online",
+            descriptionPrimary: "Es un servicio para resolver conflictos en linea, por el que dos o mas personas con la ayuda de un mediador utilizan medios electrónicos para alcanzar acuerdos mutuamente satisfactorios, evitando contagios por la pandemia de la Covid -19 o por imposibilidad de viajar, etc",
+            descriptionSecondary: "Materias que se pueden mediar:",
+            list:  [
+                "Desalojo.", 
+                "Cobro de deudas.", 
+                "Indemnización.", 
+                "Otros derechos disponibles."
+            ],
             more: [
                 {
-                    img: ConciliacionPensionAlimentos,
-                    title: "Conciliación por Pensión de Alimentos",
+                    img: ConciliacionLiquidacionesContratacionesEstado,
+                    title: "Conciliación de Liquidaciones en Contrataciones del Estado",
+                    price: "S/. 300"
                 },
-               
+                {
+                    img: ConciliacionViciosOcultosContratacionesEstado,
+                    title: "Conciliación de Vicios Ocultos en Contrataciones del Estado",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionIndenmizacionContratacionesEstado,
+                    title: "Conciliación de Indenmización en Contrataciones del Estado",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionPagoDeudasContratacionesEstado,
+                    title: "Conciliación de Pago de Deudas en Contrataciones del Estado",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionValorazionesMetrados,
+                    title: "Conciliación de Valoraziones y Metrados",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionRecepciónConformidad,
+                    title: "Conciliación de Recepción y Conformidad",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionResoluciónContratosSuministrosServiciosObras,
+                    title: "Conciliación de Resolución de Contratos de Suministros Servicios y Obras",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionAmpliaciónPlazo,
+                    title: "Conciliación de Ampliación del Plazo",
+                    price: "S/. 300"
+                }
             ]
         },
         {
-            img: MediacionOnline,
-            title: "Mediacion online",
-            description: "AEs un servicio para resolver conflictos en linea, por el que dos o mas personas con la ayuda de un mediador utilizan medios electrónicos para alcanzar acuerdos mutuamente satisfactorios, evitando contagios por la pandemia de la Covid -19 o por imposibilidad de viajar, etc",
+            img: ArbitrajeVirtual,
+            title: 'Arbitraje Virtual',
+            descriptionPrimary: "Es un servicio enfocado en las micro y pequeñas empresas que les permite obtener soluciones vinculantes, rápidas y económicas en conflictos comerciales.",
+            descriptionSecondary: "",
+            list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
+                    price: "S/. 300"
                 },
-               
+                {
+                    img: ConciliacionRegimenVisitasConExternamiento,
+                    title: "Conciliación por Régimen de Visitas con externamiento",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionGastosEmbarazo,
+                    title: "Conciliación por Gastos de Embarazo",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionRegimenVisitasSinExternamiento,
+                    title: "Conciliación de Régimen de Visias sin externamiento",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionTenenciaHijos,
+                    title: "Conciliación por Tenencia de hijos",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionHoyMismo,
+                    title: "Concilia hoy mismo",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionIndenmizaciónNegligenciaMedica,
+                    title: "Conciliación por Indenmización de Negligencia Médica",
+                    price: "S/. 300"
+                },
+                {
+                    img: ConciliacionDesalojoFaltaPago,
+                    title: "Conciliación de Desalojo por Falta de Pago",
+                    price: "S/. 300"
+                },
             ]
-        }
+        },
     ]);
 
     return (
