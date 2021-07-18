@@ -61,7 +61,6 @@ const CarouselContainer = () => {
 
     return (
         <Carousel fade={true} pause={false}>
-
             {
                 info.map((element, index) => (
                     <Carousel.Item interval={10000} key={index}>
@@ -80,7 +79,6 @@ const CarouselContainer = () => {
                     </Carousel.Item>
                 ))
             }
-          
         </Carousel>
     )
 }

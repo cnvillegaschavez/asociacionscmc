@@ -32,7 +32,8 @@ class Home extends PureComponent {
     render() {
         return (
             <Fragment>
-                <CarouselContainer />
+                {/* <CarouselContainer /> */}
+                <HeadSection/>
                 <ServicesConciliation />
                 <br />
                 <We />
