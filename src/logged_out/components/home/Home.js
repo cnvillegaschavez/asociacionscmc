@@ -40,12 +40,7 @@ class Home extends PureComponent {
                 <br />
                 <OurProfessionals />
                 <br />
-                <Contact
-                    title={this.state.titleContact}
-                    subtitle={this.state.subtitleContact}
-                    descriptionPrimary={this.state.descriptionContacPrimary}
-                    descriptionSecondary={this.state.descriptionContacSecondary}
-                />
+                <Contact />
             </Fragment>
         );
     }

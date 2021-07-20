@@ -38,7 +38,7 @@ const CardListCustom = (props) => {
                     {
                         data.map((element, index) => (
                             <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                                <CardCustom title={element.title} img={element.img} description={element.description} more={element.more} />
+                                <CardCustom title={element.title} img={element.img} price={element.price}/>
                             </Grid>
                         ))
                     }

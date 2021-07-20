@@ -3,13 +3,14 @@ import { Button } from '@material-ui/core';
 import { useHistory } from 'react-router';
 
 export default function CardAnimation(props) {
-    const { img, title, descriptionPrimary, descriptionSecondary, list, more } = props;
+    const { img, title, descriptionPrimary, descriptionSecondary, price, list, more } = props;
     const history = useHistory();
     const values = {
         title: title,
         descriptionPrimary: descriptionPrimary,
         descriptionSecondary: descriptionSecondary,
         list: list,
+        price: price,
         more: more,
         img: img
     }
@@ -28,7 +29,7 @@ export default function CardAnimation(props) {
                 <div className="ui-card">
                     <img src={img} alt="no hay imagen"/>
                     <div className="description">
-                        <h2>{title}</h2>
+                        <h3>{title}</h3>
                         <Button className="mi-link" style={{ color: "#fff" }} size="small" onClick={onServicesInfo}>
                             Más información
                         </Button>

@@ -12,11 +12,11 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff",
         background: "#0DC143",
         borderRadius: "6px",
-    }
+    },
 }));
 
 export default function CardCustom(props) {
-    const { img, title } = props;
+    const { title, img, price } = props;
     const classes = useStyles();
     const phone = "+51962212903";
     const message = `Hola, quisiera consultar acerca del servicio de `;
@@ -27,7 +27,8 @@ export default function CardCustom(props) {
                 <div className="ui-card">
                     <img src={img} alt="no hay imagen"/>
                     <div className="description">
-                        <h2>{title}</h2>
+                        <h3>{title}</h3>
+                        <h3 className="price">{price}</h3>
                         <Button
                             variant="contained"
                             className="mi-link"

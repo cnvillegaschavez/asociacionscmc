@@ -1,64 +1,13 @@
-import React, { Fragment, useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import {
-    withStyles,
-    withWidth,
-} from "@material-ui/core";
+import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { Typography, Divider } from '@material-ui/core';
-import Nosotros from '../../../images/nosotros.jpg';
-import MediacionOnline from '../../../images/fondoMediacionOnline.jpg';
-import AbogadoVirtual from '../../../images/fondoAbogadoVirtual.jpg';
-import ArbitrajeVirtual from '../../../images/fondoArtibrajeVirtual.jpg';
+import MediacionOnline from "../../../images/fondoMediacionOnline.jpg";
+import AbogadoVirtual from "../../../images/fondoAbogadoVirtual.jpg";
+import ArbitrajeVirtual from "../../../images/fondoArtibrajeVirtual.jpg";
+import Nosotros from "../../../images/nosotros.jpg";
 
-const styles = (theme) => ({
-    wrapper: {
-        position: "relative",
-        //height: "100vh",
-        backgroundColor: theme.palette.secondary.main,
-        paddingBottom: theme.spacing(0),
-        filter: "brightness(50%)",
-    },
-    container: {
-        marginTop: theme.spacing(0),
-        marginBottom: theme.spacing(0),
-        [theme.breakpoints.down("md")]: {
-            marginBottom: theme.spacing(1),
-        },
-        [theme.breakpoints.down("sm")]: {
-            marginBottom: theme.spacing(0),
-        },
-        [theme.breakpoints.down("sm")]: {
-            marginBottom: theme.spacing(0),
-        },
-    },
-    text: {
-        position: "absolute"
-    },
-    title: {
-        color: "#fff",
-        textAlign: "center"
-    },
-    subtitle: {
-        color: "#fff",
-        textAlign: "center",
-        paddingLeft: "10%",
-        paddingRight: "10%"
-    },
-    divider: {
-        marginTop: "10px",
-        marginBottom: "10px",
-        marginRight: "auto",
-        marginLeft: "auto",
-        backgroundColor: theme.palette.secondary.main,
-        width: "100px",
-    },
-});
+const Slider = () => {
 
-function HeadSection(props) {
-    const { classes } = props;
     const info = [
         {
             img: Nosotros,
@@ -83,38 +32,23 @@ function HeadSection(props) {
     ]
 
     return (
-        <Fragment>
-            <div className={classNames(/* "lg-p-top", */ classes.wrapper)}>
-                <div className={classNames(/* "container-fluid",  */classes.container)} >
-                    <Carousel autoFocus={true} autoPlay infiniteLoop emulateTouch showThumbs={false} showStatus={false} useKeyboardArrows className="presentation-mode">
-                        {
-                            info.map((element, index) => (
-                                <div key={index}>
-                                    <img src={element.img} alt={element.title} />
+        <div id="my-carousel">
+            <Carousel autoPlay interval={5000} infiniteLoop showIndicators={false} showStatus={false} showThumbs={false}>
+                {
+                    info.map((element, index) => (
+                        <div key={index}>
+                            <img src={element.img} alt="" />
+                            <div className="overlay">
+                                <h2 className="overlay-title">{element.title}</h2>
+                                <p className="overlay-description">{element.description}</p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </Carousel>
+        </div>
 
-                                    <div className={classes.text}>
-                                        <Typography variant="h3" color="primary" className={classes.title}>{element.title}</Typography>
-                                        <Divider className={classes.divider} />
-                                        <Typography variant="body1" className={classes.subtitle}>
-                                            {element.description}
-                                        </Typography>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </Carousel>
-                </div>
-            </div>
-        </Fragment>
-    );
+    )
 }
 
-HeadSection.propTypes = {
-    classes: PropTypes.object,
-    width: PropTypes.string,
-    theme: PropTypes.object,
-};
-
-export default withWidth()(
-    withStyles(styles, { withTheme: true })(HeadSection)
-);
+export default Slider

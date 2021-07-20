@@ -74,27 +74,28 @@ const ServicesConciliation = () => {
             title: "Conciliación para MYPE",
             descriptionPrimary: "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionResoluciónContrato,
                     title: "Conciliación de Resolución de Contrato",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },  
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },  
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },  
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
-                    price: "S/. 300"
+                    price: "S/.350"
                 },  
                 
             ]
@@ -104,27 +105,28 @@ const ServicesConciliation = () => {
             title: "Conciliación Empresarial",
             descriptionPrimary: "Servicio orientado en el sector empresarial con el objeto  de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
-                    price: "S/. 300"
+                    price: "S/.350"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliacion de Desalojo por Falta de Pago",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
             ]
         },
@@ -133,47 +135,48 @@ const ServicesConciliation = () => {
             title: "Conciliación Familiar",
             descriptionPrimary: "Servicio de conciliación extrajudicial de  conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionRegimenVisitasConExternamiento,
                     title: "Conciliación por Régimen de Visitas con externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionExoneracionPersionAlimentos,
                     title: "Conciliación de Exoneracion de persión de alimentos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionGastosEmbarazo,
                     title: "Conciliación por Gastos de Embarazo",
-                    price: "S/. 300"
+                    price: "S/.250"
                 },
                 {
                     img: ConciliacionRegimenVisitasSinExternamiento,
                     title: "Conciliación de Régimen de Visias sin externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionTenenciaHijos,
                     title: "Conciliación por Tenencia de hijos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDivorcio,
                     title: "Conciliación para divorcio",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 }
             ]
         },
@@ -182,47 +185,48 @@ const ServicesConciliation = () => {
             title: "Conciliación para Divorcio",
             descriptionPrimary: "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias  o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
             descriptionSecondary: "",
+            price: "S/.300",
             list:  [],
             more: [
                 {
                     img: ConciliacionTenenciaHijos,
                     title: "Conciliación por Régimen de Visitas con externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: RedaccionCartasNotariales,
                     title: "Redaccion de cartas notariales",
-                    price: "S/. 300"
+                    price: "S/.100"
                 },
                 {
                     img:   ConciliacionRegimenVisitasSinExternamiento,
                     title: "Conciliación por Régimen de Visitas sin externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img:  AbogadoVirtual,
-                    title: "Abogado virtual",
-                    price: "S/. 300"
+                    title: "Abogado Virtual",
+                    price: ""
                 },
                 {
                     img: ConciliacionRegimenVisitasConExternamiento,
                     title: "Conciliación por Pensión de Alimentos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Tenencia de hijos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizacionDañosVehiculos,
                     title: "Conciliación por Indenmización de daños a vehiculos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
             ]
         },
@@ -231,47 +235,48 @@ const ServicesConciliation = () => {
             title: "Conciliación Social",
             descriptionPrimary: "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionRegimenVisitasConExternamiento,
                     title: "Conciliación por Régimen de Visitas con externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionGastosEmbarazo,
                     title: "Conciliación por Gastos de Embarazo",
-                    price: "S/. 300"
+                    price: "S/.250"
                 },
                 {
                     img: ConciliacionRegimenVisitasSinExternamiento,
                     title: "Conciliación de Régimen de Visias sin externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionTenenciaHijos,
                     title: "Conciliación por Tenencia de hijos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizaciónNegligenciaMedica,
                     title: "Conciliación por Indenmización de Negligencia Médica",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliación de Desalojo por Falta de Pago",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
             ]
         },
@@ -280,67 +285,68 @@ const ServicesConciliation = () => {
             title: "Conciliación para Personas Naturales",
             descriptionPrimary: "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionDivisionParticionBienes,
                     title: "Conciliación de División y Partición de Bienes",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizacionDañosVehiculos,
                     title: "Conciliación por Indenmización de daños a vehículos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizaciónNegligenciaMedica,
                     title: "Conciliación por Indenmización de Negligencia Médica",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizacionAccidenteTransito,
                     title: "Conciliación por Indenmización de accidente de transito",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
-                    price: "S/. 300"
+                    price: "S/.350"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliación de Desalojo por Falta de Pago",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoOcupantePrecario,
                     title: "Conciliación de Desalojo por Ocupante Precario",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoVencimientoContrato,
                     title: "Conciliación de Desalojo por Vencimiento de contrato",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionGastosEmbarazo,
                     title: "Conciliación por Gastos de Embarazo",
-                    price: "S/. 300"
+                    price: "S/.250"
                 },
             ]
         },
@@ -349,47 +355,48 @@ const ServicesConciliation = () => {
             title: "Conciliación en Contrataciones del Estado",
             descriptionPrimary: "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionLiquidacionesContratacionesEstado,
                     title: "Conciliación de Liquidaciones en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionViciosOcultosContratacionesEstado,
                     title: "Conciliación de Vicios Ocultos en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionIndenmizacionContratacionesEstado,
                     title: "Conciliación de Indenmización en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionPagoDeudasContratacionesEstado,
                     title: "Conciliación de Pago de Deudas en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionValorazionesMetrados,
                     title: "Conciliación de Valoraziones y Metrados",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionRecepciónConformidad,
                     title: "Conciliación de Recepción y Conformidad",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionResoluciónContratosSuministrosServiciosObras,
-                    title: "Conciliación de Resolución de Contratos de Suministros Servicios y Obras",
-                    price: "S/. 300"
+                    title: "Conciliación de Resolución de Contratos de Suministros, Servicios y Obras",
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionAmpliaciónPlazo,
                     title: "Conciliación de Ampliación del Plazo",
-                    price: "S/. 300"
+                    price: "S/.499"
                 }
             ]
         },
@@ -398,24 +405,28 @@ const ServicesConciliation = () => {
             title: "Conciliación fuera del Centro de Conciliación",
             descriptionPrimary: "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDivorcio,
                     title: "Conciliación para Divorcio",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliación de Desalojo por Falta de Pago",
+                    price: "S/.300"
                 },
             ]
         },
@@ -424,56 +435,68 @@ const ServicesConciliation = () => {
             title: "Conciliación con Apoderado",
             descriptionPrimary: "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionDivisionParticionBienes,
                     title: "Conciliación de División y Partición de Bienes",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizacionDañosVehiculos,
                     title: "Conciliación por Indenmización de daños a vehiculos",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizaciónNegligenciaMedica,
                     title: "Conciliación de Indenmización de Negligencia Médica",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
+                    price: "S/.350"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliación de Desalojo por Falta de Pago",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoOcupantePrecario,
                     title: "Conciliación de Desalojo por Ocupante Precario",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDivorcio,
                     title: "Conciliación para Divorcio",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoVencimientoContrato,
                     title: "Conciliación de Desalojo por Vencimiento de Contrato",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
+                    price: "S/.300"
                 },
 
             ]
@@ -483,158 +506,176 @@ const ServicesConciliation = () => {
             title: "Concilia hoy mismo",
             descriptionPrimary: "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
             descriptionSecondary: "",
+            price: "",
             list:  [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionRegimenVisitasConExternamiento,
                     title: "Conciliación por Régimen de Visitas con externamiento",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionRegimenVisitasSinExternamiento,
                     title: "Conciliación de Régimen de Visias sin externamiento",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizacionDañosVehiculos,
                     title: "Conciliación por Indenmización de daños a vehiculos",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
+                    price: "S/.350"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliación de Desalojo por Falta de Pago",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoOcupantePrecario,
                     title: "Conciliación de Desalojo por Ocupante Precario",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionExoneracionPersionAlimentos,
                     title: "Conciliación de Exoneración de pensión de alimentos",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionTenenciaHijos,
                     title: "Conciliación por Tenencia de hijos",
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDivorcio,
                     title: "Conciliación para Divorcio",
+                    price: "S/.300"
+
                 }
             ]
         },
         {
+            link: "mediaciononline",
             img: MediacionOnline,
             title: "Mediacion Online",
             descriptionPrimary: "Es un servicio para resolver conflictos en linea, por el que dos o mas personas con la ayuda de un mediador utilizan medios electrónicos para alcanzar acuerdos mutuamente satisfactorios, evitando contagios por la pandemia de la Covid -19 o por imposibilidad de viajar, etc",
             descriptionSecondary: "Materias que se pueden mediar:",
-            list:  [
-                "Desalojo.", 
-                "Cobro de deudas.", 
-                "Indemnización.", 
+            price: "S/.350",
+            list: [
+                "Desalojo.",
+                "Cobro de deudas.",
+                "Indemnización.",
                 "Otros derechos disponibles."
             ],
             more: [
                 {
                     img: ConciliacionLiquidacionesContratacionesEstado,
                     title: "Conciliación de Liquidaciones en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionViciosOcultosContratacionesEstado,
                     title: "Conciliación de Vicios Ocultos en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionIndenmizacionContratacionesEstado,
                     title: "Conciliación de Indenmización en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionPagoDeudasContratacionesEstado,
                     title: "Conciliación de Pago de Deudas en Contrataciones del Estado",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionValorazionesMetrados,
                     title: "Conciliación de Valoraziones y Metrados",
-                    price: "S/. 300"
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionRecepciónConformidad,
                     title: "Conciliación de Recepción y Conformidad",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionResoluciónContratosSuministrosServiciosObras,
-                    title: "Conciliación de Resolución de Contratos de Suministros Servicios y Obras",
-                    price: "S/. 300"
+                    title: "Conciliación de Resolución de Contratos de Suministros, Servicios y Obras",
+                    price: "S/.499"
                 },
                 {
                     img: ConciliacionAmpliaciónPlazo,
                     title: "Conciliación de Ampliación del Plazo",
-                    price: "S/. 300"
+                    price: "S/.499"
                 }
             ]
         },
         {
+            link: "arbitrajevirtual",
             img: ArbitrajeVirtual,
             title: 'Arbitraje Virtual',
             descriptionPrimary: "Es un servicio enfocado en las micro y pequeñas empresas que les permite obtener soluciones vinculantes, rápidas y económicas en conflictos comerciales.",
             descriptionSecondary: "",
-            list:  [],
+            price: "S/.5 500",
+            list: [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
                     title: "Conciliación por Pensión de Alimentos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionRegimenVisitasConExternamiento,
                     title: "Conciliación por Régimen de Visitas con externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionGastosEmbarazo,
                     title: "Conciliación por Gastos de Embarazo",
-                    price: "S/. 300"
+                    price: "S/.250"
                 },
                 {
                     img: ConciliacionRegimenVisitasSinExternamiento,
                     title: "Conciliación de Régimen de Visias sin externamiento",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionTenenciaHijos,
                     title: "Conciliación por Tenencia de hijos",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionHoyMismo,
                     title: "Concilia hoy mismo",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionIndenmizaciónNegligenciaMedica,
                     title: "Conciliación por Indenmización de Negligencia Médica",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliación de Desalojo por Falta de Pago",
-                    price: "S/. 300"
+                    price: "S/.300"
                 },
             ]
         },

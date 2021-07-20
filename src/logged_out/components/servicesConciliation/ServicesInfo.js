@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router';
-import Contact from '../contact/Contact';
+import ContactDetailService from '../contact/ContactDetailService';
 import CardListCustom from '../cards/CardListCustom';
 import smoothScrollTop from "../../../shared/functions/smoothScrollTop";
 
@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "30px"
     },
     title: {
-        marginTop: "5%",
         fontWeight: "bold",
         color: theme.palette.primary.main,
         textAlign: "center"
@@ -39,10 +38,9 @@ const useStyles = makeStyles((theme) => ({
 const ServicesInfo = () => {
     const history = useHistory();
     const classes = useStyles();
-
+ 
     useEffect(() => {
         smoothScrollTop();
-        console.log(history.location.state.title)
     }, []);
 
     return (
@@ -50,15 +48,18 @@ const ServicesInfo = () => {
             <br />
             <br />
             <br />
-            <Contact
+            <ContactDetailService
                 title={history.location.state.title}
                 subtitle={history.location.state.subtitle}
                 descriptionPrimary={history.location.state.descriptionPrimary}
                 descriptionSecondary={history.location.state.descriptionSecondary}
+                price={history.location.state.price}
                 list={history.location.state.list}
                 img={history.location.state.img}
             />
-            <Typography variant="h3" color="primary" className={classes.title}>Aquí te recomendamos más Servicios de Conciliación relacionados</Typography>
+            <Typography variant="h3" color="primary" className={classes.title} style={{marginTop: "5%"}}>Aquí te mostramos los servicios en relación a</Typography>
+            <Typography variant="h3" color="primary" className={classes.title}>"{history.location.state.title}"</Typography>
+            
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.subtitle}>
                 Puedes comunicarte con nosotros directamente mediante nuestro <span style={{ color: "#FFB341" }}>WhatsApp</span>, donde podrás realizar cualquier consulta y asi resolver cada una de tus dudas

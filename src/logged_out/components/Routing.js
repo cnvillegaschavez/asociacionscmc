@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { Switch } from "react-router-dom";
 import PropsRoute from "../../shared/components/PropsRoute";
 import Home from "./home/Home";
-import Company from "./company/Company";
-import Product from "./products/Product";
 import ServicesInfo from "./servicesConciliation/ServicesInfo";
+import MediacionOnline from "./servicesConciliation/MediacionOnline";
+import AbogadoVirtual from "./servicesConciliation/AbogadoVirtual";
+import ArbitrajeVirtual from "./servicesConciliation/ArbitrajeVirtual";
+import MesaPartesVirtual from "./servicesConciliation/MesaPartesVirtual";
 
 function Routing(props) {
   const { selectCompany, selectHome, selectServicesInfo } = props;
@@ -14,25 +16,31 @@ function Routing(props) {
     <Switch>
       <PropsRoute
         exact
-        path="/mediaciononline"
-        component={ServicesInfo}
-      />
-      <PropsRoute
-        exact
-        path="/arbitrajevirtual"
-        component={ServicesInfo}
-      />
-      <PropsRoute
-        exact
-        path="/abogadovirtual"
-        component={ServicesInfo}
-      />
-      <PropsRoute
-        exact
         path="/servicesinfo"
         component={ServicesInfo}
         selectServicesInfo={selectServicesInfo}
       />
+      <PropsRoute
+        exact
+        path="/mediaciononline"
+        component={MediacionOnline}
+      />
+     <PropsRoute
+        exact
+        path="/abogadovirtual"
+        component={AbogadoVirtual}
+      />
+      <PropsRoute
+        exact
+        path="/arbitrajevirtual"
+        component={ArbitrajeVirtual}
+      />
+      <PropsRoute
+        exact
+        path="/mesadepartesvirtual"
+        component={MesaPartesVirtual}
+      />
+     
 
       )
       <PropsRoute path="/" component={Home} selectHome={selectHome} />)

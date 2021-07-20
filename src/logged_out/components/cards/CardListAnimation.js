@@ -44,6 +44,7 @@ const CardListAnimation = (props) => {
                                         img={element.img}
                                         descriptionPrimary={element.descriptionPrimary}
                                         descriptionSecondary={element.descriptionSecondary}
+                                        price={element.price}
                                         list={element.list}
                                         more={element.more}
                                     />

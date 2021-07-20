@@ -15,8 +15,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Box from '@material-ui/core/Box';
 import emailjs from 'emailjs-com';
 
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: theme.palette.primary.main,
@@ -100,14 +98,16 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Contact = (props) => {
-    const { title, subtitle, descriptionPrimary, descriptionSecondary, list, img } = props;
+const Contact = () => {
     const classes = useStyles();
+    const title = "Estamos aquí para ayudar";
+    const subtitle = "Contáctenos hoy para programar una consulta";
+    const descriptionPrimary = "Si tiene preguntas, necesita el consejo de un consejero de confianza o simplemente no sabe a quién acudir, nuestro equipo está aquí para ayudarlo. Contáctenos hoy para programar una consulta gratis.";
+    const descriptionSecondary = "Si no puede visitarnos en nuestra oficina en el centro durante la semana, estaremos más que felices de encontrarnos con usted en su casa o en nuestra oficina durante el fin de semana.";
     const phone = "+51962212903";
     const message = `Hola, quisiera consultar acerca del servicio de `;
     const [messageConfirm, setMessageConfirm] = useState();
     const [messageColor, setMessageColor] = useState();
-
 
     /* Work with EmailJS */
     const onSendEmailJS = (e) => {
@@ -150,35 +150,14 @@ const Contact = (props) => {
 
                 <Hidden smDown>
                     <Grid item xs={6} className={classes.paragraphWeb}>
-                        {
-                            img ? <img src={img} alt="no hay imagen" className={classes.img} /> : ''
-                        }
+                        {/* <img src={img} alt="no hay imagen" className={classes.img} /> */}
+                        
                         <Typography variant="subtitle1" >
                             {descriptionPrimary}
                             <br />
                             <br />
                             {descriptionSecondary}
                         </Typography>
-                        <List className={classes.list}>
-                            {
-                                list
-                                    ?
-                                    list.map((element, index) => (
-                                        <Box m={-3}>
-                                            <ListItem key={index}>
-                                                <ListItemIcon>
-                                                    <DoneIcon style={{ color: "#FFB341" }} />
-                                                </ListItemIcon>
-                                                <ListItemText>
-                                                    {element}
-                                                </ListItemText>
-                                            </ListItem>
-                                        </Box>
-
-                                    ))
-                                    : ""
-                            }
-                        </List>
                     </Grid>
                     <Grid item xs={6} className={classes.formWeb}>
                         <form onSubmit={onSendEmailJS}>
@@ -254,16 +233,14 @@ const Contact = (props) => {
 
                 <Hidden mdUp>
                     <Grid item xs={12} className={classes.paragraphMovil}>
-                        {
-                            img ? <img src={img} alt="no hay imagen" className={classes.img} /> : ''
-                        }
+                        {/* <img src={img} alt="no hay imagen" className={classes.img} />  */}
+            
                         <Typography variant="subtitle1" >
                             {descriptionPrimary}
                             <br />
                             <br />
                             {descriptionSecondary}
                         </Typography>
-                        {/* aqui */}
                     </Grid>
                     <Grid item xs={12} className={classes.formMovil}>
                         <form onSubmit={onSendEmailJS}>
