@@ -50,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "30px"
     },
     title: {
-        marginTop: "100px",
         fontWeight: "bold",
         color: theme.palette.primary.main,
         textAlign: "center"

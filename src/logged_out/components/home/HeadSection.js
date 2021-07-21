@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import MediacionOnline from "../../../images/fondoMediacionOnline.jpg";
 import AbogadoVirtual from "../../../images/fondoAbogadoVirtual.jpg";
 import ArbitrajeVirtual from "../../../images/fondoArtibrajeVirtual.jpg";
 import Nosotros from "../../../images/nosotros.jpg";
+import Hidden from '@material-ui/core/Hidden';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    roo: {
+
+    }
+}));
 
 const Slider = () => {
 
@@ -32,21 +40,43 @@ const Slider = () => {
     ]
 
     return (
-        <div id="my-carousel">
-            <Carousel autoPlay interval={5000} infiniteLoop showIndicators={false} showStatus={false} showThumbs={false}>
-                {
-                    info.map((element, index) => (
-                        <div key={index}>
-                            <img src={element.img} alt="" />
-                            <div className="overlay">
-                                <h2 className="overlay-title">{element.title}</h2>
-                                <p className="overlay-description">{element.description}</p>
-                            </div>
-                        </div>
-                    ))
-                }
-            </Carousel>
-        </div>
+        <Fragment>
+            <Hidden smDown>
+                <div id="my-carousel-web">
+                    <Carousel autoPlay interval={5000} infiniteLoop showIndicators={false} showStatus={false} showThumbs={false}>
+                        {
+                            info.map((element, index) => (
+                                <div key={index}>
+                                    <img src={element.img} alt="" />
+                                    <div className="overlay">
+                                        <h2 className="overlay-title">{element.title}</h2>
+                                        <p className="overlay-description">{element.description}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+            </Hidden>
+            <Hidden smUp>
+                <div id="my-carousel-movil">
+                    <Carousel autoPlay interval={5000} infiniteLoop showIndicators={false} showStatus={false} showThumbs={false}>
+                        {
+                            info.map((element, index) => (
+                                <div key={index}>
+                                    <img src={element.img} alt="" />
+                                    <div className="overlay">
+                                        <h2 className="overlay-title">{element.title}</h2>
+                                        <p className="overlay-description">{element.description}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+            </Hidden>
+        </Fragment>
+
 
     )
 }

@@ -6,13 +6,7 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import DoneIcon from '@material-ui/icons/Done';
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Box from '@material-ui/core/Box';
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
@@ -124,21 +118,6 @@ const Contact = () => {
         });
     }
 
-    /* Work with EmailJS - YO*/
-    const onSendEmailJS2 = (e) => {
-        e.preventDefault();
-        emailjs.sendForm('service_gopng3w', 'template_chvehkr', e.target, 'user_1e3ChOzPpO6EG9B6U3aTm').then(resp => {
-            console.log(resp);
-            setMessageConfirm('Su mensaje fue enviado, un representante de SCMC se comunicará con usted los más pronto posible');
-            setMessageColor('#FFFFFF');
-            e.target.reset();
-        }).catch(err => {
-            console.log(err);
-            setMessageConfirm('No se pudo enviar sus datos, intente más tarde');
-            setMessageColor('#E3B24B');
-        });
-    }
-
     return (
         <Fragment>
             <Grid container className={classes.root}>
@@ -149,9 +128,7 @@ const Contact = () => {
                 </Grid>
 
                 <Hidden smDown>
-                    <Grid item xs={6} className={classes.paragraphWeb}>
-                        {/* <img src={img} alt="no hay imagen" className={classes.img} /> */}
-                        
+                    <Grid item xs={6} className={classes.paragraphWeb}>        
                         <Typography variant="subtitle1" >
                             {descriptionPrimary}
                             <br />
@@ -233,8 +210,6 @@ const Contact = () => {
 
                 <Hidden mdUp>
                     <Grid item xs={12} className={classes.paragraphMovil}>
-                        {/* <img src={img} alt="no hay imagen" className={classes.img} />  */}
-            
                         <Typography variant="subtitle1" >
                             {descriptionPrimary}
                             <br />

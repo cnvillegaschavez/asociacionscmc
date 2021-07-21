@@ -5,7 +5,6 @@ import { withStyles } from "@material-ui/core";
 import NavBar from "./navigation/NavBar";
 import Footer from "./footer/Footer";
 import "aos/dist/aos.css";
-import CookieRulesDialog from "./cookies/CookieRulesDialog";
 import CookieConsent from "./cookies/CookieConsent";
 import Routing from "./Routing";
 import smoothScrollTop from "../../shared/functions/smoothScrollTop";

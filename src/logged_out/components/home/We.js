@@ -76,7 +76,7 @@ export default function We() {
     return (
         <Grid container>
             <Grid item xs={12} sm={12} md={6}>
-                <img src={nosotros} className={classes.image} />
+                <img src={nosotros} alt="no hay imagen" className={classes.image} />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
                 <div className={classes.paper}>

@@ -89,11 +89,11 @@
 
 /* -------------------styles component  in route: /logged_out/components/home/HeadSection.js -------------------*/
 
-#my-carousel .carousel{
+#my-carousel-web .carousel{
     position: relative;
     height: 100vh;
 }
-#my-carousel .carousel .overlay{
+#my-carousel-web .carousel .overlay{
     width: 80%;
     position: absolute;
     top: 50%;
@@ -104,14 +104,41 @@
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
 }
-#my-carousel .carousel img{
+#my-carousel-web .carousel img{
     filter: brightness(50%);
 }
-#my-carousel .carousel .overlay-title{
+#my-carousel-web .carousel .overlay-title{
     margin: 0.8rem 0 1rem 0;
     font-size: 40px;
 }
-#my-carousel .carousel .overlay-description{
+#my-carousel-web .carousel .overlay-description{
     margin: 0.8rem 0 1rem 0;
     font-size: 18px;
+}
+/* --------------movil------------- */
+#my-carousel-movil .carousel{
+    position: relative;
+    /* height: 100vh; */
+}
+#my-carousel-movil .carousel .overlay{
+    width: 90%;
+    position: absolute;
+    top: 62%;
+    transform: translateY(-50%);
+    left: 5%;
+    padding: 0.4rem 0.5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+#my-carousel-movil .carousel img{
+    filter: brightness(50%);
+}
+#my-carousel-movil .carousel .overlay-title{
+    margin: 0.8rem 0 1rem 0;
+    font-size: 20px;
+}
+#my-carousel-movil .carousel .overlay-description{
+    margin: 0.8rem 0 1rem 0;
+    font-size: 10px;
 }

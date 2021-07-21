@@ -14,7 +14,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import EmailIcon from '@material-ui/icons/Email';
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
@@ -31,8 +30,6 @@ import Constants from './../../../util/constants';
 import { useHistory } from 'react-router';
 
 import AbogadoVirtual from '../../../images/xabogadoVirtual.jpg';
-import ArbitrajeVirtual from '../../../images/xarbitrajeVirtual.jpg';
-import MediacionOnline from '../../../images/xmediacionOnline.jpg';
 import RedaccionCartasNotariales from '../../../images/xredaccionCartasNotariales.jpg';
 import ConciliacionMYPE from '../../../images/xconciliacionMype.jpg';
 import ConciliacionResoluciónContrato from '../../../images/xconciliacionResoluciónContrato.jpg';
@@ -178,13 +175,13 @@ function NavBar(props) {
       icon: <AccountBalanceIcon className="text-white" />
     },
     {
-        link: "/mesadepartesvirtual",
-        name: "Mesa de Partes Virtual",
-        isLogin: false,
-        icon: <EmailIcon className="text-white" />
-      }
+      link: "/mesadepartesvirtual",
+      name: "Mesa de Partes Virtual",
+      isLogin: false,
+      icon: <EmailIcon className="text-white" />
+    }
   ]);
-  const [servicesConciliation, setServicesConciliation] = useState([
+  const servicesConciliation = [
     {
         img: ConciliacionMYPE,
         title: "Conciliación para MYPE",
@@ -687,7 +684,7 @@ function NavBar(props) {
             }
         ]
     },
-  ]);
+  ];
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -729,10 +726,6 @@ function NavBar(props) {
     }
     getUserMenu();
   },[menuItems]);
-
-  const onGoToHome = () =>{
-    props.history.go('/');
-  }
 
   const logOut = () => {
     sessionStorage.removeItem(Constants.userInfo);
@@ -848,7 +841,6 @@ function NavBar(props) {
                               size="large"
                               classes={{ text: classes.menuButtonText }}
                               value={"example"}
-                              //onClick={e => onInfo(e, "value")} 
                             >
                               {element.name}
                             </Button>

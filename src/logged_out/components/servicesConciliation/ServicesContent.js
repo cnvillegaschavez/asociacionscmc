@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { useHistory } from 'react-router';
 import ContactDetailService from '../contact/ContactDetailService';
 import CardListCustom from '../cards/CardListCustom';
 import smoothScrollTop from "../../../shared/functions/smoothScrollTop";
@@ -10,30 +9,14 @@ import AbogadoVirtual from '../../../images/xabogadoVirtual.jpg';
 import ArbitrajeVirtual from '../../../images/xarbitrajeVirtual.jpg';
 import MediacionOnline from '../../../images/xmediacionOnline.jpg';
 import RedaccionCartasNotariales from '../../../images/xredaccionCartasNotariales.jpg';
-import ConciliacionMYPE from '../../../images/xconciliacionMype.jpg';
-import ConciliacionResoluciónContrato from '../../../images/xconciliacionResoluciónContrato.jpg';
-import ConciliacionCobrarDeudasPrestacionServicios from '../../../images/xconciliacionCobrarDeudasPrestacionServicios.jpg';
-import ConciliacionCobrarDeudasVentaBienes from '../../../images/xconciliacionCobrarDeudasVentaBienes.jpg';
-import ConciliacionCobrarPrestamosDinero from '../../../images/xconciliacionCobrarPrestamosDinero.jpg';
 import ConciliacionDesalojoFaltaPago from '../../../images/xconciliacionDesalojoFaltaPago.jpg';
-import ConciliacionEmpresa from '../../../images/xconciliacionEmpresa.jpg';
-import ConciliacionFamiliar from '../../../images/xconciliacionFamiliar.jpg';
 import ConciliacionPensionAlimentos from '../../../images/xconciliacionPensionAlimentos.jpg';
 import ConciliacionRegimenVisitasConExternamiento from '../../../images/xconciliacionRegimenVisitasConExternamiento.jpg';
-import ConciliacionExoneracionPersionAlimentos from '../../../images/xconciliacionExoneracionPersionAlimentos.jpg';
 import ConciliacionGastosEmbarazo from '../../../images/xconciliacionGastosEmbarazo.jpg';
 import ConciliacionRegimenVisitasSinExternamiento from '../../../images/xconciliacionRegimenVisitasSinExternamiento.jpg';
 import ConciliacionTenenciaHijos from '../../../images/xconciliacionTenenciaHijos.jpg';
-import ConciliacionDivorcio from '../../../images/xconciliacionDivorcio.jpg';
-import ConciliacionSocial from '../../../images/xconciliacionSocial.jpg';
-import ConciliacionPersonaNarutal from '../../../images/xconciliacionPersonaNarutal.jpg';
-import ConciliacionDivisionParticionBienes from '../../../images/xconciliacionDivisionParticionBienes.jpg';
 import ConciliacionIndenmizacionDañosVehiculos from '../../../images/xconciliacionIndenmizacionDañosVehiculos.jpg';
 import ConciliacionIndenmizaciónNegligenciaMedica from '../../../images/xconciliacionIndenmizaciónNegligenciaMedica.jpg';
-import ConciliacionIndenmizacionAccidenteTransito from '../../../images/xconciliacionIndenmizacionAccidenteTransito.jpg';
-import ConciliacionDesalojoOcupantePrecario from '../../../images/xconciliacionDesalojoOcupantePrecario.jpg';
-import ConciliacionDesalojoVencimientoContrato from '../../../images/xconciliacionDesalojoVencimientoContrato.jpg';
-import ConciliacionContratacionesEstado from '../../../images/xconciliacionContratacionesEstado.jpg';
 import ConciliacionLiquidacionesContratacionesEstado from '../../../images/xconciliacionLiquidacionesContratacionesEstado.jpg';
 import ConciliacionViciosOcultosContratacionesEstado from '../../../images/xconciliacionViciosOcultosContratacionesEstado.jpg';
 import ConciliacionIndenmizacionContratacionesEstado from '../../../images/xconciliacionIndenmizacionContratacionesEstado.jpg';
@@ -42,8 +25,6 @@ import ConciliacionValorazionesMetrados from '../../../images/xconciliacionValor
 import ConciliacionRecepciónConformidad from '../../../images/xconciliacionRecepciónConformidad.jpg';
 import ConciliacionResoluciónContratosSuministrosServiciosObras from '../../../images/xconciliacionResoluciónContratosSuministrosServiciosObras.jpg';
 import ConciliacionAmpliaciónPlazo from '../../../images/xconciliacionAmpliaciónPlazo.jpg';
-import ConciliacionFueraCentroConciliacion from '../../../images/xconciliacionFueraCentroConciliacion.jpg';
-import ConciliacionApoderado from '../../../images/xconciliacionApoderado.jpg';
 import ConciliacionHoyMismo from '../../../images/xconciliacionHoyMismo.jpg';
 
 const useStyles = makeStyles((theme) => ({
@@ -79,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 const ServicesInfoNavbar = (props) => {
     const classes = useStyles();
     const { value } = props;
-    const [services, setServices] = useState([
+    const services = [
         {
             link: "mediaciononline",
             img: MediacionOnline,
@@ -248,7 +229,7 @@ const ServicesInfoNavbar = (props) => {
                 },
             ]
         },
-    ])
+    ];
 
     useEffect(() => {
         smoothScrollTop();
@@ -261,7 +242,7 @@ const ServicesInfoNavbar = (props) => {
             <br />
             {
                 services.map((element, index) => {
-                    if (element.link == value) {
+                    if (element.link === value) {
                         return (<ContactDetailService
                             title={element.title}
                             subtitle={element.subtitle}
@@ -270,6 +251,7 @@ const ServicesInfoNavbar = (props) => {
                             price={element.price}
                             list={element.list}
                             img={element.img}
+                            key={index}
                         />)
                     }
                 })
@@ -283,8 +265,8 @@ const ServicesInfoNavbar = (props) => {
 
             {
                 services.map((element, index) => {
-                    if (element.link == value) {
-                        return (<CardListCustom data={element.more} />)
+                    if (element.link === value) {
+                        return (<CardListCustom data={element.more} key={index} />)
                     }
                 })
             }

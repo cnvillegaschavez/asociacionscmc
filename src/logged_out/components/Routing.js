@@ -10,7 +10,7 @@ import ArbitrajeVirtual from "./servicesConciliation/ArbitrajeVirtual";
 import MesaPartesVirtual from "./servicesConciliation/MesaPartesVirtual";
 
 function Routing(props) {
-  const { selectCompany, selectHome, selectServicesInfo } = props;
+  const { selectHome, selectServicesInfo } = props;
 
   return (
     <Switch>

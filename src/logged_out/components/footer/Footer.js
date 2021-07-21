@@ -22,7 +22,6 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Slide from '@material-ui/core/Slide';
 import transitions from "@material-ui/core/styles/transitions";
 import ColoredButton from "../../../shared/components/ColoredButton";
-import { sendEmail } from '../../../redux/actions/contactActions';
 import emailjs from 'emailjs-com';
 
 
@@ -230,35 +229,11 @@ const socialIcons = [
 
 function Footer(props) {
     const { classes, theme, width } = props;
-    const [email, setEmail] = useState('');
-    const [comments, setComments] = useState('');
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
     const [responseResult, setResponseResult] = useState({ message: '' });
     const [messageConfirm, setMessageConfirm] = useState();
     const [messageColor, setMessageColor] = useState();
-
-    // const handleChange = (event) => {
-    //     const { name, value } = event.target;
-    //     switch (name) {
-    //         case 'email':
-    //             setEmail(value);
-    //             break;
-    //         case 'comments':
-    //             setComments(value);
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // }
-
-    // const onClickBtnSubmit = (event) => {
-    //     event.preventDefault();
-    //     setResponseResult({ message: '' });
-    //     const requestDto = { Email: email, Message: comments };
-    //     setLoading(true);
-    //     sendEmail(requestDto, callBackResponse);
-    // }
 
     /* Work with EmailJS */
     const onSendEmailJS = (e) => {
@@ -275,17 +250,6 @@ function Footer(props) {
         });
     }
 
-    const callBackResponse = (responseDto) => {
-
-        if (responseDto.isValid) {
-            setEmail('');
-            setComments('');
-        }
-        setLoading(false);
-        setResponseResult(responseDto);
-        setOpen(true);
-    }
-
     const handleClose = () => {
         setOpen(false);
     }
@@ -295,14 +259,12 @@ function Footer(props) {
     }
 
     return (
-        <footer /* className="lg-p-top" */>
+        <footer>
             <div className={classes.footerInner}>
                 <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
                     <Grid item xs={12} md={6} lg={4}>
-
                         <Typography variant="h5" color="secondary" className={classes.titleFooter}>Contacto</Typography>
-
-                        <Box display="flex" /* justifyContent="center" */>
+                        <Box display="flex">
                             <div >
                                 {infos.map((info, index) => (
                                     <Box display="flex" mb={1} key={index}>
@@ -328,11 +290,9 @@ function Footer(props) {
                                 ))}
                             </div>
                         </Box>
-
                         <Typography variant="h6" paragraph className="text-white">
                             Siguenos:
                         </Typography>
-
                         <Box display="flex">
                             {socialIcons.map((socialIcon, index) => (
                                 <Box key={index} mr={index !== socialIcons.length - 1 ? 1 : 0}>
@@ -346,12 +306,10 @@ function Footer(props) {
                                 </Box>
                             ))}
                         </Box>
-
                     </Grid>
-
                     <Grid item xs={12} md={6} lg={4}>
                         <Typography variant="h5" color="secondary" className={classes.titleFooter}>Servicios Virtuales</Typography>
-                        <Box display="flex" /* justifyContent="center" */>
+                        <Box display="flex">
                             <div >
                                 {infosServices.map((info, index) => (
                                     <Box display="flex" mb={1} key={index}>
@@ -377,11 +335,8 @@ function Footer(props) {
                                 ))}
                             </div>
                         </Box>
-
                     </Grid>
-
                     <Grid item xs={12} md={6} lg={4}>
-
                         <Typography variant="h5" color="secondary" className={classes.titleFooter}>Evaluación gratuita</Typography>
                         <Typography variant="subtitle1" className={classes.textEvaluation}>
                             Si tiene preguntas, necesita el consejo de un consejero de confianza o simplemente no sabe a quién acudir, nuestro equipo está aquí para ayudarlo. Contáctenos hoy para programar una consulta gratis.
@@ -394,10 +349,8 @@ function Footer(props) {
                                         id="name"
                                         name="name"
                                         autoComplete="name"
-                                        // value={name}
                                         label="Nombre"
                                         variant="outlined"
-                                        //id="custom-css-outlined-input"
                                         inputProps={{ "aria-label": "Get in Touch", maxLength: 60 }}
                                         InputProps={{
                                             className: classes.inputEvaluation
@@ -421,10 +374,8 @@ function Footer(props) {
                                         id="email"
                                         name="email"
                                         autoComplete="email"
-                                        // value={enail}
                                         label="Correo electrónico"
                                         variant="outlined"
-                                        //id="custom-css-outlined-input"
                                         inputProps={{ "aria-label": "Get in Touch", maxLength: 60 }}
                                         InputProps={{
                                             className: classes.inputEvaluation
@@ -442,7 +393,6 @@ function Footer(props) {
                                             }
                                         }}
                                     />
-
                                 </Box>
                                 <Box mb={1}>
                                     <CssTextField
@@ -452,7 +402,6 @@ function Footer(props) {
                                         autoComplete="message"
                                         label="Cuéntanos tu caso"
                                         variant="outlined"
-                                        //id="custom-css-outlined-input"
                                         inputProps={{ "aria-label": "Get in Touch", maxLength: 400 }}
                                         InputProps={{
                                             className: classes.inputEvaluation
@@ -461,7 +410,6 @@ function Footer(props) {
                                         required
                                         style={{ padding: "10px 0" }}
                                         rows={6}
-                                        /* maxRows={20} */
                                         multiline
                                         InputLabelProps={{
                                             style: {
@@ -487,7 +435,6 @@ function Footer(props) {
                                     <Typography variant="subtitle1" style={{color: messageColor, fontWeight: "normal", fontStyle: "italic"}}>{messageConfirm}</Typography>
                                     {loading && <CircularProgress size={24} className={classes.buttonProgress} />}
                                 </div>
-
                                 <Snackbar
                                     open={open}
                                     onClose={handleClose}
@@ -496,10 +443,7 @@ function Footer(props) {
                                 />
                             </Box>
                         </form>
-
-
                     </Grid>
-
                 </Grid>
             </div>
         </footer>

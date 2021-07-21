@@ -1,13 +1,11 @@
 import React, { Fragment, PureComponent } from "react";
 import PropTypes from "prop-types";
 import HeadSection from "./HeadSection";
-import FeatureSection from "./FeatureSection";
-import CarouselContainer from "../carousel/CarouselContainer";
 import ServicesConciliation from "./ServicesConciliation";
 import We from "./We";
 import OurProfessionals from "./OurProfessionals";
 import Contact from "../contact/Contact";
-import smoothScrollTop from "../../../shared/functions/smoothScrollTop";
+// import smoothScrollTop from "../../../shared/functions/smoothScrollTop";
 
 class Home extends PureComponent {
 
@@ -34,6 +32,7 @@ class Home extends PureComponent {
             <Fragment>
                 {/* <CarouselContainer /> */}
                 <HeadSection/>
+                <br />
                 <ServicesConciliation />
                 <br />
                 <We />

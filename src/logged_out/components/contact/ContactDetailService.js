@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
@@ -186,7 +185,7 @@ const ContactDetailService = (props) => {
                                 list 
                                 ?
                                 list.map((element, index) => (
-                                    <Box m={-3}>
+                                    <Box m={-3} key={index}>
                                         <ListItem key={index}>
                                             <ListItemIcon>
                                                 <DoneIcon style={{ color: "#FFB341" }} />

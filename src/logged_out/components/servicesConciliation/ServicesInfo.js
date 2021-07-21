@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router';
@@ -58,7 +58,7 @@ const ServicesInfo = () => {
                 img={history.location.state.img}
             />
             {
-                (history.location.state.title==="Mediacion Online" || history.location.state.title=="Arbitraje Virtual")
+                (history.location.state.title==="Mediacion Online" || history.location.state.title==="Arbitraje Virtual")
                 ?
                 <div>
                     <Typography variant="h3" color="primary" className={classes.title} style={{marginTop: "5%"}}>Aquí te recomendamos más Servicios de Conciliación relacionados</Typography>
@@ -67,10 +67,8 @@ const ServicesInfo = () => {
                 <div>
                     <Typography variant="h3" color="primary" className={classes.title} style={{marginTop: "5%"}}>Aquí te mostramos los servicios en relación a</Typography>
                     <Typography variant="h3" color="primary" className={classes.title}>"{history.location.state.title}"</Typography>
-                </div>
-               
+                </div>   
             }
-            
             
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.subtitle}>
