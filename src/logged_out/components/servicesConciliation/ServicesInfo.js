@@ -42,7 +42,7 @@ const ServicesInfo = () => {
     useEffect(() => {
         smoothScrollTop();
     }, []);
-
+    
     return (
         <Fragment>
             <br />
@@ -57,8 +57,20 @@ const ServicesInfo = () => {
                 list={history.location.state.list}
                 img={history.location.state.img}
             />
-            <Typography variant="h3" color="primary" className={classes.title} style={{marginTop: "5%"}}>Aquí te mostramos los servicios en relación a</Typography>
-            <Typography variant="h3" color="primary" className={classes.title}>"{history.location.state.title}"</Typography>
+            {
+                (history.location.state.title==="Mediacion Online" || history.location.state.title=="Arbitraje Virtual")
+                ?
+                <div>
+                    <Typography variant="h3" color="primary" className={classes.title} style={{marginTop: "5%"}}>Aquí te recomendamos más Servicios de Conciliación relacionados</Typography>
+                </div>
+                :
+                <div>
+                    <Typography variant="h3" color="primary" className={classes.title} style={{marginTop: "5%"}}>Aquí te mostramos los servicios en relación a</Typography>
+                    <Typography variant="h3" color="primary" className={classes.title}>"{history.location.state.title}"</Typography>
+                </div>
+               
+            }
+            
             
             <Divider className={classes.divider} />
             <Typography variant="h6" className={classes.subtitle}>

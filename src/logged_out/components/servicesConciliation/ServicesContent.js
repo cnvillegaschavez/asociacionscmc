@@ -83,7 +83,7 @@ const ServicesInfoNavbar = (props) => {
         {
             link: "mediaciononline",
             img: MediacionOnline,
-            title: "Mediacion Online",
+            title: "Mediación Online",
             descriptionPrimary: "Es un servicio para resolver conflictos en linea, por el que dos o mas personas con la ayuda de un mediador utilizan medios electrónicos para alcanzar acuerdos mutuamente satisfactorios, evitando contagios por la pandemia de la Covid -19 o por imposibilidad de viajar, etc",
             descriptionSecondary: "Materias que se pueden mediar:",
             price: "S/.350",
