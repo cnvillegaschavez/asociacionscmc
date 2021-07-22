@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { getAddressByUserId } from '../../api/addressApi';
 
 // types

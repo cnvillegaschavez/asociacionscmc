@@ -790,9 +790,9 @@ const ServicesInfoNavbar = (props) => {
                 services.map((element, index) => {
                     if (element.link === value) {
                         if (element.link === "mediaciononline" || element.link === "abogadovirtual" || element.link === "arbitrajevirtual") {
-                            return (<Typography variant="h3" color="primary" className={classes.title}>Aquí te recomendamos más Servicios de Conciliación relacionados</Typography>)
+                            return (<Typography key={index} variant="h3" color="primary" className={classes.title}>Aquí te recomendamos más Servicios de Conciliación relacionados</Typography>)
                         }else{
-                            return (<div>
+                            return (<div key={index}>
                                 <Typography variant="h3" color="primary" className={classes.title}>Aquí te mostramos los servicios en relación a</Typography>
                                 <Typography variant="h3" color="primary" className={classes.title}>"{element.title}"</Typography>
                             </div>)
