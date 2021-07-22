@@ -18,14 +18,14 @@ import CloseIcon from "@material-ui/icons/Close";
 
 const styles = theme => ({
   closeIcon: {
-    marginRight: theme.spacing(0.5)
+    marginRight: theme.spacing(0)
   },
   headSection: {
-    width: 200
+    width: "100%"
   },
   blackList: {
     backgroundColor: theme.palette.primary.main,
-    height: "100%"
+    /* height: "100%" */
   },
   noDecoration: {
     textDecoration: "none !important"
@@ -54,13 +54,14 @@ class NavigationDrawer extends PureComponent {
     } = this.props;
     return (
       <Drawer variant="temporary" open={open} onClose={onClose} anchor={anchor}>
+          
         <Toolbar className={classes.headSection}>
           <ListItem
             style={{
               paddingTop: theme.spacing(0),
               paddingBottom: theme.spacing(0),
               height: "100%",
-              justifyContent: anchor === "left" ? "flex-start" : "flex-end"
+              justifyContent: "center"
             }}
             disableGutters
           >
@@ -70,7 +71,9 @@ class NavigationDrawer extends PureComponent {
               </IconButton>
             </ListItemIcon>
           </ListItem>
+        
         </Toolbar>
+
         <List className={classes.blackList}>
           {menuItems.map(element => {
             if (element.link) {
@@ -108,7 +111,7 @@ class NavigationDrawer extends PureComponent {
                 <ListItemIcon>{element.icon}</ListItemIcon>
                 <ListItemText
                   primary={
-                    <Typography variant="subtitle1" className="text-white">
+                    <Typography variant="body2" className="text-white">
                       {element.name}
                     </Typography>
                   }

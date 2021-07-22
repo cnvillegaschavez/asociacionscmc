@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardListAnimation from '../cards/CardListAnimation';
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ServicesConciliation = () => {
     const classes = useStyles();
-    const [servicesConciliation, setServicesConciliation] = useState([
+    const servicesConciliation = [
         {
             img: ConciliacionMYPE,
             title: "Conciliación para MYPE",
@@ -678,7 +678,7 @@ const ServicesConciliation = () => {
                 },
             ]
         },
-    ]);
+    ];
 
     return (
         <Fragment>

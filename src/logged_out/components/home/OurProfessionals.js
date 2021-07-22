@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     subtitle: {
         fontWeight: "bold",
         color: theme.palette.primary.main,
-        // textAlign: "center"
     },
     paragraph: {
         color: "#7C99C1",
@@ -54,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function OurProfessionals() {
     const classes = useStyles();
+    const mainTitle= "Nuestros Profesionales"
+    const paragraph = "Los miembros del centro de conciliación extrajudicial Ex Lege provienen del mundo empresarial, público y académico, con lo cual la unidad de arbitraje y conciliación extrajudicial busca contar con enfoques que comprenden las necesidades y realidades de todos los usuarios."
     const infoValues = [
         {
             title: "Arbitraje",
@@ -71,9 +72,9 @@ export default function OurProfessionals() {
         <Grid container>
             <Grid item xs={12} sm={12} md={6}>
                 <div className={classes.paper}>
-                    <Typography variant="h3" color="primary" className={classes.title}>Nuestros Profesionales</Typography>
+                    <Typography variant="h3" color="primary" className={classes.title}>{mainTitle}</Typography>
                     <Divider className={classes.divider} />
-                    <Typography variant="subtitle1" color="initial" className={classes.paragraph}>Los miembros del centro de conciliación extrajudicial Ex Lege provienen del mundo empresarial, público y académico, con lo cual la unidad de arbitraje y conciliacion extrajudicial busca contar con enfoques que comprenden las necesidades y realidades de todos los usuarios.</Typography>
+                    <Typography variant="subtitle1" color="initial" className={classes.paragraph}>{paragraph}</Typography>
 
                     <List>
                         <Grid container>
@@ -87,7 +88,7 @@ export default function OurProfessionals() {
                                                 </Avatar>
                                             </ListItemAvatar>
                                             <ListItemText>
-                                                <Typography variant="body1" className={classes.subtitle}>{element.title}</Typography>
+                                                <Typography variant="subtitle2" className={classes.subtitle}>{element.title}</Typography>
                                             </ListItemText>
                                         </ListItem>
                                         <Typography variant="body1" className={classes.paragraph}>{element.description}</Typography>

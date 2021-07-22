@@ -6,13 +6,6 @@ import AbogadoVirtual from "../../../images/fondoAbogadoVirtual.jpg";
 import ArbitrajeVirtual from "../../../images/fondoArtibrajeVirtual.jpg";
 import Nosotros from "../../../images/nosotros.jpg";
 import Hidden from '@material-ui/core/Hidden';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    roo: {
-
-    }
-}));
 
 const Slider = () => {
 
@@ -58,7 +51,7 @@ const Slider = () => {
                     </Carousel>
                 </div>
             </Hidden>
-            <Hidden smUp>
+            <Hidden mdUp>
                 <div id="my-carousel-movil">
                     <Carousel autoPlay interval={5000} infiniteLoop showIndicators={false} showStatus={false} showThumbs={false}>
                         {

@@ -99,7 +99,7 @@ const Contact = () => {
     const descriptionPrimary = "Si tiene preguntas, necesita el consejo de un consejero de confianza o simplemente no sabe a quién acudir, nuestro equipo está aquí para ayudarlo. Contáctenos hoy para programar una consulta gratis.";
     const descriptionSecondary = "Si no puede visitarnos en nuestra oficina en el centro durante la semana, estaremos más que felices de encontrarnos con usted en su casa o en nuestra oficina durante el fin de semana.";
     const phone = "+51962212903";
-    const message = `Hola, quisiera consultar acerca del servicio de `;
+    const message = `Hola, quisiera más información acerca de los servicios de conciliación que ofrecen.`;
     const [messageConfirm, setMessageConfirm] = useState();
     const [messageColor, setMessageColor] = useState();
 
@@ -200,7 +200,7 @@ const Contact = () => {
                             className={classes.button}
                             startIcon={<WhatsAppIcon className={classes.styleIconWhatsApps} style={{ fontSize: "30px" }} />}
                         >
-                            <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${title}`} style={{ textDecoration: "none", color: "#181717" }}>
+                            <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message}`} style={{ textDecoration: "none", color: "#181717" }}>
                                 Contactar
                             </a>
                         </Button>
@@ -281,7 +281,7 @@ const Contact = () => {
                             className={classes.button}
                             startIcon={<WhatsAppIcon className={classes.styleIconWhatsApps} style={{ fontSize: "30px" }} />}
                         >
-                            <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message} ${title}`} style={{ textDecoration: "none", color: "#181717" }}>
+                            <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message}`} style={{ textDecoration: "none", color: "#181717" }}>
                                 Contactar
                             </a>
                         </Button>

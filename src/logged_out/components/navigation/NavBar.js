@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import {
@@ -8,25 +8,18 @@ import {
   Hidden,
   IconButton,
   withStyles,
-  Avatar, Typography
+  Typography
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import EmailIcon from '@material-ui/icons/Email';
-import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
-import PersonIcon from '@material-ui/icons/Person';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import GavelOutlinedIcon from '@material-ui/icons/GavelOutlined';
 
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
-import classNames from "classnames";
-import { isAuth, getUserInfo } from '../../../api/userApi';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 
-import Constants from './../../../util/constants';
 import { useHistory } from 'react-router';
 
 import AbogadoVirtual from '../../../images/xabogadoVirtual.jpg';
@@ -107,40 +100,16 @@ const styles = theme => ({
   caja: {
     position: 'float',
     display: 'block',
-  }
+  },
+  menuServices: {
+    color: theme.palette.primary.main,
+    "&:hover": {
+        background: theme.palette.primary.main,
+        color: theme.palette.secondary.main,
+    }
+  },
   
 });
-
-const StyledMenu = withStyles({
-    paper: {
-        border: '1px solid #d3d4d5',
-    },
-})((props) => (
-    <Menu
-        elevation={0}
-        getContentAnchorEl={null}
-        anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center',
-        }}
-        transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center',
-        }}
-        {...props}
-    />
-));
-
-const StyledMenuItem = withStyles((theme) => ({
-    root: {
-        '&:focus': {
-            backgroundColor: theme.palette.primary.main,
-            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-                color: theme.palette.common.white,
-            },
-        },
-    },
-}))(MenuItem);
 
 function NavBar(props) {
   const {
@@ -152,9 +121,7 @@ function NavBar(props) {
   } = props;
  
   const history = useHistory();
-  const [anchorEl, setAnchorEl] = useState(null);
   const [anchorButtonServices, setAnchorButtonServices] = useState(null);
-  const [userUrlIcon, setUserUrlIcon] = useState(Constants.profilePicture);
   const [menuItems, setMenuItems] = useState([
     {
       link: "/mediaciononline",
@@ -181,45 +148,135 @@ function NavBar(props) {
       icon: <EmailIcon className="text-white" />
     }
   ]);
+
+  const [menuItemsDrawer, setMenuItemsDrawer] = useState([
+    {
+      link: "/mediaciononline",
+      name: "Mediación Online",
+      isLogin: false,
+      icon: <AccountBalanceIcon style={{color: "#FFB341"}} />
+    },
+    {
+      link: "/arbitrajevirtual",
+      name: "Arbitraje Virtual",
+      isLogin: false,
+      icon: <AccountBalanceIcon style={{color: "#FFB341"}} />
+    },
+    {
+      link: "/abogadovirtual",
+      name: "Abogado Virtual",
+      isLogin: false,
+      icon: <AccountBalanceIcon style={{color: "#FFB341"}} />
+    },
+    {
+      link: "/mesadepartesvirtual",
+      name: "Mesa de Partes Virtual",
+      isLogin: false,
+      icon: <EmailIcon style={{color: "#FFB341"}} />
+    }, 
+    { /* TODO: */
+        link: "/conciliacionmype",
+        name: "Conciliación MYPE",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacionempresarial",
+        name: "Conciliación Empresarial",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacionfamiliar",
+        name: "Conciliación Familiar",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliaciondivorcio",
+        name: "Conciliación para Divorcio",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacionsocial",
+        name: "Conciliación Social",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacionpersonasnaturales",
+        name: "Conciliación para Personas Naturales",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacioncontratacionesestado",
+        name: "Conciliación en Contrataciones del Estado",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacionfueradelcentroconciliacion",
+        name: "Conciliación fuera del Centro de Conciliación",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliacionapoderdo",
+        name: "Conciliación con Apoderado",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+      {
+        link: "/conciliahoymismo",
+        name: "Concilia hoy mismo",
+        isLogin: false,
+        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+      },
+  ]);
+
   const servicesConciliation = [
     {
+        link: "conciliacionmype",
         img: ConciliacionMYPE,
         title: "Conciliación para MYPE",
         descriptionPrimary: "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionResoluciónContrato,
                 title: "Conciliación de Resolución de Contrato",
                 price: "S/. 300"
-            },  
+            },
             {
                 img: ConciliacionCobrarDeudasPrestacionServicios,
                 title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
                 price: "S/. 300"
-            },  
+            },
             {
                 img: ConciliacionCobrarDeudasVentaBienes,
                 title: "Conciliación para Cobrar Deudas por Venta de Bienes",
                 price: "S/. 300"
-            },  
+            },
             {
                 img: ConciliacionCobrarPrestamosDinero,
                 title: "Conciliación para Cobrar Préstamos de Dinero",
                 price: "S/. 350"
-            },  
-            
+            },
+
         ]
     },
     {
+        link: "conciliacionempresarial",
         img: ConciliacionEmpresa,
         title: "Conciliación Empresarial",
         descriptionPrimary: "Servicio orientado en el sector empresarial con el objeto  de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionCobrarDeudasPrestacionServicios,
@@ -244,12 +301,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliacionfamiliar",
         img: ConciliacionFamiliar,
         title: "Conciliación Familiar",
         descriptionPrimary: "Servicio de conciliación extrajudicial de  conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionPensionAlimentos,
@@ -294,12 +352,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliaciondivorcio",
         img: ConciliacionDivorcio,
         title: "Conciliación para Divorcio",
         descriptionPrimary: "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias  o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
         descriptionSecondary: "",
         price: "S/.300",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionTenenciaHijos,
@@ -312,12 +371,12 @@ function NavBar(props) {
                 price: "S/.100"
             },
             {
-                img:   ConciliacionRegimenVisitasSinExternamiento,
+                img: ConciliacionRegimenVisitasSinExternamiento,
                 title: "Conciliación por Régimen de Visitas sin externamiento",
                 price: "S/.300"
             },
             {
-                img:  AbogadoVirtual,
+                img: AbogadoVirtual,
                 title: "Abogado Virtual",
                 price: ""
             },
@@ -344,12 +403,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliacionsocial",
         img: ConciliacionSocial,
         title: "Conciliación Social",
         descriptionPrimary: "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionPensionAlimentos,
@@ -394,12 +454,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliacionpersonasnaturales",
         img: ConciliacionPersonaNarutal,
         title: "Conciliación para Personas Naturales",
         descriptionPrimary: "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionDivisionParticionBienes,
@@ -464,12 +525,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliacioncontratacionesestado",
         img: ConciliacionContratacionesEstado,
         title: "Conciliación en Contrataciones del Estado",
         descriptionPrimary: "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionLiquidacionesContratacionesEstado,
@@ -514,12 +576,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliacionfueradelcentroconciliacion",
         img: ConciliacionFueraCentroConciliacion,
         title: "Conciliación fuera del Centro de Conciliación",
         descriptionPrimary: "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionPensionAlimentos,
@@ -544,12 +607,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliacionapoderdo",
         img: ConciliacionApoderado,
         title: "Conciliación con Apoderado",
         descriptionPrimary: "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionDivisionParticionBienes,
@@ -615,12 +679,13 @@ function NavBar(props) {
         ]
     },
     {
+        link: "conciliahoymismo",
         img: ConciliacionHoyMismo,
         title: "Concilia hoy mismo",
         descriptionPrimary: "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
         descriptionSecondary: "",
         price: "",
-        list:  [],
+        list: [],
         more: [
             {
                 img: ConciliacionPensionAlimentos,
@@ -686,14 +751,6 @@ function NavBar(props) {
     },
   ];
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   const handleMenuClose = () => {
     setAnchorButtonServices(null);
   }
@@ -702,68 +759,8 @@ function NavBar(props) {
     setAnchorButtonServices(event.currentTarget);    
   }
 
-  useEffect(() => {
-    const getUserMenu = () => {
-      if(isAuth()){
-        let user= getUserInfo();
-        let urlIcon = Constants.profilePicture;
-        if(user.media && user.media[0]){
-          urlIcon = user.media[0].thumb.replace(Constants.replacePath, Constants.extension);
-        }
-        setUserUrlIcon(urlIcon);
-        let isLoginItem =
-        {
-          name: user.name,
-          isLogin: true,
-          link: '/c/profile',
-          icon: <SupervisorAccountIcon className="text-white" />
-        };
-        let items= menuItems;       
-        items.pop();
-        items.push(isLoginItem);
-        setMenuItems(items);
-      }
-    }
-    getUserMenu();
-  },[menuItems]);
-
-  const logOut = () => {
-    sessionStorage.removeItem(Constants.userInfo);
-    props.history.go('/');
-  }
-
-  const onProfile = () => {
-    history.push('/c/profile')
-  }
-
   const onHome = () => {
     history.push('/');
-  }
-  const onServicesInfo = (event) => {
-    const { myValue } = event.currentTarget.dataset;
-    servicesConciliation.map((element, index) => {
-        if(element.title===myValue){
-            const values = {
-                title: element.title,
-                subtitle: element.subtitle,
-                descriptionPrimary: element.descriptionPrimary,
-                descriptionSecondary: element.descriptionSecondary,
-                price: element.price,
-                list: element.list,
-                img: element.img,
-                more: element.more
-            }
-            history.push({
-                pathname: '/servicesinfo',
-                state: values,
-            });
-        }
-    });
-    setAnchorButtonServices(null);
-  }
-
-  const onInfo = (event) => {
-    console.log(event.target.value);
   }
 
   return (
@@ -777,9 +774,9 @@ function NavBar(props) {
               </Button>
             
           </div>
-          
-       
+                 
           <div className={classes.caja}>
+
             <Hidden mdUp>
               <IconButton
                 className={classes.menuButton}
@@ -804,20 +801,21 @@ function NavBar(props) {
               >
                 Servicios de Conciliación
               </Button>
-              <Menu style={{marginTop: "35px", width: "1000px"}} id="menu" onClose={handleMenuClose} anchorEl={anchorButtonServices} open={Boolean(anchorButtonServices)}>
+              <Menu style={{marginTop: "35px", width: "1000px", color: "#111E47"}} id="menu" onClose={handleMenuClose} anchorEl={anchorButtonServices} open={Boolean(anchorButtonServices)}>
                   {
-                      servicesConciliation.map((element, index) => (
-                          <div key={index}>
-                             <MenuItem data-my-value={element.title} onClick={onServicesInfo} /* onClick={handleMenuClose} */ >{element.title}</MenuItem>
-                          </div>
-                      ))
+                    servicesConciliation.map((element, index) => (
+                        <Link key={index} to={element.link} className={classes.noDecoration} onClick={handleMenuClose}>
+                            <MenuItem data-my-value={element.title} className={classes.menuServices}>
+                                {element.title}
+                            </MenuItem>
+                        </Link>
+                    ))
                   }
               </Menu>
               {/* ---- ------------------------------- ----*/}
 
-              {menuItems.map(element => {
-                if (element.isLogin===false) {
-                  return (
+              {
+                menuItems.map(element => (
                     <Link
                       key={element.name}
                       to={element.link}
@@ -846,45 +844,8 @@ function NavBar(props) {
                             </Button>
                         }
                     </Link>
-                  );
-                }               
-                return (
-                  <Fragment key={element.name}>
-                    <Button
-                        color="primary"
-                        size="large"
-                        onClick={handleClick}
-                        classes={{ text: classes.menuButtonText }}
-                    >
-                        <Avatar
-                            alt="profile picture"
-                            src={userUrlIcon}
-                            className={classNames(classes.accountAvatar)}
-                        />
-                    </Button>
-                    <StyledMenu
-                        id="customized-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        <StyledMenuItem onClick={onProfile}>
-                            <ListItemIcon>
-                                <PersonIcon fontSize="small" />
-                            </ListItemIcon>
-                            <ListItemText primary="Mi perfil" />
-                        </StyledMenuItem>
-                        <StyledMenuItem onClick={logOut}>
-                            <ListItemIcon>
-                                <ExitToAppIcon fontSize="small" />
-                            </ListItemIcon>
-                            <ListItemText primary="Cerrar sesión" />
-                        </StyledMenuItem>
-                    </StyledMenu>
-                  </Fragment> 
-                );
-              })}
+               ))
+              }
             </Hidden>
           
           </div>
@@ -892,7 +853,7 @@ function NavBar(props) {
       </AppBar>
       
       <NavigationDrawer
-        menuItems={menuItems}
+        menuItems={menuItemsDrawer}
         anchor="right"
         open={mobileDrawerOpen}
         selectedItem={selectedTab}

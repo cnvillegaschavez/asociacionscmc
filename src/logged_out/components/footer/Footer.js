@@ -156,34 +156,34 @@ const styles = theme => ({
 const infos = [
     {
         icon: <PhoneIcon />,
-        description: <Typography variant="subtitle1" color="initial">963 559 100</Typography> /* >963 559 100 */
+        description: <Typography variant="subtitle1" color="initial" className="text-white">963 559 100</Typography> /* >963 559 100 */
     },
     {
         icon: <MailIcon />,
-        description: <Typography variant="subtitle1" color="initial">exlegecentrodeconciliacion@gmail.com</Typography>
+        description: <Typography variant="subtitle1" color="initial" className="text-white">exlegecentrodeconciliacion@gmail.com</Typography>
     },
     {
         icon: <AccessTimeIcon />,
-        description: <Typography variant="subtitle1" color="initial">Horario: 09:00 - 19:00</Typography>
+        description: <Typography variant="subtitle1" color="initial" className="text-white">Horario: 09:00 - 19:00</Typography>
     },
     {
         icon: <GavelIcon />,
-        description: <Typography variant="subtitle1" color="initial">Estudio jurídico</Typography>
+        description: <Typography variant="subtitle1" color="initial" className="text-white">Estudio jurídico</Typography>
     }
 ];
 
 const infosServices = [
     {
         icon: <AccountBalanceIcon />,
-        description: <Typography variant="subtitle1" color="initial">Mediación Online</Typography>
+        description: <Typography variant="subtitle1" color="initial" className="text-white">Mediación Online</Typography>
     },
     {
         icon: <AccountBalanceIcon />,
-        description: <Typography variant="subtitle1" color="initial">Arbitraje Virtual</Typography>
+        description: <Typography variant="subtitle1" color="initial" className="text-white">Arbitraje Virtual</Typography>
     },
     {
         icon: <AccountBalanceIcon />,
-        description: <Typography variant="subtitle1" color="initial">Abogado Virtual</Typography>
+        description: <Typography variant="subtitle1" color="initial" className="text-white">Abogado Virtual</Typography>
     },
 ];
 
@@ -262,6 +262,7 @@ function Footer(props) {
         <footer>
             <div className={classes.footerInner}>
                 <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
+                    
                     <Grid item xs={12} md={6} lg={4}>
                         <Typography variant="h5" color="secondary" className={classes.titleFooter}>Contacto</Typography>
                         <Box display="flex">
@@ -282,15 +283,15 @@ function Footer(props) {
                                             flexDirection="column"
                                             justifyContent="center"
                                         >
-                                            <Typography variant="h6" className="text-white">
+                                            
                                                 {info.description}
-                                            </Typography>
+                                            
                                         </Box>
                                     </Box>
                                 ))}
                             </div>
                         </Box>
-                        <Typography variant="h6" paragraph className="text-white">
+                        <Typography variant="h6" paragraph className="text-white"> {/* TODO: */}
                             Siguenos:
                         </Typography>
                         <Box display="flex">
@@ -307,6 +308,7 @@ function Footer(props) {
                             ))}
                         </Box>
                     </Grid>
+                    
                     <Grid item xs={12} md={6} lg={4}>
                         <Typography variant="h5" color="secondary" className={classes.titleFooter}>Servicios Virtuales</Typography>
                         <Box display="flex">
@@ -327,15 +329,16 @@ function Footer(props) {
                                             flexDirection="column"
                                             justifyContent="center"
                                         >
-                                            <Typography variant="h6" className="text-white">
+                                           
                                                 {info.description}
-                                            </Typography>
+                                            
                                         </Box>
                                     </Box>
                                 ))}
                             </div>
                         </Box>
                     </Grid>
+                    
                     <Grid item xs={12} md={6} lg={4}>
                         <Typography variant="h5" color="secondary" className={classes.titleFooter}>Evaluación gratuita</Typography>
                         <Typography variant="subtitle1" className={classes.textEvaluation}>
@@ -444,8 +447,10 @@ function Footer(props) {
                             </Box>
                         </form>
                     </Grid>
+                
                 </Grid>
             </div>
+        
         </footer>
     );
 }
