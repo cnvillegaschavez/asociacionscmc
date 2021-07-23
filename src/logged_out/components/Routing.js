@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Switch } from "react-router-dom";
 import PropsRoute from "../../shared/components/PropsRoute";
 import Home from "./home/Home";
-import ServicesInfo from "./servicesConciliation/ServicesInfo";
 import MediacionOnline from "./servicesConciliation/MediacionOnline";
 import AbogadoVirtual from "./servicesConciliation/AbogadoVirtual";
 import ArbitrajeVirtual from "./servicesConciliation/ArbitrajeVirtual";
@@ -21,7 +20,7 @@ import ConciliacionPersonasNaturales from "./servicesConciliation/ConciliacionPe
 import ConciliacionSocial from "./servicesConciliation/ConciliacionSocial";
 
 function Routing(props) {
-  const { selectHome, selectServicesInfo } = props;
+  const { selectHome } = props;
 
   return (
     <Switch>

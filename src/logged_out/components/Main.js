@@ -8,8 +8,6 @@ import "aos/dist/aos.css";
 import CookieConsent from "./cookies/CookieConsent";
 import Routing from "./Routing";
 import smoothScrollTop from "../../shared/functions/smoothScrollTop";
-import settingApi, { getExistSettings } from "./../../api/settingApi";
-import Constants from "./../../util/constants";
 
 AOS.init({ once: true });
 
@@ -100,13 +98,7 @@ class Main extends PureComponent {
   };
 
   fetchSettings = () => {
-    if(!getExistSettings()) {
-      settingApi().then(r=>{
-        if(r.data){
-          sessionStorage.setItem(Constants.settingName, JSON.stringify(r.data.data))
-        }      
-      });
-    }    
+    
   };
 
   handleCookieRulesDialogOpen = () => {

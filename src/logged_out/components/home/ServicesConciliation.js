@@ -700,6 +700,7 @@ const ServicesConciliation = () => {
             <div className={classes.logo}>
                 <img src={logo2} alt="no hay inagen"/>
             </div>
+            <br/>
             <Typography variant="h3" color="primary" className={classes.title}>Servicios de Conciliación para ti</Typography>
             <Divider className={classes.divider} />
             <CardListAnimation data={servicesConciliation} />

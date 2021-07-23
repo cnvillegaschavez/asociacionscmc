@@ -14,8 +14,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import EmailIcon from '@material-ui/icons/Email';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import GavelOutlinedIcon from '@material-ui/icons/GavelOutlined';
-import HomeIcon from '@material-ui/icons/Home';
 
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import Menu from '@material-ui/core/Menu';
@@ -160,77 +158,77 @@ function NavBar(props) {
     {
         link: "/",
         name: "Inicio",
-        icon: <i class="fas fa-home fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-home fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/mediaciononline",
       name: "Mediación Online",
-      icon: <i class="fas fa-balance-scale fa-lg" style={{color: "#FFB341"}}></i>
+      icon: <i className="fas fa-balance-scale fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/arbitrajevirtual",
       name: "Arbitraje Virtual",
-      icon: <i class="fas fa-gavel fa-lg" style={{color: "#FFB341"}}></i>
+      icon: <i className="fas fa-gavel fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/abogadovirtual",
       name: "Abogado Virtual",
-      icon: <i class="fas fa-layer-group fa-lg" style={{color: "#FFB341"}}></i>
+      icon: <i className="fas fa-layer-group fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/mesadepartesvirtual",
       name: "Mesa de Partes Virtual",
-      icon: <i class="far fa-envelope fa-lg" style={{color: "#FFB341"}}></i>
+      icon: <i className="far fa-envelope fa-lg" style={{color: "#FFB341"}}></i>
     }, 
     { /* TODO: */
         link: "/conciliacionmype",
         name: "Conciliación MYPE",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionempresarial",
         name: "Conciliación Empresarial",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionfamiliar",
         name: "Conciliación Familiar",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliaciondivorcio",
         name: "Conciliación para Divorcio",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionsocial",
         name: "Conciliación Social",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionpersonasnaturales",
         name: "Conciliación para Personas Naturales",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacioncontratacionesestado",
         name: "Conciliación en Contrataciones del Estado",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionfueradelcentroconciliacion",
         name: "Conciliación fuera del Centro de Conciliación",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionapoderdo",
         name: "Conciliación con Apoderado",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliahoymismo",
         name: "Concilia hoy mismo",
-        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
+        icon: <i className="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
   ]);
 

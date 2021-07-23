@@ -15,7 +15,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailIcon from "@material-ui/icons/Mail";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import GavelIcon from '@material-ui/icons/Gavel';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -174,15 +173,15 @@ const infos = [
 
 const infosServices = [
     {
-        icon: <i class="fas fa-balance-scale fa-sm"></i>,
+        icon: <i className="fas fa-balance-scale fa-sm"></i>,
         description: <Typography variant="subtitle1" color="initial" className="text-white">Mediación Online</Typography>
     },
     {
-        icon:  <i class="fas fa-gavel fa-ms"></i>,
+        icon:  <i className="fas fa-gavel fa-ms"></i>,
         description: <Typography variant="subtitle1" color="initial" className="text-white">Arbitraje Virtual</Typography>
     },
     {
-        icon: <i class="fas fa-layer-group fa-ms"></i>,
+        icon: <i className="fas fa-layer-group fa-ms"></i>,
         description: <Typography variant="subtitle1" color="initial" className="text-white">Abogado Virtual</Typography>
     },
 ];
