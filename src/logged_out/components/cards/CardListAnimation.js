@@ -37,17 +37,13 @@ const CardListAnimation = (props) => {
                 <Grid container>
                     {
                         data.map((element, index) => (
-                                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                                    <CardAnimation
-                                        title={element.title}
-                                        img={element.img}
-                                        descriptionPrimary={element.descriptionPrimary}
-                                        descriptionSecondary={element.descriptionSecondary}
-                                        price={element.price}
-                                        list={element.list}
-                                        more={element.more}
-                                    />
-                                </Grid>
+                            <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+                                <CardAnimation
+                                    link={element.link}
+                                    title={element.title}
+                                    img={element.img}
+                                />
+                            </Grid>
                         ))
                     }
                 </Grid>

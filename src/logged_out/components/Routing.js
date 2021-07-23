@@ -25,12 +25,12 @@ function Routing(props) {
 
   return (
     <Switch>
-      {/* <PropsRoute
+      <PropsRoute
         exact
-        path="/servicesinfo"
-        component={ServicesInfo}
-        selectServicesInfo={selectServicesInfo}
-      /> */}
+        path="/"
+        component={Home}
+        selectHome={selectHome}
+      />
       <PropsRoute
         exact
         path="/mediaciononline"

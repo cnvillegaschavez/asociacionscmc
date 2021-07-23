@@ -79,15 +79,15 @@ const styles = theme => ({
         color: theme.palette.common.white
     },
     infoIcon: {
-        color: `${theme.palette.common.white} !important`,
-        backgroundColor: `${theme.palette.secondary.main} !important`
+        color: `${theme.palette.secondary.main} !important`,
+        backgroundColor: `${theme.palette.common.darkBlack} !important`
     },
     socialIcon: {
-        fill: theme.palette.common.white,
-        backgroundColor: theme.palette.secondary.main,
+        fill: theme.palette.secondary.main,
+        backgroundColor: theme.palette.common.darkBlack,
         borderRadius: theme.shape.borderRadius,
         "&:hover": {
-            backgroundColor: theme.palette.primary.main
+            backgroundColor: "#fff"
         }
     },
     link: {
@@ -174,15 +174,15 @@ const infos = [
 
 const infosServices = [
     {
-        icon: <AccountBalanceIcon />,
+        icon: <i class="fas fa-balance-scale fa-sm"></i>,
         description: <Typography variant="subtitle1" color="initial" className="text-white">Mediación Online</Typography>
     },
     {
-        icon: <AccountBalanceIcon />,
+        icon:  <i class="fas fa-gavel fa-ms"></i>,
         description: <Typography variant="subtitle1" color="initial" className="text-white">Arbitraje Virtual</Typography>
     },
     {
-        icon: <AccountBalanceIcon />,
+        icon: <i class="fas fa-layer-group fa-ms"></i>,
         description: <Typography variant="subtitle1" color="initial" className="text-white">Abogado Virtual</Typography>
     },
 ];
@@ -221,7 +221,7 @@ const socialIcons = [
         href: "https://www.facebook.com/Centro-de-Conciliaci%C3%B3n-Ex-Lege-108763947357901"
     },
     {
-        icon: <YouTubeIcon style={{color: "#fff"}}/>,
+        icon: <YouTubeIcon style={{color: "#FFB341"}}/>,
         label: "Youtube",
         href: "https://www.facebook.com/Centro-de-Conciliaci%C3%B3n-Ex-Lege-108763947357901"
     },

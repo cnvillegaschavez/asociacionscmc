@@ -15,6 +15,7 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import EmailIcon from '@material-ui/icons/Email';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import GavelOutlinedIcon from '@material-ui/icons/GavelOutlined';
+import HomeIcon from '@material-ui/icons/Home';
 
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import Menu from '@material-ui/core/Menu';
@@ -108,6 +109,16 @@ const styles = theme => ({
         color: theme.palette.secondary.main,
     }
   },
+  buttonContact: {
+    color: "#fff",
+    backgroundColor: theme.palette.primary.main, 
+    borderRadius: "20px", 
+    padding: "10px 20px",
+    "&:hover": {
+        background: theme.palette.secondary.main,
+        color: theme.palette.primary.main,
+    }
+  }
   
 });
 
@@ -126,113 +137,100 @@ function NavBar(props) {
     {
       link: "/mediaciononline",
       name: "Mediación Online",
-      isLogin: false,
       icon: <AccountBalanceIcon className="text-white" />
     },
     {
       link: "/arbitrajevirtual",
       name: "Arbitraje Virtual",
-      isLogin: false,
       icon: <AccountBalanceIcon className="text-white" />
     },
     {
       link: "/abogadovirtual",
       name: "Abogado Virtual",
-      isLogin: false,
       icon: <AccountBalanceIcon className="text-white" />
     },
     {
       link: "/mesadepartesvirtual",
       name: "Mesa de Partes Virtual",
-      isLogin: false,
       icon: <EmailIcon className="text-white" />
     }
   ]);
 
   const [menuItemsDrawer, setMenuItemsDrawer] = useState([
     {
+        link: "/",
+        name: "Inicio",
+        icon: <i class="fas fa-home fa-lg" style={{color: "#FFB341"}}></i>
+    },
+    {
       link: "/mediaciononline",
       name: "Mediación Online",
-      isLogin: false,
-      icon: <AccountBalanceIcon style={{color: "#FFB341"}} />
+      icon: <i class="fas fa-balance-scale fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/arbitrajevirtual",
       name: "Arbitraje Virtual",
-      isLogin: false,
-      icon: <AccountBalanceIcon style={{color: "#FFB341"}} />
+      icon: <i class="fas fa-gavel fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/abogadovirtual",
       name: "Abogado Virtual",
-      isLogin: false,
-      icon: <AccountBalanceIcon style={{color: "#FFB341"}} />
+      icon: <i class="fas fa-layer-group fa-lg" style={{color: "#FFB341"}}></i>
     },
     {
       link: "/mesadepartesvirtual",
       name: "Mesa de Partes Virtual",
-      isLogin: false,
-      icon: <EmailIcon style={{color: "#FFB341"}} />
+      icon: <i class="far fa-envelope fa-lg" style={{color: "#FFB341"}}></i>
     }, 
     { /* TODO: */
         link: "/conciliacionmype",
         name: "Conciliación MYPE",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionempresarial",
         name: "Conciliación Empresarial",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionfamiliar",
         name: "Conciliación Familiar",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliaciondivorcio",
         name: "Conciliación para Divorcio",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionsocial",
         name: "Conciliación Social",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionpersonasnaturales",
         name: "Conciliación para Personas Naturales",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacioncontratacionesestado",
         name: "Conciliación en Contrataciones del Estado",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionfueradelcentroconciliacion",
         name: "Conciliación fuera del Centro de Conciliación",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliacionapoderdo",
         name: "Conciliación con Apoderado",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
       {
         link: "/conciliahoymismo",
         name: "Concilia hoy mismo",
-        isLogin: false,
-        icon: <GavelOutlinedIcon style={{color: "#FFB341"}} />
+        icon: <i class="fas fa-handshake fa-lg" style={{color: "#FFB341"}}></i>
       },
   ]);
 
@@ -789,6 +787,21 @@ function NavBar(props) {
         
             <Hidden smDown>
 
+              <Link
+                to="/"
+                className={classes.noDecoration}
+                onClick={handleMobileDrawerClose}
+              >
+                <Button
+                  color="primary"
+                  size="large"
+                  classes={{ text: classes.menuButtonText }}
+                  value={"example"}
+                >
+                  Inicio
+                </Button>
+              </Link>
+
               {/* ---- MenuButton servicesConciliacion ----*/}
               <Button
                 aria-controls="menu"
@@ -828,8 +841,7 @@ function NavBar(props) {
                             <Button
                               color="primary"
                               size="large"
-                              classes={{ text: classes.menuButtonText }}
-                              style={{color: "#fff", backgroundColor: "#111E47", borderRadius: "20px", padding: "10px 20px"}}
+                              className={classes.buttonContact}
                             >
                               {element.name}
                             </Button>

@@ -1,38 +1,22 @@
 import React, { Fragment } from 'react';
 import { Button } from '@material-ui/core';
-import { useHistory } from 'react-router';
+import { Link } from "react-router-dom";
 
 export default function CardAnimation(props) {
-    const { img, title, descriptionPrimary, descriptionSecondary, price, list, more } = props;
-    const history = useHistory();
-    const values = {
-        title: title,
-        descriptionPrimary: descriptionPrimary,
-        descriptionSecondary: descriptionSecondary,
-        list: list,
-        price: price,
-        more: more,
-        img: img
-    }
-
-    const onServicesInfo = (event) => {
-        event.preventDefault();
-        history.push({
-            pathname: '/servicesinfo',
-            state: values,
-        });
-    }
+    const { link, img, title } = props;
 
     return (
         <Fragment>
             <div id="cardAnimation" >
                 <div className="ui-card">
-                    <img src={img} alt="no hay imagen"/>
+                    <img src={img} alt="no hay imagen" />
                     <div className="description">
                         <h3>{title}</h3>
-                        <Button className="mi-link" style={{ color: "#fff" }} size="small" onClick={onServicesInfo}>
-                            Más información
-                        </Button>
+                        <Link to={link} style={{ textDecoration: "none" }}>
+                            <Button className="mi-link" style={{ color: "#fff" }} size="small">
+                                Más información
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

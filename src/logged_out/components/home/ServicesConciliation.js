@@ -3,6 +3,7 @@ import { Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardListAnimation from '../cards/CardListAnimation';
 
+import logo2 from '../../../images/logo2.png';
 import AbogadoVirtual from '../../../images/xabogadoVirtual.jpg';
 import ArbitrajeVirtual from '../../../images/xarbitrajeVirtual.jpg';
 import MediacionOnline from '../../../images/xmediacionOnline.jpg';
@@ -63,79 +64,87 @@ const useStyles = makeStyles((theme) => ({
         width: "100px",
         height: "3px",
     },
+    logo: {
+       display: "flex",
+       justifyContent: "center"
+
+    }
 }));
 
 const ServicesConciliation = () => {
     const classes = useStyles();
     const servicesConciliation = [
         {
+            link: "conciliacionmype",
             img: ConciliacionMYPE,
             title: "Conciliación para MYPE",
             descriptionPrimary: "Servicio enfocado en las micro y pequeñas empresas que permite solucionar conflictos comerciales de manera extrajudicial. Sobre todo, conserva relaciones comerciales con clientes, a menor precio y en el menor tiempo posible",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionResoluciónContrato,
                     title: "Conciliación de Resolución de Contrato",
-                    price: "S/.300"
-                },  
+                    price: "S/. 300"
+                },
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
-                    price: "S/.300"
-                },  
+                    price: "S/. 300"
+                },
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
-                    price: "S/.300"
-                },  
+                    price: "S/. 300"
+                },
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
-                    price: "S/.350"
-                },  
-                
+                    price: "S/. 350"
+                },
+
             ]
         },
         {
+            link: "conciliacionempresarial",
             img: ConciliacionEmpresa,
             title: "Conciliación Empresarial",
             descriptionPrimary: "Servicio orientado en el sector empresarial con el objeto  de resolver conflictos por vías no litigiosas. Por tanto, preserva la confidencialidad y las relaciones comerciales.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionCobrarDeudasPrestacionServicios,
                     title: "Conciliación para Cobrar Deudas por Prestación de Servicios",
-                    price: "S/.300"
+                    price: "S/. 300"
                 },
                 {
                     img: ConciliacionCobrarDeudasVentaBienes,
                     title: "Conciliación para Cobrar Deudas por Venta de Bienes",
-                    price: "S/.300"
+                    price: "S/. 300"
                 },
                 {
                     img: ConciliacionCobrarPrestamosDinero,
                     title: "Conciliación para Cobrar Préstamos de Dinero",
-                    price: "S/.350"
+                    price: "S/. 350"
                 },
                 {
                     img: ConciliacionDesalojoFaltaPago,
                     title: "Conciliacion de Desalojo por Falta de Pago",
-                    price: "S/.300"
+                    price: "S/. 300"
                 },
             ]
         },
         {
+            link: "conciliacionfamiliar",
             img: ConciliacionFamiliar,
             title: "Conciliación Familiar",
             descriptionPrimary: "Servicio de conciliación extrajudicial de  conflictos familiares mediante diálogo. Por tanto, mantiene relaciones familiares, con absoluta confidencialidad y evitando procesos judiciales.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -180,12 +189,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliaciondivorcio",
             img: ConciliacionDivorcio,
             title: "Conciliación para Divorcio",
             descriptionPrimary: "Servicio dirigido a cónyuges que desean divorciarse por mutuo acuerdo en Notarias  o Municipalidades. Sobre todo, con la finalidad de obtener acuerdos sobre pensión de alimentos, tenencia y régimen de visitas de hijos.",
             descriptionSecondary: "",
             price: "S/.300",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionTenenciaHijos,
@@ -198,12 +208,12 @@ const ServicesConciliation = () => {
                     price: "S/.100"
                 },
                 {
-                    img:   ConciliacionRegimenVisitasSinExternamiento,
+                    img: ConciliacionRegimenVisitasSinExternamiento,
                     title: "Conciliación por Régimen de Visitas sin externamiento",
                     price: "S/.300"
                 },
                 {
-                    img:  AbogadoVirtual,
+                    img: AbogadoVirtual,
                     title: "Abogado Virtual",
                     price: ""
                 },
@@ -230,12 +240,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliacionsocial",
             img: ConciliacionSocial,
             title: "Conciliación Social",
             descriptionPrimary: "Servicio destinado a personas de escasos recursos económicos. Sobre todo, brinda la oportunidad de acceder a servicios de conciliación extrajudicial a precios accesibles y de calidad.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -280,12 +291,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliacionpersonasnaturales",
             img: ConciliacionPersonaNarutal,
             title: "Conciliación para Personas Naturales",
             descriptionPrimary: "Servicio de conciliación extrajudicial destinado a personas naturales que ayuda solucionar sus conflictos en materia civil. Por ejemplo, pago deuda, desalojo.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionDivisionParticionBienes,
@@ -350,12 +362,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliacioncontratacionesestado",
             img: ConciliacionContratacionesEstado,
             title: "Conciliación en Contrataciones del Estado",
             descriptionPrimary: "Servicio de conciliación que ayuda a contratistas a solucionar controversias de manera amistosa en menor tiempo y costo. Por tanto,  evitas inciertos, largos y costosos procesos arbitrales.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionLiquidacionesContratacionesEstado,
@@ -375,7 +388,7 @@ const ServicesConciliation = () => {
                 {
                     img: ConciliacionPagoDeudasContratacionesEstado,
                     title: "Conciliación de Pago de Deudas en Contrataciones del Estado",
-                    price: "S/.499"
+                    price: "S/.300"
                 },
                 {
                     img: ConciliacionValorazionesMetrados,
@@ -400,12 +413,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliacionfueradelcentroconciliacion",
             img: ConciliacionFueraCentroConciliacion,
             title: "Conciliación fuera del Centro de Conciliación",
             descriptionPrimary: "Servicio de conciliación extrajudicial orientado a satisfacer situaciones excepcionales de las partes como perdida de la libertad. Además, internamiento en centro de salud, etc.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -430,12 +444,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliacionapoderdo",
             img: ConciliacionApoderado,
             title: "Conciliación con Apoderado",
             descriptionPrimary: "Servicio de conciliación extrajudicial que permite participar de un procedimiento conciliatorio a través de un apoderado. Del mismo modo, como lo haría el poderdante.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionDivisionParticionBienes,
@@ -501,12 +516,13 @@ const ServicesConciliation = () => {
             ]
         },
         {
+            link: "conciliahoymismo",
             img: ConciliacionHoyMismo,
             title: "Concilia hoy mismo",
             descriptionPrimary: "Servicio de conciliación extrajudicial que posibilita conciliar el mismo día que presentas la solicitud de conciliación. En conclusión, te liberas del conflicto el mismo día.",
             descriptionSecondary: "",
             price: "",
-            list:  [],
+            list: [],
             more: [
                 {
                     img: ConciliacionPensionAlimentos,
@@ -567,7 +583,6 @@ const ServicesConciliation = () => {
                     img: ConciliacionDivorcio,
                     title: "Conciliación para Divorcio",
                     price: "S/.300"
-
                 }
             ]
         },
@@ -682,9 +697,12 @@ const ServicesConciliation = () => {
 
     return (
         <Fragment>
+            <div className={classes.logo}>
+                <img src={logo2} alt="no hay inagen"/>
+            </div>
             <Typography variant="h3" color="primary" className={classes.title}>Servicios de Conciliación para ti</Typography>
             <Divider className={classes.divider} />
-            <CardListAnimation data={servicesConciliation}/>
+            <CardListAnimation data={servicesConciliation} />
         </Fragment>
     );
 }
