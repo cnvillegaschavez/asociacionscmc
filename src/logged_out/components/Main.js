@@ -5,7 +5,6 @@ import { withStyles } from "@material-ui/core";
 import NavBar from "./navigation/NavBar";
 import Footer from "./footer/Footer";
 import "aos/dist/aos.css";
-import CookieConsent from "./cookies/CookieConsent";
 import Routing from "./Routing";
 import smoothScrollTop from "../../shared/functions/smoothScrollTop";
 
@@ -118,12 +117,7 @@ class Main extends PureComponent {
     } = this.state;
     return (
       <div className={classes.wrapper}>
-        {!cookieRulesDialogOpen && (
-          <CookieConsent
-            handleCookieRulesDialogOpen={this.handleCookieRulesDialogOpen}
-          />
-        )}
-
+    
         <NavBar
           selectedTab={selectedTab}
           selectTab={this.selectTab}
