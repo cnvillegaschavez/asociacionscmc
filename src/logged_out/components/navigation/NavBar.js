@@ -108,13 +108,13 @@ const styles = theme => ({
     }
   },
   buttonContact: {
-    color: "#fff",
+    color: "#FFF !important",
     backgroundColor: theme.palette.primary.main, 
     borderRadius: "20px", 
     padding: "10px 20px",
     "&:hover": {
         background: theme.palette.secondary.main,
-        color: theme.palette.primary.main,
+        color: '#111E47 !important',
     }
   }
   
