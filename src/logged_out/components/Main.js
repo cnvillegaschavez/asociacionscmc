@@ -18,7 +18,7 @@ const styles = theme => ({
 });
 
 class Main extends PureComponent {
-  titleWeb = 'SCMC'; 
+  titleWeb = 'Centro de conciliación EX-LEGE'; 
 
   state = {
     selectedTab: null,
